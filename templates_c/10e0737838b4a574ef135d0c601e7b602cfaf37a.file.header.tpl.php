@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-09-16 17:47:57
+<?php /* Smarty version Smarty-3.1.14, created on 2016-09-19 22:00:58
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:546157dbfe762f7ec1-87144243%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1474040873,
+      1 => 1474314964,
       2 => 'file',
     ),
   ),
@@ -46,9 +46,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="#" id="inicio">Inicio <span class="sr-only">(actual)</span></a></li>
-          <li><a href="#" id="animes">Anime mas vistos <span class="sr-only">(actual)</span></a></li>
-          <li><a href="#" id="descargas">Descargas <span class="sr-only">(actual)</span></a></li>
-          <li><a href="#" id="staff">Unete a nuestro staff <span class="sr-only">(actual)</span></a></li>
+          <li><a href="index.php?action=listar_animes" id="animes">Anime mas vistos <span class="sr-only">(actual)</span></a></li>
+          <li><a href="index.php?action=mostrar_descargas" id="descargas">Descargas <span class="sr-only">(actual)</span></a></li>
+          <li><a href="index.php?action=mostrar_staff" id="staff">Unete a nuestro staff <span class="sr-only">(actual)</span></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right iconos">
           <li><a href="https://www.facebook.com/" target="_blank"><img alt="siguenos en facebook" src="images/iconos/iconoface.png" title="siguenos en facebook" /></a></li>

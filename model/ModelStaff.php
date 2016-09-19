@@ -3,7 +3,7 @@
 /**
 * 
 */
-class ModelAnime
+class ModelStaff
 {
 	
 	function __construct()

@@ -1,4 +1,26 @@
- {include file='header.tpl'}
+<?php /* Smarty version Smarty-3.1.14, created on 2016-09-19 22:00:58
+         compiled from ".\templates\staff.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:873557e043fa80aed8-01602927%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '70b9404c19f013cc072d54e91820c6ca7ed2db26' => 
+    array (
+      0 => '.\\templates\\staff.tpl',
+      1 => 1474313549,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '873557e043fa80aed8-01602927',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_57e043fab9a5a2_18714849',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_57e043fab9a5a2_18714849')) {function content_57e043fab9a5a2_18714849($_smarty_tpl) {?> <?php echo $_smarty_tpl->getSubTemplate ('header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 <section>
 <div class="cuerpotexto">
   <h1>¿Te gustaria formar parte de nuestro staff?</h1>
@@ -56,5 +78,6 @@
 </section>
 
 
-  {include file='footer.tpl'}
- 
+  <?php echo $_smarty_tpl->getSubTemplate ('footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+ <?php }} ?>
