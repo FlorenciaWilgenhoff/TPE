@@ -17,6 +17,19 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
   	$anime = new ControllerAnime();
     $anime->listar();
     break;
+    case ConfigApp::$ACTION_MOSTRAR_ANIME:
+    $anime = new ControllerAnime();
+    $anime->mostrarAnime();
+    break;
+    case ConfigApp::$ACTION_GUARDAR_ANIMES:
+    $controller->guardar();
+    break;
+    case ConfigApp::$ACTION_MOSTRAR_ADMIN:
+    $controller->mostrarAdmin();
+    break;
+  case ConfigApp::$ACTION_ELIMINAR_ANIMES:
+    $controller->eliminar();
+    break;
    case ConfigApp::$ACTION_MOSTRAR_DESCARGAS:
   	$descarga = new ControllerDescarga();
     $descarga->mostrar();

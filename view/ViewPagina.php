@@ -9,10 +9,14 @@ class ViewPagina{
       $this->smarty = new Smarty();
   }
 
-function MostrarPagina(){
-	$this->smarty->display("index.tpl");
-}
+	function MostrarPagina(){
+		$this->smarty->display("index.tpl");
+	}
 
+	function mostrar_admin($animes){
+		$this->smarty->assign("animes", $animes);
+	   	$this->smarty->display("admin.tpl");
+	   }
 }
 
 
