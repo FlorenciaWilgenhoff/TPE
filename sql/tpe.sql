@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-09-2016 a las 21:07:40
--- Versión del servidor: 10.1.13-MariaDB
--- Versión de PHP: 5.6.21
+-- Tiempo de generación: 01-10-2016 a las 19:26:05
+-- Versión del servidor: 10.1.16-MariaDB
+-- Versión de PHP: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `tpe`
 --
+CREATE DATABASE IF NOT EXISTS `tpe` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `tpe`;
 
 -- --------------------------------------------------------
 
@@ -93,6 +95,22 @@ CREATE TABLE `imagen_anime` (
   `fk_id_anime` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `staff`
+--
+
+CREATE TABLE `staff` (
+  `id_staff` int(11) NOT NULL,
+  `nombre` varchar(30) NOT NULL,
+  `apellido` varchar(30) NOT NULL,
+  `edad` int(2) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `puesto` set('edi','en','tra') NOT NULL,
+  `motivo` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Índices para tablas volcadas
 --
@@ -122,6 +140,12 @@ ALTER TABLE `imagen_anime`
   ADD PRIMARY KEY (`id_ia`);
 
 --
+-- Indices de la tabla `staff`
+--
+ALTER TABLE `staff`
+  ADD PRIMARY KEY (`id_staff`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -145,6 +169,11 @@ ALTER TABLE `categoria_anime`
 --
 ALTER TABLE `imagen_anime`
   MODIFY `id_ia` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `staff`
+--
+ALTER TABLE `staff`
+  MODIFY `id_staff` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

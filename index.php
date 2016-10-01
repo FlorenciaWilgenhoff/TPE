@@ -33,11 +33,16 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
    case ConfigApp::$ACTION_MOSTRAR_DESCARGAS:
   	$descarga = new ControllerDescarga();
     $descarga->mostrar();
-    break; 
+    break;
 	case ConfigApp::$ACTION_MOSTRAR_STAFF:
   	$staff = new ControllerStaff();
     $staff->mostrar();
-    break; 
+    break;
+  case ConfigApp::$ACTION_GUARDAR_STAFF:
+  	$staff = new ControllerStaff();
+    $staff->nuevoStaff();
+    $staff->mostrar();
+    break;
   default:
     $controller->mostrar();
     break;
