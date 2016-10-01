@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-01 19:12:48
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-01 23:03:01
          compiled from ".\templates\staff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:873557e043fa80aed8-01602927%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '70b9404c19f013cc072d54e91820c6ca7ed2db26' => 
     array (
       0 => '.\\templates\\staff.tpl',
-      1 => 1475341960,
+      1 => 1475355778,
       2 => 'file',
     ),
   ),
@@ -43,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <h3 class="panel-title">Llena este formulario para ser parte del Staff:</h3>
     </div>
     <div class="panel-body">
-    	<form method="POST" action="index.php?action=guardar_staff">
+      <form method="POST" action="index.php?action=guardar_staff">
 
         <div class="form-group">
           <label for="name">Nombre</label>

@@ -40,15 +40,8 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
 	case ConfigApp::$ACTION_MOSTRAR_STAFF:
   	$staff = new ControllerStaff();
     $staff->mostrar();
-<<<<<<< HEAD
-    break; 
-    case ConfigApp::$ACTION_GUARDAR_STAFF:
+ case ConfigApp::$ACTION_GUARDAR_STAFF:
     $staff = new ControllerStaff();
-=======
-    break;
-  case ConfigApp::$ACTION_GUARDAR_STAFF:
-  	$staff = new ControllerStaff();
->>>>>>> dab9b6abd38a647b54754e2c1fc89c85cb7c9c1c
     $staff->nuevoStaff();
     $staff->mostrar();
     break;

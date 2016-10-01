@@ -1,12 +1,8 @@
 <?php
 
-<<<<<<< HEAD
-
-=======
 /**
 *
 */
->>>>>>> dab9b6abd38a647b54754e2c1fc89c85cb7c9c1c
 class ModelStaff
 {
 

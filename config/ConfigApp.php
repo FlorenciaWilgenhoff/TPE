@@ -10,7 +10,7 @@ class ConfigApp{
   public static $ACTION_GUARDAR_STAFF = "guardar_staff";
   public static $ACTION_MOSTRAR_ADMIN = "mostrar_admin";
   public static $ACTION_AGREGAR_ANIME = "agregar_anime";
-  public static $ACTION_GUARDAR_STAFF = "guardar_staff";
+  
 }
 
  ?>
