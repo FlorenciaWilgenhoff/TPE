@@ -21,16 +21,15 @@ class ModelAnime
   }
     //creo anime
   	function crearAnime($anime, $imagenes){
-    //Agrega en la ultima posicion del arreglo
-    $sentencia = $this->db->prepare("INSERT INTO anime(nombre) VALUES(?)");
-    $sentencia->execute(array($anime));
+    $sentencia = $this->db->prepare("INSERT INTO anime(nombre, noticia, año, link) VALUES(?,?,?,?)");
+    $sentencia->execute(array($anime["nombre"], $anime["descripcion"], $anime["anio"], $anime["link"]));
     $id_anime = $this->db->lastInsertId();
 
-    //Copiarla del lugar temporal al definitivo.
+    
     foreach ($imagenes as $key => $imagen) {
       $path="images/".uniqid()."_".$imagen["name"];
       move_uploaded_file($imagen["tmp_name"], $path);
-      $insertImagen = $this->db->prepare("INSERT INTO imagen(path,fk_id_anime VALUES(?,?)");
+      $insertImagen = $this->db->prepare("INSERT INTO imagen_anime(path,fk_id_anime VALUES(?,?)");
       $insertImagen->execute(array($path,$id_anime));
     }
    }

@@ -6,6 +6,7 @@ require('controller/ControllerPagina.php');
 require('controller/ControllerDescarga.php');
 require('controller/ControllerStaff.php');
 $controller = new ControllerPagina();
+$controllerAnime = new ControllerAnime();
 
 if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
   $controller->mostrar();
@@ -14,18 +15,20 @@ if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
 
 switch ($_REQUEST[ConfigApp::$ACTION]) {
   case ConfigApp::$ACTION_LISTAR_ANIMES:
-  	$anime = new ControllerAnime();
-    $anime->listar();
+
+    $controllerAnime->listar();
     break;
     case ConfigApp::$ACTION_MOSTRAR_ANIME:
-    $anime = new ControllerAnime();
-    $anime->mostrarAnime();
+     $controllerAnime->mostrarAnime();
     break;
     case ConfigApp::$ACTION_GUARDAR_ANIMES:
     $controller->guardar();
     break;
     case ConfigApp::$ACTION_MOSTRAR_ADMIN:
     $controller->mostrarAdmin();
+    break;
+    case ConfigApp::$ACTION_AGREGAR_ANIME:
+    $controllerAnime->agregar();
     break;
   case ConfigApp::$ACTION_ELIMINAR_ANIMES:
     $controller->eliminar();

@@ -9,7 +9,7 @@
    {include file='header.tpl'}
   <div class="container">
     <h1>Categoria</h1>
-	<h1>{$anime["nombre"]}</h1>
+	<h1>{$anime["nombre"]} - {$anime["año"]} </h1>
 
 	{foreach from=$anime['imagenes'] key=index item=imagen}
       <img src="{$imagen['path']}" alt="AnimeImagen_{$anime['nombre']}_{$imagen['id_ia']}"  class="img-thumbnail">

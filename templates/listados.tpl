@@ -11,18 +11,13 @@
 <h1>Listado de Animes</h1>
 
 
- 
     <ul>
       {foreach from=$animes item=anime}
         <li>{$anime["nombre"]}
-          <a href="index.php?action=mostrar_anime&id_anime={$anime['fk_id_categoria']}">Ver mas</a></li>
+          <a href="index.php?action=mostrar_anime&id_anime={$anime['id_anime']}">Ver mas</a></li>
       {/foreach}
     </ul>
 
   </div>
   {include file='footer.tpl'}
 
-
-
-
-  <!--hacer boton de ver mas-->

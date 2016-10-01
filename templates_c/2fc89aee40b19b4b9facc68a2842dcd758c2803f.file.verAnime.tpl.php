@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-09-28 21:35:26
+<?php /* Smarty version Smarty-3.1.14, created on 2016-09-30 16:26:07
          compiled from ".\templates\verAnime.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2735257ec1071ab7df4-93965075%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2fc89aee40b19b4b9facc68a2842dcd758c2803f' => 
     array (
       0 => '.\\templates\\verAnime.tpl',
-      1 => 1475091320,
+      1 => 1475245526,
       2 => 'file',
     ),
   ),
@@ -37,7 +37,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <div class="container">
     <h1>Categoria</h1>
 	<h1><?php echo $_smarty_tpl->tpl_vars['anime']->value["nombre"];?>
-</h1>
+ - <?php echo $_smarty_tpl->tpl_vars['anime']->value["año"];?>
+ </h1>
 
 	<?php  $_smarty_tpl->tpl_vars['imagen'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['imagen']->_loop = false;
  $_smarty_tpl->tpl_vars['index'] = new Smarty_Variable;

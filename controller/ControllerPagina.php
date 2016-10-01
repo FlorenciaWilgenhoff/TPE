@@ -24,6 +24,7 @@ class ControllerPagina {
    	$animes = $this->modelAnime->getAnimes();
    	$this->view->mostrar_admin($animes);
    }
+
 }
 
  ?>

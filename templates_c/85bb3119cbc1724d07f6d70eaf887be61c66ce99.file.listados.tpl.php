@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-09-28 20:31:27
+<?php /* Smarty version Smarty-3.1.14, created on 2016-09-30 17:28:39
          compiled from ".\templates\listados.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2176857e85b80d7d9d1-83548528%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '85bb3119cbc1724d07f6d70eaf887be61c66ce99' => 
     array (
       0 => '.\\templates\\listados.tpl',
-      1 => 1475087486,
+      1 => 1475249317,
       2 => 'file',
     ),
   ),
@@ -47,7 +47,7 @@ $_smarty_tpl->tpl_vars['anime']->_loop = true;
 ?>
         <li><?php echo $_smarty_tpl->tpl_vars['anime']->value["nombre"];?>
 
-          <a href="index.php?action=mostrar_anime&id_anime=<?php echo $_smarty_tpl->tpl_vars['anime']->value['fk_id_categoria'];?>
+          <a href="index.php?action=mostrar_anime&id_anime=<?php echo $_smarty_tpl->tpl_vars['anime']->value['id_anime'];?>
 ">Ver mas</a></li>
       <?php } ?>
     </ul>

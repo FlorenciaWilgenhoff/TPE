@@ -16,6 +16,17 @@ class ControllerAnime {
    function listar(){
    	$this->view->listar_animes($this->model->getAnimes());
    }
+      function agregar(){
+     if (isset($_POST["nombre"]) && isset( $_POST["anio"]) && isset( $_POST["descripcion"]) && isset( $_POST["link"]) ){
+     $anime["nombre"] = $_POST["nombre"];
+     $anime["anio"] = $_POST["anio"];
+     $anime["descripcion"] = $_POST["descripcion"];
+     $anime["link"] = $_POST["link"];
+     $this->model->crearAnime($anime, $_FILES['imagenes']);
+
+     }
+  
+   }
 
 
   function mostrarAnime(){
