@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-09-19 22:00:58
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-01 19:12:48
          compiled from ".\templates\staff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:873557e043fa80aed8-01602927%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '70b9404c19f013cc072d54e91820c6ca7ed2db26' => 
     array (
       0 => '.\\templates\\staff.tpl',
-      1 => 1474313549,
+      1 => 1475341960,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_57e043fab9a5a2_18714849',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_57e043fab9a5a2_18714849')) {function content_57e043fab9a5a2_18714849($_smarty_tpl) {?> <?php echo $_smarty_tpl->getSubTemplate ('header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -43,34 +43,34 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <h3 class="panel-title">Llena este formulario para ser parte del Staff:</h3>
     </div>
     <div class="panel-body">
-    	<form method="POST" action="index.php?action=consulta"> 
-   
+    	<form method="POST" action="index.php?action=guardar_staff">
+
         <div class="form-group">
           <label for="name">Nombre</label>
-          <input type="text" class="form-control" id="name" placeholder="Ingrese su Nombre">
+          <input type="text" class="form-control" name="nombre" placeholder="Ingrese su Nombre">
         </div>
         <div class="form-group">
           <label for="username">Apellido</label>
-          <input type="text" class="form-control" id="username" placeholder="Ingrese su Apellido">
+          <input type="text" class="form-control" name="apellido" placeholder="Ingrese su Apellido">
         </div>
         <div class="form-group">
           <label for="number">Edad</label>
-          <input type="number" class="form-control" id="number" placeholder="Ingrese su edad">
+          <input type="number" class="form-control" name="edad" placeholder="Ingrese su edad">
         </div>
         <p>Email</p>
         <div class="input-group">
           <span class="input-group-addon">@</span>
-          <input type="text" class="form-control" placeholder="Ingrese su Email">
+          <input type="text" class="form-control" name="email" placeholder="Ingrese su Email">
         </div>
         <p>¿En que puesto esta interesado/a?</p>
-        <select class="form-control">
-          <option>Editor/a</option>
-          <option>Encargado/a R.S</option>
-          <option>Traductor/a</option>
+        <select class="form-control" name="puesto">
+          <option value="edi">Editor/a</option>
+          <option value="en">Encargado/a R.S</option>
+          <option value="tra">Traductor/a</option>
         </select>
         <p>¿Por que deberiamos elegirte?</p>
-        <textarea class="form-control" rows="8"></textarea>
-        <button type="button" class="btn btn-success">Enviar</button>
+        <textarea class="form-control" name="motivo" rows="8"></textarea>
+        <button type="submit" class="btn btn-success">Enviar</button>
       </form>
     </div>
   </div>
@@ -80,4 +80,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
   <?php echo $_smarty_tpl->getSubTemplate ('footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
- <?php }} ?>
+<?php }} ?>

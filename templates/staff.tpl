@@ -21,7 +21,11 @@
       <h3 class="panel-title">Llena este formulario para ser parte del Staff:</h3>
     </div>
     <div class="panel-body">
+<<<<<<< HEAD
       <form method="POST" action="index.php?action=guardar_staff">
+=======
+    	<form method="POST" action="index.php?action=guardar_staff">
+>>>>>>> dab9b6abd38a647b54754e2c1fc89c85cb7c9c1c
 
         <div class="form-group">
           <label for="name">Nombre</label>
