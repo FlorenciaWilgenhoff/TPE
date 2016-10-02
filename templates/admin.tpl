@@ -81,7 +81,7 @@
 <h1>Eliminar Animes</h1>
  {if isset($animes)}
     <ul>
-      {foreach from=$animes item=anime}
+      {foreach from=$animes  item=anime}
         <li>{$anime["nombre"]}<a class="eliminarAnimes" href="#" data-idtarea="{$anime['id_anime']}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 
           </li>

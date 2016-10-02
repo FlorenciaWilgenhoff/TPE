@@ -46,12 +46,6 @@ class ModelAnime
     $sentencia->execute(array($id_anime));
   }
 
-      //function toogleAnime($id_anime){
-      //$anime = $this->getAnime($id_anime);
-      //$sentencia = $this->db->prepare("update anime set finalizada=? where id_anime=?");
-      //$sentencia->execute(array(!$anime['finalizada'],$id_anime));
-    //}
-
     function getAnime($id_anime){
       $sentencia = $this->db->prepare( "select * from anime where id_anime=?");
       $sentencia->execute(array($id_anime));

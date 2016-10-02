@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-09-30 17:35:47
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-02 19:13:33
          compiled from ".\templates\admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1956557ec20ff6f1f79-72699599%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dde4406728b78ad8acb77d025ffd08e41bf138dd' => 
     array (
       0 => '.\\templates\\admin.tpl',
-      1 => 1475249691,
+      1 => 1475428402,
       2 => 'file',
     ),
   ),
@@ -98,6 +98,7 @@ $_smarty_tpl->tpl_vars['anime']->_loop = true;
 
 
 <h1>Editar Animes</h1>
+
 
 
 

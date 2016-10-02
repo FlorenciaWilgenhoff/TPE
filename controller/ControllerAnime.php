@@ -38,8 +38,8 @@ class ControllerAnime {
 
   }
   function iniciar(){
-    $animes = $this->modelo->getAnimes();
-    $this->vista->mostrar($animes);
+    $animes = $this->model->getAnimes();
+    $this->view->mostrar($animes);
   }
 
   function getImagenesVerificadas($imagenes){
@@ -62,16 +62,16 @@ class ControllerAnime {
       $imagenesVerificadas = $this->getImagenesVerificadas($_FILES['imagenes']);
       if(count($imagenesVerificadas)>0){
         if(!$this->filtro($anime)){
-          $this->modelo->crearAnime($anime,$imagenesVerificadas);
-          $this->vista->mostrarMensaje("Anime creado con imagen", "success");
+          $this->model->crearAnime($anime,$imagenesVerificadas);
+          $this->view->mostrarMensaje("Anime creado con imagen", "success");
         }
       }
       else{
-        $this->vista->mostrarMensaje("Error", "danger");
+        $this->view->mostrarMensaje("Error", "danger");
       }
     }
     else{
-        $this->vista->mostrarMensaje("La imagen es requerida","danger");
+        $this->view->mostrarMensaje("La imagen es requerida","danger");
     }
 
     $this->iniciar();
@@ -79,9 +79,9 @@ class ControllerAnime {
 
   function eliminar(){
     $key = $_GET['id_anime'];
-    $this->modelo->eliminarAnime($key);
-    $animes = $this->modelo->getAnimes();
-    $this->vista->getLista($animes);
+    $this->model->eliminarAnime($key);
+    $anime = $this->modelo->getAnimes();
+    $this->view->listar($anime);
   }
 
 }
