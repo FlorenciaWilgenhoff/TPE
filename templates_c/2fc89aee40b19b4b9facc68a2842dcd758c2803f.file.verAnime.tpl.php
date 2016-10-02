@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-09-30 16:26:07
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-02 19:33:16
          compiled from ".\templates\verAnime.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2735257ec1071ab7df4-93965075%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:876957f144dcc71777-62648304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,20 +11,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2735257ec1071ab7df4-93965075',
+  'nocache_hash' => '876957f144dcc71777-62648304',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_57ec1071b0f6d7_63522355',
   'variables' => 
   array (
     'anime' => 0,
     'imagen' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_57f144dcda7939_08632262',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57ec1071b0f6d7_63522355')) {function content_57ec1071b0f6d7_63522355($_smarty_tpl) {?><!--SEGUNDA PAGINA, 
+<?php if ($_valid && !is_callable('content_57f144dcda7939_08632262')) {function content_57f144dcda7939_08632262($_smarty_tpl) {?><!--SEGUNDA PAGINA, 
  
   VER DONDE PONER EL BOTON QUE MANDE AL ADMINISTRADOR !!!!
 

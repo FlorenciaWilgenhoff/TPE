@@ -18,6 +18,16 @@ function listar_animes($listaAnimes){
     $this->smarty->assign('anime',$anime);
     $this->smarty->display("verAnime.tpl");
   }
+
+  function mostrar_admin($animes){
+    $this->smarty->assign("animes", $animes);
+    $this->smarty->display("admin.tpl");
+   }
+  function formEditar($anime, $imagenes){
+    $this->smarty->assign("imagenes", $imagenes);
+    $this->smarty->assign("anime", $anime);
+    $this->smarty->display("editarAnime.tpl");
+   }
 /*
 function agregarError($error){
     $this->smarty->assign('error',$error);

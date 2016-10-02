@@ -11,7 +11,6 @@ class ControllerPagina {
     private $view;
 
     function __construct(){
-      $this->modelAnime = new ModelAnime();
       $this->model = new ModelPagina();
       $this->view = new ViewPagina();
     }
@@ -20,10 +19,7 @@ class ControllerPagina {
    	$this->view->MostrarPagina();
    }
 
-   function mostrarAdmin(){
-   	$animes = $this->modelAnime->getAnimes();
-   	$this->view->mostrar_admin($animes);
-   }
+
 
 }
 

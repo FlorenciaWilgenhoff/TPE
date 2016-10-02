@@ -19,17 +19,23 @@ class ModelAnime
 
     return $animes;
   }
+  function getAnime($id_anime){
+      $sentencia = $this->db->prepare( "select * from anime where id_anime=?");
+      $sentencia->execute(array($id_anime));
+      return $sentencia->fetch(PDO::FETCH_ASSOC);
+    }
+  
     //creo anime
   	function crearAnime($anime, $imagenes){
     $sentencia = $this->db->prepare("INSERT INTO anime(nombre, noticia, año, link) VALUES(?,?,?,?)");
     $sentencia->execute(array($anime["nombre"], $anime["descripcion"], $anime["anio"], $anime["link"]));
     $id_anime = $this->db->lastInsertId();
 
-    
     foreach ($imagenes as $key => $imagen) {
       $path="images/".uniqid()."_".$imagen["name"];
       move_uploaded_file($imagen["tmp_name"], $path);
-      $insertImagen = $this->db->prepare("INSERT INTO imagen_anime(path,fk_id_anime VALUES(?,?)");
+
+      $insertImagen = $this->db->prepare("INSERT INTO imagen_anime(path,fk_id_anime) VALUES(?,?)");
       $insertImagen->execute(array($path,$id_anime));
     }
    }
@@ -39,6 +45,23 @@ class ModelAnime
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
+      function eliminarImagen($id_imagen){
+    $sentencia = $this->db->prepare( "delete from imagen_anime where id_ia=?");
+    $sentencia->execute(array($id_imagen));
+  }
+    // Arreglar cosas repetidas
+    function editarAnime ($anime, $id_anime, $imagenes){
+     $sentencia = $this->db->prepare(" UPDATE anime SET nombre=?,año=?,link=?,noticia=? WHERE id_anime=?");
+     $sentencia->execute(array($anime["nombre"], $anime["anio"], $anime["link"], $anime["descripcion"], $id_anime ));
+
+      foreach ($imagenes as $key => $imagen) {
+      $path="images/".uniqid()."_".$imagen["name"];
+      move_uploaded_file($imagen["tmp_name"], $path);
+
+      $insertImagen = $this->db->prepare("INSERT INTO imagen_anime(path,fk_id_anime) VALUES(?,?)");
+      $insertImagen->execute(array($path,$id_anime));
+      }
+    }
       //elimino anime
     function eliminarAnime($id_anime){
     
@@ -46,12 +69,7 @@ class ModelAnime
     $sentencia->execute(array($id_anime));
   }
 
-    function getAnime($id_anime){
-      $sentencia = $this->db->prepare( "select * from anime where id_anime=?");
-      $sentencia->execute(array($id_anime));
-      return $sentencia->fetch(PDO::FETCH_ASSOC);
-    }
-  
+    
 
 
 

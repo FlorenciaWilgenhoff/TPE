@@ -66,7 +66,25 @@
 
 
 <h1>Editar Animes</h1>
+ {if isset($animes)}
+    <ul>
+      {foreach from=$animes key=index item=anime}
+        <li>{$anime["nombre"]}<a class="editarAnime" href="index.php?action=editar_anime&id_anime={$anime['id_anime'] }"> Editar</a>
 
+          </li>
+      {/foreach}
+    </ul>
+  {/if}
+<!--
+con un formulario
+nombre
+año
+noticia
+imagen
+link
+categoria
+boton de submit
+-->
 
 
 
@@ -81,17 +99,13 @@
 <h1>Eliminar Animes</h1>
  {if isset($animes)}
     <ul>
-      {foreach from=$animes  item=anime}
-        <li>{$anime["nombre"]}<a class="eliminarAnimes" href="#" data-idtarea="{$anime['id_anime']}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+      {foreach from=$animes key=index item=anime}
+        <li>{$anime["nombre"]}<a class="eliminarAnime" href="index.php?action=eliminar_anime&id_anime={$anime['id_anime'] }"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 
           </li>
       {/foreach}
     </ul>
   {/if}
-  
-  
-
-
 
  {include file='footer.tpl'}
 

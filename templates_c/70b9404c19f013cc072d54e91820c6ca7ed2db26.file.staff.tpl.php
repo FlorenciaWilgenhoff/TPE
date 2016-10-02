@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-01 23:03:01
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-02 22:21:20
          compiled from ".\templates\staff.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:873557e043fa80aed8-01602927%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1305857f16c4096ed04-52297892%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '873557e043fa80aed8-01602927',
+  'nocache_hash' => '1305857f16c4096ed04-52297892',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_57e043fab9a5a2_18714849',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_57f16c409dc490_28264401',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57e043fab9a5a2_18714849')) {function content_57e043fab9a5a2_18714849($_smarty_tpl) {?> <?php echo $_smarty_tpl->getSubTemplate ('header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_57f16c409dc490_28264401')) {function content_57f16c409dc490_28264401($_smarty_tpl) {?> <?php echo $_smarty_tpl->getSubTemplate ('header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <section>
 <div class="cuerpotexto">

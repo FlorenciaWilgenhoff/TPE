@@ -13,10 +13,7 @@ class ViewPagina{
 		$this->smarty->display("index.tpl");
 	}
 
-	function mostrar_admin($animes){
-		$this->smarty->assign("animes", $animes);
-	   	$this->smarty->display("admin.tpl");
-	   }
+
 }
 
 
