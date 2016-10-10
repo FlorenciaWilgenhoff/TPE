@@ -16,10 +16,16 @@ class ControllerStaff {
    function mostrar(){
    	$this->view->MostrarStaff();
    }
-function nuevoStaff(){
+   
+   function nuevoStaff(){
+  
+   
+     if (isset($_POST["nombre"]) && isset( $_POST["apellido"]) && isset( $_POST["edad"]) && isset( $_POST["email"]) && isset( $_POST["puesto"]) && isset( $_POST["motivo"]) ){
+
      $staff = array($_POST['nombre'],$_POST['apellido'],$_POST['edad'],$_POST['email'],$_POST['puesto'],$_POST['motivo']);
      $this->model->nuevoStaff($staff);
-   }
- }
+}}}
+
+
 
  ?>
