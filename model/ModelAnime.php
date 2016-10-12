@@ -19,6 +19,8 @@ class ModelAnime
 
     return $animes;
   }
+
+  //obtengo un anime
   function getAnime($id_anime){
       $sentencia = $this->db->prepare( "select * from anime where id_anime=?");
       $sentencia->execute(array($id_anime));

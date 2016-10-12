@@ -1,20 +1,5 @@
  <!--TERCER PAGINA (ADMINISTRADOR)
-  LISTADO DE ANIMES
-  -nombre
-  -nombre
-  AGREGAR ANIME
-  -nombre
-  -categoria a elegir
-  -subir imagen
-  -descripcion
-  -link
-  EDITAR ANIME (VER)
-  -nombre (del anime que quiere editar)
-  -nombre
-  ELIMINAR ANIME
-  -nombre
-  -nombre 
-  con un boton al lado de X
+  hacer boton para que llegue aca desde animes
 -->
 
 {include file='header.tpl'}
@@ -65,6 +50,7 @@
 
 
 
+
 <h1>Editar Animes</h1>
  {if isset($animes)}
     <ul>
@@ -75,23 +61,6 @@
       {/foreach}
     </ul>
   {/if}
-<!--
-con un formulario
-nombre
-año
-noticia
-imagen
-link
-categoria
-boton de submit
--->
-
-
-
-
-
-
-
 
 
 

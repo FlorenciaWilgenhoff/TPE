@@ -1,21 +1,27 @@
 <?php
 
 require_once("model/ModelAnime.php");
+require_once("model/ModelCategoria.php");
 require_once("view/ViewAnime.php");
 
 class ControllerAnime {
 
     private $model;
     private $view;
+    private $modelCategoria;
 
     function __construct(){
       $this->model = new ModelAnime();
+      $this->modelCategoria = new ModelCategoria();
       $this->view = new ViewAnime();
     }
 
    function listar(){
-   	$this->view->listar_animes($this->model->getAnimes());
+    $categorias = $this->modelCategoria->getCategorias();
+   	$this->view->listar_animes($this->model->getAnimes(), $categorias);
    }
+
+
 
    function mostrarAdmin(){
     $animes = $this->model->getAnimes();
@@ -25,14 +31,16 @@ class ControllerAnime {
    function mostrarAnime(){
     $idAnime = $_GET["id_anime"];
     $anime = $this->model->getAnime($idAnime);
+    $idCategoria = $anime["fk_id_categoria"];
+    $categoria = $this->modelCategoria->getCategoria($idCategoria);
     $anime["imagenes"] = $this->model->getImagenes($idAnime);
-    
-    $this->view->mostrarAnime($anime);
+    $this->view->mostrarAnime($anime, $categoria);
 
   }
   function iniciar(){
     $animes = $this->model->getAnimes();
-    $this->view->mostrar($animes);
+     
+    $this->view->mostrar($animes, $categorias);
   }
 
       function agregar(){
@@ -116,6 +124,7 @@ class ControllerAnime {
     $this->view->mostrar_admin($animes);
   }
 
+ 
 }
 
  ?>
