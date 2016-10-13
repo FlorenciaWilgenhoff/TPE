@@ -29,8 +29,8 @@ class ModelAnime
   
     //creo anime
   	function crearAnime($anime, $imagenes){
-    $sentencia = $this->db->prepare("INSERT INTO anime(nombre, noticia, año, link) VALUES(?,?,?,?)");
-    $sentencia->execute(array($anime["nombre"], $anime["descripcion"], $anime["anio"], $anime["link"]));
+    $sentencia = $this->db->prepare("INSERT INTO anime(nombre, noticia, año, link, fk_id_categoria) VALUES(?,?,?,?,?)");
+    $sentencia->execute(array($anime["nombre"], $anime["descripcion"], $anime["anio"], $anime["link"], $anime["categoria"]));
     $id_anime = $this->db->lastInsertId();
 
     foreach ($imagenes as $key => $imagen) {

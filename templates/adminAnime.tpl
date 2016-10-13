@@ -1,5 +1,5 @@
  <!--TERCER PAGINA (ADMINISTRADOR)
-  hacer boton para que llegue aca desde animes
+  
 -->
 
 {include file='header.tpl'}
@@ -19,21 +19,30 @@
  
 
 <h1>Agregar Animes</h1>
-<!--hacer dropdown para elegir categoria -->
+
   <form method="POST" action="index.php?action=agregar_anime" enctype="multipart/form-data"> 
     <div class="form-group">
       <label for="grupo">Año</label>
-      <input type="text" class="imputform" name="anio" placeholder="1986" required />
+      <input type="text" class="form-control" name="anio" placeholder="1986" required />
     </div>
 
     <div class="form-group">
       <label for="grupo">Nombre del Anime</label>
-      <input type="text" class="imputform" name="nombre" placeholder="dragonballz" required />
+      <input type="text" class="form-control" name="nombre" placeholder="dragonballz" required />
     </div>
 
       <div class="form-group">
       <label for="grupo">Link</label>
-      <input type="text" class="imputform" name="link" placeholder="link" required />
+      <input type="text" class="form-control" name="link" placeholder="link" required />
+    </div>
+
+    <div class="form-group">
+        <label for="sel1">Categoria</label>
+        <select class="form-control" name="categoria">
+          {foreach from=$categorias key=index item=categoria}
+          <option value="{$categoria["id_categoria"]}">{$categoria["nombre"]}</option>  
+          {/foreach}
+        </select>
     </div>
 
    <div class="form-group">
@@ -42,7 +51,7 @@
       
     </div>
 
-    <input type="file" name="imagenes[]" required value="" multiple>
+    <input type="file" name="imagenes[]" value="" multiple>
 
     <input type="submit" name="Agregar" id="agregarAnimeBtn">
  

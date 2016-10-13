@@ -24,8 +24,9 @@ class ControllerAnime {
 
 
    function mostrarAdmin(){
+    $categorias = $this->modelCategoria->getCategorias();
     $animes = $this->model->getAnimes();
-    $this->view->mostrar_admin($animes);
+    $this->view->mostrar_admin($animes, $categorias);
    }
 
    function mostrarAnime(){
@@ -43,18 +44,19 @@ class ControllerAnime {
     $this->view->mostrar($animes, $categorias);
   }
 
-      function agregar(){
+  function agregar(){
      if (isset($_POST["nombre"]) && isset( $_POST["anio"]) && isset( $_POST["descripcion"]) && isset( $_POST["link"]) ){
-     $anime["nombre"] = $_POST["nombre"];
-     $anime["anio"] = $_POST["anio"];
-     $anime["descripcion"] = $_POST["descripcion"];
-     $anime["link"] = $_POST["link"];
+       $anime["nombre"] = $_POST["nombre"];
+       $anime["anio"] = $_POST["anio"];
+       $anime["descripcion"] = $_POST["descripcion"];
+       $anime["link"] = $_POST["link"];
+       $anime["categoria"] = $_POST["categoria"];
+       $this->model->crearAnime($anime,$this->getImagenesVerificadas($_FILES['imagenes']) );
 
-     $this->model->crearAnime($anime,$this->getImagenesVerificadas($_FILES['imagenes']) );
-
-     }
+    }
+    $this->mostrarAdmin();
   
-   }
+  }
    function editar(){ 
     $id_anime = $_GET["id_anime"];
     $imagenes = $this->model->getImagenes($id_anime);
@@ -96,32 +98,12 @@ class ControllerAnime {
     return $imagenesVerificadas;
   }
 
-  function guardar(){
-    $anime = $_POST['anime'];
-    if(isset($_FILES['imagenes'])){
-      $imagenesVerificadas = $this->getImagenesVerificadas($_FILES['imagenes']);
-      if(count($imagenesVerificadas)>0){
-        if(!$this->filtro($anime)){
-          $this->model->crearAnime($anime,$imagenesVerificadas);
-          $this->view->mostrarMensaje("Anime creado con imagen", "success");
-        }
-      }
-      else{
-        $this->view->mostrarMensaje("Error", "danger");
-      }
-    }
-    else{
-        $this->view->mostrarMensaje("La imagen es requerida","danger");
-    }
 
-    $this->iniciar();
-  }
 
   function eliminar(){
     $key = $_GET['id_anime'];
     $this->model->eliminarAnime($key);
-    $animes = $this->model->getAnimes();
-    $this->view->mostrar_admin($animes);
+    $this->mostrarAdmin();
   }
 
  

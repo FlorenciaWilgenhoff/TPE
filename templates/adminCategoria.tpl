@@ -15,10 +15,10 @@
  
 
 <h1>Agregar Categoria</h1>
-  <form method="POST" action="index.php?action=agregar_categoria" enctype="multipart/form-data"> 
+  <form method="POST" action="index.php?action=agregar_categoria"> 
     <div class="form-group">
       <label for="grupo">Nombre</label>
-      <input type="text" class="imputform" name="categoria" placeholder="Accion" required />
+      <input type="text" class="imputform" name="nombre" placeholder="Accion" required />
     </div>
 
     <input type="submit" name="Agregar" id="agregarAnimeBtn">
@@ -32,9 +32,11 @@
  {if isset($categoria)}
     <ul>
       {foreach from=$categorias key=index item=categoria}
-        <li>{$categoria["nombre"]}<a class="editarCat" href="index.php?action=editar_categoria&id_categoria={$categoria['id_categoria'] }"> Editar</a>
-
-          </li>
+      <form method="POST" action="index.php?action=editar_categoria&id_categoria={$categoria['id_categoria'] }"> 
+        <li data-name="{$categoria['nombre']}">{$categoria["nombre"]} <a class="editarCat">Editar</a> </li>
+        <input type="submit" name="Agregar" value="Guardar" class="hidden">
+      </form>   
+          
       {/foreach}
     </ul>
   {/if}

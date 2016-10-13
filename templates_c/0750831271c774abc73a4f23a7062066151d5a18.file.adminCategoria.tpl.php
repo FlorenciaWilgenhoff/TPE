@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-13 01:24:47
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-13 22:39:41
          compiled from ".\templates\adminCategoria.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2314457fe83f2b064a3-20176220%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0750831271c774abc73a4f23a7062066151d5a18' => 
     array (
       0 => '.\\templates\\adminCategoria.tpl',
-      1 => 1476314451,
+      1 => 1476391175,
       2 => 'file',
     ),
   ),
@@ -47,10 +47,10 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
  
 
 <h1>Agregar Categoria</h1>
-  <form method="POST" action="index.php?action=agregar_categoria" enctype="multipart/form-data"> 
+  <form method="POST" action="index.php?action=agregar_categoria"> 
     <div class="form-group">
       <label for="grupo">Nombre</label>
-      <input type="text" class="imputform" name="categoria" placeholder="Accion" required />
+      <input type="text" class="imputform" name="nombre" placeholder="Accion" required />
     </div>
 
     <input type="submit" name="Agregar" id="agregarAnimeBtn">
@@ -70,11 +70,14 @@ foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->key => $_smarty_tpl->tpl
 $_smarty_tpl->tpl_vars['categoria']->_loop = true;
  $_smarty_tpl->tpl_vars['index']->value = $_smarty_tpl->tpl_vars['categoria']->key;
 ?>
-        <li><?php echo $_smarty_tpl->tpl_vars['categoria']->value["nombre"];?>
-<a class="editarCat" href="index.php?action=editar_categoria&id_categoria=<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
-"> Editar</a>
-
-          </li>
+      <form method="POST" action="index.php?action=editar_categoria&id_categoria=<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+"> 
+        <li data-name="<?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
+"><?php echo $_smarty_tpl->tpl_vars['categoria']->value["nombre"];?>
+ <a class="editarCat">Editar</a> </li>
+        <input type="submit" name="Agregar" value="Guardar" class="hidden">
+      </form>   
+          
       <?php } ?>
     </ul>
   <?php }?>

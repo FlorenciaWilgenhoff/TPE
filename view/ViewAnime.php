@@ -21,9 +21,11 @@ function listar_animes($listaAnimes, $categorias){
     $this->smarty->display("verAnime.tpl");
   }
 
-  function mostrar_admin($animes){
+  function mostrar_admin($animes, $categorias){
     $this->smarty->assign("animes", $animes);
+    $this->smarty->assign("categorias", $categorias);
     $this->smarty->display("adminAnime.tpl");
+
    }
   function formEditar($anime, $imagenes){
     $this->smarty->assign("imagenes", $imagenes);

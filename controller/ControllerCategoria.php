@@ -44,7 +44,7 @@ class ControllerCategoria {
      $categoria["nombre"] = $_POST["nombre"];
 
      $this->model->crearCategoria($categoria);
-
+     $this->mostrarAdmin();
      }
   
    }
