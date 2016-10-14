@@ -1,6 +1,7 @@
 <?php
 class ConfigApp{
   public static $ACTION = "action";
+  public static $ACTION_HOME = "go_home";
   public static $ACTION_MOSTRAR_DESCARGAS = "mostrar_descargas";
   public static $ACTION_LISTAR_ANIMES = "listar_animes";
   public static $ACTION_MOSTRAR_ANIME = 'mostrar_anime';

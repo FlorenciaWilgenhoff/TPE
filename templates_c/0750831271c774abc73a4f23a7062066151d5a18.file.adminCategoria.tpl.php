@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-13 22:39:41
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-14 18:08:37
          compiled from ".\templates\adminCategoria.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2314457fe83f2b064a3-20176220%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0750831271c774abc73a4f23a7062066151d5a18' => 
     array (
       0 => '.\\templates\\adminCategoria.tpl',
-      1 => 1476391175,
+      1 => 1476461310,
       2 => 'file',
     ),
   ),
@@ -24,9 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57fe83f2be9542_03392019')) {function content_57fe83f2be9542_03392019($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
-
+<?php if ($_valid && !is_callable('content_57fe83f2be9542_03392019')) {function content_57fe83f2be9542_03392019($_smarty_tpl) {?>
 
  <h1>Listado de categorias</h1>
 
@@ -47,7 +45,7 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
  
 
 <h1>Agregar Categoria</h1>
-  <form method="POST" action="index.php?action=agregar_categoria"> 
+  <form id="agregarCat" method="POST" > 
     <div class="form-group">
       <label for="grupo">Nombre</label>
       <input type="text" class="imputform" name="nombre" placeholder="Accion" required />
@@ -70,7 +68,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->key => $_smarty_tpl->tpl
 $_smarty_tpl->tpl_vars['categoria']->_loop = true;
  $_smarty_tpl->tpl_vars['index']->value = $_smarty_tpl->tpl_vars['categoria']->key;
 ?>
-      <form method="POST" action="index.php?action=editar_categoria&id_categoria=<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+      <form data-id="<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+" class="formEditar" method="POST" action="index.php?action=editar_categoria&id_categoria=<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
 "> 
         <li data-name="<?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
 "><?php echo $_smarty_tpl->tpl_vars['categoria']->value["nombre"];?>
@@ -96,7 +95,8 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
  $_smarty_tpl->tpl_vars['index']->value = $_smarty_tpl->tpl_vars['categoria']->key;
 ?>
         <li><?php echo $_smarty_tpl->tpl_vars['categoria']->value["nombre"];?>
-<a class="eliminarCat" href="index.php?action=eliminar_categoria&id_categoria=<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+<a data-id="<?php echo $_smarty_tpl->tpl_vars['categoria']->value["id_categoria"];?>
+" class="eliminarCat" href="index.php?action=eliminar_categoria&id_categoria=<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
 "><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 
           </li>
@@ -105,5 +105,4 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
   <?php }?>
 
 
- <?php echo $_smarty_tpl->getSubTemplate ('footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

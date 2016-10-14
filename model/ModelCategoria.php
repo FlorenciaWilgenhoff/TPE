@@ -38,7 +38,7 @@ class ModelCategoria
     //edito categoria
    function editarCat ($categoria, $id_categoria){
      $sentencia = $this->db->prepare(" UPDATE categoria SET nombre=? WHERE id_categoria=?");
-     $sentencia->execute(array($categoria["nombre"], $id_categoria ));
+     $sentencia->execute(array($categoria, $id_categoria ));
 
 
       }

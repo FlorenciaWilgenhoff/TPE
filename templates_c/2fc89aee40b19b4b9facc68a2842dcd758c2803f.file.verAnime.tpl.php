@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-13 22:06:02
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-14 17:24:07
          compiled from ".\templates\verAnime.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:876957f144dcc71777-62648304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2fc89aee40b19b4b9facc68a2842dcd758c2803f' => 
     array (
       0 => '.\\templates\\verAnime.tpl',
-      1 => 1476388947,
+      1 => 1476458403,
       2 => 'file',
     ),
   ),
@@ -28,8 +28,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_57f144dcda7939_08632262')) {function content_57f144dcda7939_08632262($_smarty_tpl) {?><!--SEGUNDA PAGINA, 
   
   !-->
-   <?php echo $_smarty_tpl->getSubTemplate ('header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
+   
   <div class="container">
     <h1><?php echo $_smarty_tpl->tpl_vars['anime']->value["nombre"];?>
  <small> - <?php echo $_smarty_tpl->tpl_vars['anime']->value["año"];?>
@@ -66,6 +65,5 @@ _<?php echo $_smarty_tpl->tpl_vars['imagen']->value['id_ia'];?>
 	
 
   </div>
-  <?php echo $_smarty_tpl->getSubTemplate ('footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <?php }} ?>

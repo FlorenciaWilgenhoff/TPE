@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-02 22:21:20
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-14 17:14:48
          compiled from ".\templates\staff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1305857f16c4096ed04-52297892%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '70b9404c19f013cc072d54e91820c6ca7ed2db26' => 
     array (
       0 => '.\\templates\\staff.tpl',
-      1 => 1475355778,
+      1 => 1476458043,
       2 => 'file',
     ),
   ),
@@ -15,12 +15,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_57f16c409dc490_28264401',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57f16c409dc490_28264401')) {function content_57f16c409dc490_28264401($_smarty_tpl) {?> <?php echo $_smarty_tpl->getSubTemplate ('header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
+<?php if ($_valid && !is_callable('content_57f16c409dc490_28264401')) {function content_57f16c409dc490_28264401($_smarty_tpl) {?>
 <section>
 <div class="cuerpotexto">
   <h1>¿Te gustaria formar parte de nuestro staff?</h1>
@@ -43,7 +42,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <h3 class="panel-title">Llena este formulario para ser parte del Staff:</h3>
     </div>
     <div class="panel-body">
-      <form method="POST" action="index.php?action=guardar_staff">
+      <form  class="formularios" method="POST" >
 
         <div class="form-group">
           <label for="name">Nombre</label>
@@ -76,8 +75,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   </div>
 </div>
 </section>
-
-
-  <?php echo $_smarty_tpl->getSubTemplate ('footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <?php }} ?>

@@ -68,6 +68,9 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
     $staff->nuevoStaff();
     $staff->mostrar();
     break;
+ case ConfigApp::$ACTION_HOME:
+    $controller->mostrarHome();
+    break;
   default:
     $controller->mostrar();
     break;

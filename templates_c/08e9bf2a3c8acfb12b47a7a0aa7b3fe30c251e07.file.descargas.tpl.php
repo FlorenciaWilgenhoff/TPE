@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-10 21:42:59
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-14 16:45:23
          compiled from ".\templates\descargas.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2807157fbef4399a6c2-08081678%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '08e9bf2a3c8acfb12b47a7a0aa7b3fe30c251e07' => 
     array (
       0 => '.\\templates\\descargas.tpl',
-      1 => 1474064791,
+      1 => 1476456321,
       2 => 'file',
     ),
   ),
@@ -15,12 +15,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_57fbef44691337_75256103',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57fbef44691337_75256103')) {function content_57fbef44691337_75256103($_smarty_tpl) {?> <?php echo $_smarty_tpl->getSubTemplate ('header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
+<?php if ($_valid && !is_callable('content_57fbef44691337_75256103')) {function content_57fbef44691337_75256103($_smarty_tpl) {?>
 <section>
   <h1>Descargas</h1>
   <h2>Desde aca podras descargar muchisimos animes completamente gratis!!!</h2>
@@ -182,7 +181,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </article>
   </section>
 
-
-  <?php echo $_smarty_tpl->getSubTemplate ('footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
- <?php }} ?>
+<?php }} ?>

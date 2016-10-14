@@ -2,8 +2,6 @@
   
 -->
 
-{include file='header.tpl'}
-
 
  <h1>Listado de Animes</h1>
 
@@ -64,14 +62,20 @@
  {if isset($animes)}
     <ul>
       {foreach from=$animes key=index item=anime}
-        <li>{$anime["nombre"]}<a class="editarAnime" href="index.php?action=editar_anime&id_anime={$anime['id_anime'] }"> Editar</a>
+        <form method="POST" action="index.php?action=editar_anime&id_anime={$anime['id_anime'] }">
+        <li data-name="{$anime['nombre']}">{$anime["nombre"]} <a class="editarAnime">Editar</a> </li>
+        <input type="submit" name="Agregar" value="Guardar" class="hidden">
+      </form>  
+<!--VER SI ESTA BIEN Y QUE HAY QUE CAMBIAR -->
+        <!--<li>{$anime["nombre"]}<a class="editarAnime" href="index.php?action=editar_anime&id_anime={$anime['id_anime'] }"> Editar</a>
 
-          </li>
+          </li>-->
+
       {/foreach}
     </ul>
   {/if}
 
-
+ 
 
 
 <h1>Eliminar Animes</h1>
@@ -84,10 +88,3 @@
       {/foreach}
     </ul>
   {/if}
-
- {include file='footer.tpl'}
-
-
-      
-     
-     

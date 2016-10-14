@@ -12,7 +12,9 @@ class ViewPagina{
 	function MostrarPagina(){
 		$this->smarty->display("index.tpl");
 	}
-
+	function MostrarHome(){
+		$this->smarty->display("home.tpl");
+	}
 
 }
 

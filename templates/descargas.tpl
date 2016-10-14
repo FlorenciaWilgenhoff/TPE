@@ -1,4 +1,4 @@
- {include file='header.tpl'}
+
 <section>
   <h1>Descargas</h1>
   <h2>Desde aca podras descargar muchisimos animes completamente gratis!!!</h2>
@@ -160,6 +160,3 @@
     </article>
   </section>
 
-
-  {include file='footer.tpl'}
- 

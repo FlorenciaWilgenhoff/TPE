@@ -1,7 +1,7 @@
 <!--SEGUNDA PAGINA, 
   
   !-->
-   {include file='header.tpl'}
+   
   <div class="container">
     <h1>{$anime["nombre"]} <small> - {$anime["año"]} - {$categoria["nombre"]}</small></h1>
 
@@ -24,4 +24,4 @@
 	
 
   </div>
-  {include file='footer.tpl'}
+

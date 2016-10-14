@@ -5,8 +5,6 @@ require_once("view/ViewPagina.php");
 
 class ControllerPagina {
 
-
-	private $modelAnime;
     private $model;
     private $view;
 
@@ -17,6 +15,9 @@ class ControllerPagina {
 
    function mostrar(){
    	$this->view->MostrarPagina();
+   }
+   function mostrarHome(){
+    $this->view->MostrarHome();
    }
 
 

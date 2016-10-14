@@ -52,14 +52,13 @@ class ControllerCategoria {
 //editar categoria
    function editarCat(){ 
     $id_categoria = $_GET["id_categoria"];
-  
      if (isset($_POST["nombre"])){
-     $categoriaEditada["nombre"] = $_POST["nombre"];
+     $categoriaEditada = $_POST["nombre"];
+     $this->model->editarCat($categoriaEditada, $id_categoria);
      }
-     $this->model->editarCategoria($categoriaEditada, $id_categoria);
      
-     $categoria = $this->model->getCategoria($id_categoria);
-     $this->view->formEditar($categoria);
+
+     $this->mostrarAdmin();
     
    }
 

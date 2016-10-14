@@ -24,12 +24,12 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="index.php" id="inicio">Inicio <span class="sr-only">(actual)</span></a></li>
-          <li><a href="index.php?action=listar_animes" id="animes">Anime mas vistos <span class="sr-only">(actual)</span></a></li>
-          <li><a href="index.php?action=mostrar_descargas" id="descargas">Descargas <span class="sr-only">(actual)</span></a></li>
-          <li><a href="index.php?action=mostrar_staff" id="staff">Unete a nuestro staff <span class="sr-only">(actual)</span></a></li>
-          <li><a href="index.php?action=admin_anime">A-Anime<span class="sr-only">(actual)</span></a></li>
-          <li><a href="index.php?action=admin_categoria">A-Categorias<span class="sr-only">(actual)</span></a></li>
+          <li><a id="inicio">Inicio <span class="sr-only">(actual)</span></a></li>
+          <li><a id="animes">Anime mas vistos <span class="sr-only">(actual)</span></a></li>
+          <li><a id="descargas">Descargas <span class="sr-only">(actual)</span></a></li>
+          <li><a id="staff">Unete a nuestro staff <span class="sr-only">(actual)</span></a></li>
+          <li><a id="aAnime">A-Anime<span class="sr-only">(actual)</span></a></li>
+          <li><a id="aCategoria">A-Categorias<span class="sr-only">(actual)</span></a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right iconos">

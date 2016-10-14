@@ -1,4 +1,4 @@
- {include file='header.tpl'}
+
 <section>
 <div class="cuerpotexto">
   <h1>¿Te gustaria formar parte de nuestro staff?</h1>
@@ -21,7 +21,7 @@
       <h3 class="panel-title">Llena este formulario para ser parte del Staff:</h3>
     </div>
     <div class="panel-body">
-      <form method="POST" action="index.php?action=guardar_staff">
+      <form  class="formularios" method="POST" >
 
         <div class="form-group">
           <label for="name">Nombre</label>
@@ -55,5 +55,3 @@
 </div>
 </section>
 
-
-  {include file='footer.tpl'}

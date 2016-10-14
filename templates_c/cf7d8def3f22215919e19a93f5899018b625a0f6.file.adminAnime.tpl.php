@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-13 22:13:27
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-14 17:00:43
          compiled from ".\templates\adminAnime.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1882757fe8276d86b77-23777802%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cf7d8def3f22215919e19a93f5899018b625a0f6' => 
     array (
       0 => '.\\templates\\adminAnime.tpl',
-      1 => 1476389442,
+      1 => 1476457228,
       2 => 'file',
     ),
   ),
@@ -29,9 +29,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_57fe8276e71d71_69251725')) {function content_57fe8276e71d71_69251725($_smarty_tpl) {?> <!--TERCER PAGINA (ADMINISTRADOR)
   
 -->
-
-<?php echo $_smarty_tpl->getSubTemplate ('header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
 
 
  <h1>Listado de Animes</h1>
@@ -112,16 +109,25 @@ foreach ($_from as $_smarty_tpl->tpl_vars['anime']->key => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['anime']->_loop = true;
  $_smarty_tpl->tpl_vars['index']->value = $_smarty_tpl->tpl_vars['anime']->key;
 ?>
-        <li><?php echo $_smarty_tpl->tpl_vars['anime']->value["nombre"];?>
+        <form method="POST" action="index.php?action=editar_anime&id_anime=<?php echo $_smarty_tpl->tpl_vars['anime']->value['id_anime'];?>
+">
+        <li data-name="<?php echo $_smarty_tpl->tpl_vars['anime']->value['nombre'];?>
+"><?php echo $_smarty_tpl->tpl_vars['anime']->value["nombre"];?>
+ <a class="editarAnime">Editar</a> </li>
+        <input type="submit" name="Agregar" value="Guardar" class="hidden">
+      </form>  
+<!--VER SI ESTA BIEN Y QUE HAY QUE CAMBIAR -->
+        <!--<li><?php echo $_smarty_tpl->tpl_vars['anime']->value["nombre"];?>
 <a class="editarAnime" href="index.php?action=editar_anime&id_anime=<?php echo $_smarty_tpl->tpl_vars['anime']->value['id_anime'];?>
 "> Editar</a>
 
-          </li>
+          </li>-->
+
       <?php } ?>
     </ul>
   <?php }?>
 
-
+ 
 
 
 <h1>Eliminar Animes</h1>
@@ -142,11 +148,4 @@ $_smarty_tpl->tpl_vars['anime']->_loop = true;
       <?php } ?>
     </ul>
   <?php }?>
-
- <?php echo $_smarty_tpl->getSubTemplate ('footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
-
-
-      
-     
-     <?php }} ?>
+<?php }} ?>
