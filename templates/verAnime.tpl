@@ -1,27 +1,15 @@
-<!--SEGUNDA PAGINA, 
-  
-  !-->
-   
-  <div class="container">
-    <h1>{$anime["nombre"]} <small> - {$anime["año"]} - {$categoria["nombre"]}</small></h1>
+<div class="container">
+  <h1>{$anime["nombre"]} <small> - {$anime["año"]} - {$categoria["nombre"]}</small></h1>
 
-    <ul>
+  <ul>
+    <li>
+      {foreach from=$anime['imagenes'] key=index item=imagen}
+      <img src="{$imagen['path']}" alt="Anime_{$anime['nombre']}"  class="img-thumbnail">
+      {/foreach}
 
-        <li>
-          {foreach from=$anime['imagenes'] key=index item=imagen}
-      <img src="{$imagen['path']}" alt="AnimeImagen_{$anime['nombre']}_{$imagen['id_ia']}"  class="img-thumbnail">
-          {/foreach}
-  
-  <p>{$anime["noticia"]}</p>
-  <a href="{$anime['link']}">Link de descarga</a>
-  
-        </li>
-        
+      <p>{$anime["noticia"]}</p>
+      <a href="{$anime['link']}">Link de descarga</a>
 
-    </ul>
-
-
-	
-
-  </div>
-
+    </li>
+  </ul>
+</div>

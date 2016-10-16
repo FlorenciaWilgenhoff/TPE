@@ -1,15 +1,11 @@
 <?php
-
-require_once("model/ModelPagina.php");
 require_once("view/ViewPagina.php");
 
 class ControllerPagina {
 
-    private $model;
     private $view;
 
     function __construct(){
-      $this->model = new ModelPagina();
       $this->view = new ViewPagina();
     }
 
@@ -19,8 +15,9 @@ class ControllerPagina {
    function mostrarHome(){
     $this->view->MostrarHome();
    }
-
-
+   function mostrarDescargas(){
+    $this->view->MostrarDescargas();
+   }
 
 }
 

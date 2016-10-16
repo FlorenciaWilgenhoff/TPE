@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-14 17:24:07
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-16 20:15:29
          compiled from ".\templates\verAnime.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:876957f144dcc71777-62648304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2fc89aee40b19b4b9facc68a2842dcd758c2803f' => 
     array (
       0 => '.\\templates\\verAnime.tpl',
-      1 => 1476458403,
+      1 => 1476474676,
       2 => 'file',
     ),
   ),
@@ -25,20 +25,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57f144dcda7939_08632262')) {function content_57f144dcda7939_08632262($_smarty_tpl) {?><!--SEGUNDA PAGINA, 
-  
-  !-->
-   
-  <div class="container">
-    <h1><?php echo $_smarty_tpl->tpl_vars['anime']->value["nombre"];?>
+<?php if ($_valid && !is_callable('content_57f144dcda7939_08632262')) {function content_57f144dcda7939_08632262($_smarty_tpl) {?><div class="container">
+  <h1><?php echo $_smarty_tpl->tpl_vars['anime']->value["nombre"];?>
  <small> - <?php echo $_smarty_tpl->tpl_vars['anime']->value["año"];?>
  - <?php echo $_smarty_tpl->tpl_vars['categoria']->value["nombre"];?>
 </small></h1>
 
-    <ul>
-
-        <li>
-          <?php  $_smarty_tpl->tpl_vars['imagen'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['imagen']->_loop = false;
+  <ul>
+    <li>
+      <?php  $_smarty_tpl->tpl_vars['imagen'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['imagen']->_loop = false;
  $_smarty_tpl->tpl_vars['index'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['anime']->value['imagenes']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['imagen']->key => $_smarty_tpl->tpl_vars['imagen']->value){
@@ -46,24 +41,16 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
  $_smarty_tpl->tpl_vars['index']->value = $_smarty_tpl->tpl_vars['imagen']->key;
 ?>
       <img src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['path'];?>
-" alt="AnimeImagen_<?php echo $_smarty_tpl->tpl_vars['anime']->value['nombre'];?>
-_<?php echo $_smarty_tpl->tpl_vars['imagen']->value['id_ia'];?>
+" alt="Anime_<?php echo $_smarty_tpl->tpl_vars['anime']->value['nombre'];?>
 "  class="img-thumbnail">
-          <?php } ?>
-  
-  <p><?php echo $_smarty_tpl->tpl_vars['anime']->value["noticia"];?>
+      <?php } ?>
+
+      <p><?php echo $_smarty_tpl->tpl_vars['anime']->value["noticia"];?>
 </p>
-  <a href="<?php echo $_smarty_tpl->tpl_vars['anime']->value['link'];?>
+      <a href="<?php echo $_smarty_tpl->tpl_vars['anime']->value['link'];?>
 ">Link de descarga</a>
-  
-        </li>
-        
 
-    </ul>
-
-
-	
-
-  </div>
-
+    </li>
+  </ul>
+</div>
 <?php }} ?>

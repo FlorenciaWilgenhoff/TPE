@@ -1,95 +1,70 @@
 <?php
+include_once 'model/ModelDB.php';
+class ModelAnime{
 
-
-class ModelAnime
-{
-  private $animes;
   private $db;
-	function __construct()
-	{
-	 $this->db = new PDO('mysql:host=localhost;dbname=tpe;charset=utf8', 'root', '');
 
-	}
-   
-   //obtengo los animes
-	function getAnimes(){
+  function __construct() {
+    $this->db = new DB();
+    $this->db = $this->db->getDB();
+  }
+
+  //obtengo los animes
+  function getAnimes(){
     $sentencia = $this->db->prepare( "select * from anime");
     $sentencia->execute();
     $animes = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-
     return $animes;
   }
-
-  //obtengo un anime
+  //obtengo los datos un anime
   function getAnime($id_anime){
-      $sentencia = $this->db->prepare( "select * from anime where id_anime=?");
-      $sentencia->execute(array($id_anime));
-      return $sentencia->fetch(PDO::FETCH_ASSOC);
-    }
-  
-    //creo anime
-  	function crearAnime($anime, $imagenes){
-    $sentencia = $this->db->prepare("INSERT INTO anime(nombre, noticia, año, link, fk_id_categoria) VALUES(?,?,?,?,?)");
-    $sentencia->execute(array($anime["nombre"], $anime["descripcion"], $anime["anio"], $anime["link"], $anime["categoria"]));
-    $id_anime = $this->db->lastInsertId();
+    $sentencia = $this->db->prepare( "select * from anime where id_anime=?");
+    $sentencia->execute(array($id_anime));
+    return $sentencia->fetch(PDO::FETCH_ASSOC);
+  }
 
+  function addImagenes($imagenes, $id_anime){
     foreach ($imagenes as $key => $imagen) {
       $path="images/".uniqid()."_".$imagen["name"];
       move_uploaded_file($imagen["tmp_name"], $path);
-
       $insertImagen = $this->db->prepare("INSERT INTO imagen_anime(path,fk_id_anime) VALUES(?,?)");
       $insertImagen->execute(array($path,$id_anime));
     }
-   }
-    function getImagenes($id_anime){
+  }
+
+  //creo anime
+  function crearAnime($anime, $imagenes){
+    $sentencia = $this->db->prepare("INSERT INTO anime(nombre, noticia, año, link, fk_id_categoria) VALUES(?,?,?,?,?)");
+    $sentencia->execute(array($anime["nombre"], $anime["descripcion"], $anime["anio"], $anime["link"], $anime["categoria"]));
+    $id_anime = $this->db->lastInsertId();
+    $this->addImagenes($imagenes, $id_anime);
+  }
+
+  function getImagenes($id_anime){
     $sentencia = $this->db->prepare( "select * from imagen_anime where fk_id_anime=?");
     $sentencia->execute(array($id_anime));
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
-      function eliminarImagen($id_imagen){
+  function eliminarImagen($id_imagen){
     $sentencia = $this->db->prepare( "delete from imagen_anime where id_ia=?");
     $sentencia->execute(array($id_imagen));
   }
-    // Arreglar cosas repetidas
-    function editarAnime ($anime, $id_anime, $imagenes){
-     $sentencia = $this->db->prepare(" UPDATE anime SET nombre=?,año=?,link=?,noticia=? WHERE id_anime=?");
-     $sentencia->execute(array($anime["nombre"], $anime["anio"], $anime["link"], $anime["descripcion"], $id_anime ));
 
-      foreach ($imagenes as $key => $imagen) {
-      $path="images/".uniqid()."_".$imagen["name"];
-      move_uploaded_file($imagen["tmp_name"], $path);
+  function editarAnime ($anime, $id_anime, $imagenes){
+    $sentencia = $this->db->prepare(" UPDATE anime SET nombre=?,año=?,link=?,noticia=? WHERE id_anime=?");
+    $sentencia->execute(array($anime["nombre"], $anime["anio"], $anime["link"], $anime["descripcion"], $id_anime ));
+    $this->addImagenes($imagenes, $id_anime);
+  }
+  //elimino anime
+  function eliminarAnime($id_anime){
 
-      $insertImagen = $this->db->prepare("INSERT INTO imagen_anime(path,fk_id_anime) VALUES(?,?)");
-      $insertImagen->execute(array($path,$id_anime));
-      }
-    }
-      //elimino anime
-    function eliminarAnime($id_anime){
-    
     $sentencia = $this->db->prepare("delete from anime where id_anime=?");
     $sentencia->execute(array($id_anime));
   }
-
-    
-
-
-
-
-
-
-
-
 
 
 
 }
 
-
-
-
-
-
 ?>
-
-    

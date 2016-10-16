@@ -15,6 +15,9 @@ class ViewPagina{
 	function MostrarHome(){
 		$this->smarty->display("home.tpl");
 	}
+  function MostrarDescargas(){
+  	$this->smarty->display("descargas.tpl");
+  }
 
 }
 

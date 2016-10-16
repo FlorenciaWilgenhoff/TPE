@@ -4,36 +4,24 @@ require_once('libs/Smarty.class.php');
 class ViewCategoria{
 
   private $smarty;
+  private $categorias;
 
   function __construct(){
-      $this->smarty = new Smarty();
+    $this->smarty = new Smarty();
   }
 
-  function listar_categorias($listaCategorias){
-    $this->smarty->assign('categorias',$listaCategorias);
-  	$this->smarty->display("listados.tpl");
+  function assignCategorias($categorias){
+    $this->categorias = $categorias;
+    $this->smarty->assign('categorias',$this->categorias);
   }
 
-  function mostrarCategoria($categoria){
-    $this->smarty->assign('categoria',$categoria);
-    $this->smarty->display("verAnime.tpl");
+  function listar_categorias(){
+    $this->smarty->display("listados.tpl");
   }
 
-  function mostrar_admin($categorias){
-    $this->smarty->assign("categorias", $categorias);
+  function mostrar_admin(){
     $this->smarty->display("adminCategoria.tpl");
-   }
-
-function formEditar($categoria){
-    $this->smarty->assign("categoria", $categoria);
-    $this->smarty->display("editarCat.tpl");
-   }
-
-
-   }
-
-
-
-
+  }
+}
 
 ?>
