@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-16 20:15:13
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-16 20:52:29
          compiled from ".\templates\adminAnime.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1882757fe8276d86b77-23777802%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cf7d8def3f22215919e19a93f5899018b625a0f6' => 
     array (
       0 => '.\\templates\\adminAnime.tpl',
-      1 => 1476469509,
+      1 => 1476643801,
       2 => 'file',
     ),
   ),
@@ -38,8 +38,11 @@ $_smarty_tpl->tpl_vars['anime']->_loop = true;
 
   <a href="index.php?action=editar_anime&id_anime=<?php echo $_smarty_tpl->tpl_vars['anime']->value['id_anime'];?>
 " class="editarAnime">Editar</a>
-  <a class="eliminarAnime" href="index.php?action=eliminar_anime&id_anime=<?php echo $_smarty_tpl->tpl_vars['anime']->value['id_anime'];?>
+
+  <a data-id="<?php echo $_smarty_tpl->tpl_vars['anime']->value["id_anime"];?>
+" class="eliminarAnime" href="index.php?action=eliminar_anime&id_anime=<?php echo $_smarty_tpl->tpl_vars['anime']->value['id_anime'];?>
 "><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+
   </li>
   <?php } ?>
 </ul>

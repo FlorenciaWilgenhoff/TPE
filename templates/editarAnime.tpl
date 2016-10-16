@@ -18,6 +18,20 @@
 		<input type="text" name="link" class="form-control"  value="{$anime["link"]}" placeholder="link" required />
 	</div>
 
+<!--HACER QUE ANDE LA CATEGORIA DEL EDITAR -->
+	<div class="form-group">
+		<label for="grupo">Categoria</label>
+		<input type="text" name="categoria" class="form-control"  value="{$categoria["nombre"]}" placeholder="categoria" required />
+	</div>
+
+   <!-- <select class="form-control" name="categoria">
+      {foreach from=$categorias key=index item=categoria}
+      <option value="{$categoria["id_categoria"]}">{$categoria["nombre"]}</option>
+      {/foreach}
+    </select>
+  	--> 
+
+
 	<div class="form-group">
 		<label for="grupo">Descripcion del anime</label>
 		<textarea name="descripcion" class="form-control" rows="3"> {$anime["noticia"]}</textarea>

@@ -4,7 +4,9 @@
   {foreach from=$animes item=anime}
   <li>{$anime["nombre"]}
   <a href="index.php?action=editar_anime&id_anime={$anime['id_anime']}" class="editarAnime">Editar</a>
-  <a class="eliminarAnime" href="index.php?action=eliminar_anime&id_anime={$anime['id_anime']}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+
+  <a data-id="{$anime["id_anime"]}" class="eliminarAnime" href="index.php?action=eliminar_anime&id_anime={$anime['id_anime']}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+
   </li>
   {/foreach}
 </ul>

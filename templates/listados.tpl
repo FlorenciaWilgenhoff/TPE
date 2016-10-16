@@ -8,7 +8,7 @@
   </ul>
 
   <h1>Listado de Animes</h1>
-  <ul>
+  <ul> <!--VER PORQUE NO MUESTRA EL LISTADO -->
     {foreach from=$categorias item=categoria}
       {foreach from=$animes item=anime}
       {if $anime["fk_id_categoria"] == $categoria["id_categoria"]}

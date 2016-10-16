@@ -32,7 +32,7 @@ class ModelAnime{
     }
   }
 
-  //creo anime
+  
   function crearAnime($anime, $imagenes){
     $sentencia = $this->db->prepare("INSERT INTO anime(nombre, noticia, año, link, fk_id_categoria) VALUES(?,?,?,?,?)");
     $sentencia->execute(array($anime["nombre"], $anime["descripcion"], $anime["anio"], $anime["link"], $anime["categoria"]));
@@ -56,7 +56,7 @@ class ModelAnime{
     $sentencia->execute(array($anime["nombre"], $anime["anio"], $anime["link"], $anime["descripcion"], $id_anime ));
     $this->addImagenes($imagenes, $id_anime);
   }
-  //elimino anime
+  
   function eliminarAnime($id_anime){
 
     $sentencia = $this->db->prepare("delete from anime where id_anime=?");

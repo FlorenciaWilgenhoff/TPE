@@ -37,7 +37,7 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
      case ConfigApp::$ACTION_EDITAR_ANIMES:
     $controllerAnime->editar();
     break;
-  case ConfigApp::$ACTION_ELIMINAR_ANIMES:
+    case ConfigApp::$ACTION_ELIMINAR_ANIMES:
     $controllerAnime->eliminar();
     break;
     case ConfigApp::$ACTION_LISTAR_CATEGORIAS:
@@ -55,20 +55,20 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
      case ConfigApp::$ACTION_ELIMINAR_CATEGORIAS:
      $controllerCategoria->eliminarCat();
     break;
-   case ConfigApp::$ACTION_MOSTRAR_DESCARGAS:
+    case ConfigApp::$ACTION_MOSTRAR_DESCARGAS:
   	$descarga = new ControllerDescarga();
     $descarga->mostrar();
     break;
-	case ConfigApp::$ACTION_MOSTRAR_STAFF:
+	  case ConfigApp::$ACTION_MOSTRAR_STAFF:
   	$staff = new ControllerStaff();
     $staff->mostrar();
     break;
- case ConfigApp::$ACTION_GUARDAR_STAFF:
+    case ConfigApp::$ACTION_GUARDAR_STAFF:
     $staff = new ControllerStaff();
     $staff->nuevoStaff();
     $staff->mostrar();
     break;
- case ConfigApp::$ACTION_HOME:
+    case ConfigApp::$ACTION_HOME:
     $controller->mostrarHome();
     break;
   default:
