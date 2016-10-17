@@ -3,7 +3,7 @@
 <h1>Listado de categorias</h1>
 <ul>
   {foreach from=$categorias key=index item=categoria}
-  <form data-id="{$categoria['id_categoria'] }" class="formEditar form-inline" method="POST" action="index.php?action=editar_categoria&id_categoria={$categoria['id_categoria'] }">
+  <form  class="formEditar form-inline" method="POST" action="index.php?action=editar_categoria&id_categoria={$categoria['id_categoria'] }">
     <div class="form-group">
       <li data-name="{$categoria['nombre']}">{$categoria["nombre"]}
         <!-- boton editar categoria -->
@@ -21,7 +21,7 @@
 
 
 <h1>Agregar Categoria</h1>
-<form class="form-inline" method="POST" >
+<form class="form-inline agregarCat" method="POST" action="index.php?action=agregar_categoria">
   <div class="form-group">
     <label for="grupo">Nombre: </label>
     <input type="text" class="form-control" name="nombre" placeholder="Accion" required />

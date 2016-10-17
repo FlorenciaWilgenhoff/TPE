@@ -3,7 +3,7 @@
 <ul>
   {foreach from=$animes item=anime}
   <li>{$anime["nombre"]}
-  <a href="index.php?action=editar_anime&id_anime={$anime['id_anime']}" class="editarAnime">Editar</a>
+  <a data-id="{$anime["id_anime"]}" href="index.php?action=editar_anime&id_anime={$anime['id_anime']}" class="editarAnime">Editar</a>
 
   <a data-id="{$anime["id_anime"]}" class="eliminarAnime" href="index.php?action=eliminar_anime&id_anime={$anime['id_anime']}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 
@@ -14,7 +14,7 @@
 
 <h1>Agregar Anime</h1>
 
-<form method="POST" action="index.php?action=agregar_anime" enctype="multipart/form-data">
+<form method="POST" class="agregarAnime" action="index.php?action=agregar_anime" enctype="multipart/form-data">
   <div class="form-group">
     <label for="grupo">Año</label>
     <input type="text" class="form-control" name="anio" placeholder="1986" required />

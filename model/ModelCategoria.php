@@ -24,7 +24,7 @@ class ModelCategoria {
     return $sentencia->fetch(PDO::FETCH_ASSOC);
   }
  
-  function crearCategoria($categoria){
+  function crearCat($categoria){
     $sentencia = $this->db->prepare("INSERT INTO categoria(nombre) VALUES(?)");
     $sentencia->execute(array($categoria));
   }

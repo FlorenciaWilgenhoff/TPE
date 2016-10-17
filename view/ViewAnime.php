@@ -27,9 +27,10 @@ class ViewAnime{
     $this->smarty->display("adminAnime.tpl");
 
   }
-  function formEditar($anime, $imagenes){
+  function formEditar($anime, $imagenes, $categorias){
     $this->smarty->assign("imagenes", $imagenes);
     $this->smarty->assign("anime", $anime);
+    $this->smarty->assign("categorias", $categorias);
     $this->smarty->display("editarAnime.tpl");
   }
 

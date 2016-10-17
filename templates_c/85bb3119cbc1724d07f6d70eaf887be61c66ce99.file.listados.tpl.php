@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-16 21:07:11
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-17 21:17:48
          compiled from ".\templates\listados.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:412257f144c91b5383-41016036%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '85bb3119cbc1724d07f6d70eaf887be61c66ce99' => 
     array (
       0 => '.\\templates\\listados.tpl',
-      1 => 1476644281,
+      1 => 1476644857,
       2 => 'file',
     ),
   ),
@@ -41,7 +41,7 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
   </ul>
 
   <h1>Listado de Animes</h1>
-  <ul>
+  <ul> <!--VER PORQUE NO MUESTRA EL LISTADO -->
     <?php  $_smarty_tpl->tpl_vars['categoria'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['categoria']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['categorias']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->key => $_smarty_tpl->tpl_vars['categoria']->value){

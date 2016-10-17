@@ -74,11 +74,15 @@ class ControllerAnime {
           $this->model->eliminarImagen($imagen["id_ia"]);
         }
       }
-
       $this->model->editarAnime($animeNuevo, $id_anime, $this->getImagenesVerificadas($_FILES['imagenes']));
+      $this->mostrarAdmin();
     }
-    $anime = $this->model->getAnime($id_anime);
-    $this->view->formEditar($anime, $this->model->getImagenes($id_anime));
+    else {
+      $categorias= $this->modelCategoria->getCategorias();
+      $anime = $this->model->getAnime($id_anime);
+      $this->view->formEditar($anime, $this->model->getImagenes($id_anime), $categorias );
+    }
+
 
   }
 

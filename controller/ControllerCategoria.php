@@ -34,7 +34,7 @@ class ControllerCategoria {
   
   function agregarCat(){
     if (isset($_POST["nombre"])){
-      $categoria["nombre"] = $_POST["nombre"];
+      $categoria = $_POST["nombre"];
       $this->model->crearCat($categoria);
     }
     $this->mostrarAdmin();

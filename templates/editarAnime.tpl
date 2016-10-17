@@ -1,8 +1,7 @@
-{include file='header.tpl'}
 
 <h1>Editar Anime</h1>
 
-<form method="post" action="index.php?action=editar_anime&id_anime={$anime["id_anime"]}" enctype="multipart/form-data">
+<form data-id="{$anime['id_anime'] }" method="post" class="editarA" action="index.php?action=editar_anime&id_anime={$anime["id_anime"]}" enctype="multipart/form-data">
 	<div class="form-group">
 		<label for="grupo">Año</label>
 		<input type="text" name="anio" class="form-control" value="{$anime["año"]}" placeholder="1986" required />
@@ -18,18 +17,17 @@
 		<input type="text" name="link" class="form-control"  value="{$anime["link"]}" placeholder="link" required />
 	</div>
 
-<!--HACER QUE ANDE LA CATEGORIA DEL EDITAR -->
+
 	<div class="form-group">
 		<label for="grupo">Categoria</label>
-		<input type="text" name="categoria" class="form-control"  value="{$categoria["nombre"]}" placeholder="categoria" required />
+		<select class="form-control" name="categoria">
+	      {foreach from=$categorias key=index item=categoria}
+	      <option value="{$categoria["id_categoria"]}">{$categoria["nombre"]}</option>
+	      {/foreach}
+    	</select>
 	</div>
 
-   <!-- <select class="form-control" name="categoria">
-      {foreach from=$categorias key=index item=categoria}
-      <option value="{$categoria["id_categoria"]}">{$categoria["nombre"]}</option>
-      {/foreach}
-    </select>
-  	--> 
+
 
 
 	<div class="form-group">
@@ -55,4 +53,3 @@
 </form>
 
 
-{include file='footer.tpl'}

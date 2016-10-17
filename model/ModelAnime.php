@@ -52,9 +52,10 @@ class ModelAnime{
   }
 
   function editarAnime ($anime, $id_anime, $imagenes){
-    $sentencia = $this->db->prepare(" UPDATE anime SET nombre=?,año=?,link=?,noticia=? WHERE id_anime=?");
-    $sentencia->execute(array($anime["nombre"], $anime["anio"], $anime["link"], $anime["descripcion"], $id_anime ));
+    $sentencia = $this->db->prepare(" UPDATE anime SET nombre=?,año=?,link=?,noticia=?, fk_id_categoria=? WHERE id_anime=?");
+    $sentencia->execute(array($anime["nombre"], $anime["anio"], $anime["link"], $anime["descripcion"], $anime["categoria"], $id_anime ));
     $this->addImagenes($imagenes, $id_anime);
+
   }
   
   function eliminarAnime($id_anime){

@@ -66,7 +66,6 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
     case ConfigApp::$ACTION_GUARDAR_STAFF:
     $staff = new ControllerStaff();
     $staff->nuevoStaff();
-    $staff->mostrar();
     break;
     case ConfigApp::$ACTION_HOME:
     $controller->mostrarHome();

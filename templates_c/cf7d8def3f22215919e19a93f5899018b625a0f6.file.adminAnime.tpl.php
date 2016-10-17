@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-16 20:52:29
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-17 22:34:33
          compiled from ".\templates\adminAnime.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1882757fe8276d86b77-23777802%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cf7d8def3f22215919e19a93f5899018b625a0f6' => 
     array (
       0 => '.\\templates\\adminAnime.tpl',
-      1 => 1476643801,
+      1 => 1476736467,
       2 => 'file',
     ),
   ),
@@ -36,7 +36,8 @@ $_smarty_tpl->tpl_vars['anime']->_loop = true;
 ?>
   <li><?php echo $_smarty_tpl->tpl_vars['anime']->value["nombre"];?>
 
-  <a href="index.php?action=editar_anime&id_anime=<?php echo $_smarty_tpl->tpl_vars['anime']->value['id_anime'];?>
+  <a data-id="<?php echo $_smarty_tpl->tpl_vars['anime']->value["id_anime"];?>
+" href="index.php?action=editar_anime&id_anime=<?php echo $_smarty_tpl->tpl_vars['anime']->value['id_anime'];?>
 " class="editarAnime">Editar</a>
 
   <a data-id="<?php echo $_smarty_tpl->tpl_vars['anime']->value["id_anime"];?>
@@ -50,7 +51,7 @@ $_smarty_tpl->tpl_vars['anime']->_loop = true;
 
 <h1>Agregar Anime</h1>
 
-<form method="POST" action="index.php?action=agregar_anime" enctype="multipart/form-data">
+<form method="POST" class="agregarAnime" action="index.php?action=agregar_anime" enctype="multipart/form-data">
   <div class="form-group">
     <label for="grupo">Año</label>
     <input type="text" class="form-control" name="anio" placeholder="1986" required />

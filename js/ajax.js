@@ -23,14 +23,24 @@ $( document ).ready(function() {
     });
   }
   // Ajax para ir a un anime especifico
-  $(document).on("click", ".anime", function(ev){
-    ev.preventDefault();
-    var idAnime = $(this).attr("data-id");
-    $.get("index.php?action=mostrar_anime&id_anime=" + idAnime, function(data) {
-      $(".contenido").html(data);
+  mostrarDatos(".anime", "mostrar_anime&id_anime=");
+  mostrarDatos(".editarAnime", "editar_anime&id_anime=");
+
+
+  function mostrarDatos(clase, action){
+    $(document).on("click", clase, function(ev){
+      ev.preventDefault();
+      var idAnime = $(this).attr("data-id");
+      $.get("index.php?action=" + action + idAnime, function(data) {
+        $(".contenido").html(data);
+      });
     });
-  });
-  // Al hacer click en el editar de una categoria, se crea un nuevo input para editarla
+  }
+
+
+
+
+    // Al hacer click en el editar de una categoria, se crea un nuevo input para editarla
   $(document).on("click", ".editarCat", function(ev){
     var categoria = $(this).parent().attr("data-name");
     $(this).parent().parent().next().toggleClass("hidden");
@@ -38,14 +48,11 @@ $( document ).ready(function() {
 
   });
   // Envio de datos de la categoria por ajax
-  $(document).on("submit", ".formEditar", function(ev){
-    ev.preventDefault();
-    var id = $(this).attr("data-id");
-    var datosFormulario = $(this).serialize();
-    $.post( "index.php?action=editar_categoria&id_categoria=" + id, datosFormulario, function(data){
-      $(".contenido").html(data);
-    });
-  });
+
+
+
+
+
   // Eliminacion de categoria
   $(document).on("click", ".eliminarCat", function(ev){
     ev.preventDefault();
@@ -55,10 +62,34 @@ $( document ).ready(function() {
     });
   });
   // Guardar datos del formulario de staff
-  $(document).on("submit", ".formularios", function (ev) {
+  agregarDatos(".agregarCat", "agregar_categoria");
+  agregarDatos(".formularios", "guardar_staff");
+  agregarDatos(".agregarAnime", "agregar_anime");
+  agregarDatos(".editarA", "editar_anime&id_anime=", true);
+
+  function agregarDatos(clase, action, llevaId){
+    $(document).on("submit", clase, function (ev) {
     ev.preventDefault();
-    $.post( "index.php?action=guardar_staff", $(this).serialize());
+    formData = new FormData(this);
+    var id = "";
+    if(llevaId) id = $(this).attr("data-id");
+    $.ajax({
+       method: "POST",
+       url: "index.php?action=" + action + id,
+       data: formData,
+       contentType: false,
+       cache: false,
+       processData:false,
+       success: function(data){
+        $(".contenido").html(data);  
+       }
+    });
+
+
+
+
   });
+  }
 
 //eliminacion del anime
  $(document).on("click", ".eliminarAnime", function(ev){
@@ -71,20 +102,11 @@ $( document ).ready(function() {
 
 
 //editar anime (TERMINAR)
- $(document).on("click", ".editarAnime", function(ev){
-    var categoria = $(this).parent().attr("data-name");
-    $(this).parent().parent().next().toggleClass("hidden");
-    $(this).parent().html('<input type="text"  class="form-control" name="nombre" value=' + anime + '>');
 
-  });
-//agregar anime
-
-//agregar categoria
 
 });
 
   
  //cosas que faltan hacer:
-//ver porque en anime mas vistos no se muestran todo el listado de animes, y en el admin si
-//admin anime: ajax en editar, ajax en agregar, arreglar error en editar  anime (por la categoria),
-//admin categoria: hacer andar el agregar, ponerle ajax
+
+//admin anime: ajax en editar
