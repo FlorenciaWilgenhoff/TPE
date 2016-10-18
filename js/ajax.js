@@ -22,7 +22,8 @@ $( document ).ready(function() {
       });
     });
   }
-  // Ajax para ir a un anime especifico
+
+  // Ajax para ir a un anime especifico, muestra anime y edite anime
   mostrarDatos(".anime", "mostrar_anime&id_anime=");
   mostrarDatos(".editarAnime", "editar_anime&id_anime=");
 
@@ -37,35 +38,12 @@ $( document ).ready(function() {
     });
   }
 
-
-
-
-    // Al hacer click en el editar de una categoria, se crea un nuevo input para editarla
-  $(document).on("click", ".editarCat", function(ev){
-    var categoria = $(this).parent().attr("data-name");
-    $(this).parent().parent().next().toggleClass("hidden");
-    $(this).parent().html('<input type="text"  class="form-control" name="nombre" value=' + categoria + '>');
-
-  });
-  // Envio de datos de la categoria por ajax
-
-
-
-
-
-  // Eliminacion de categoria
-  $(document).on("click", ".eliminarCat", function(ev){
-    ev.preventDefault();
-    var id = $(this).attr("data-id");
-    $.post( "index.php?action=eliminar_categoria&id_categoria=" + id, function(data){
-      $(".contenido").html(data);
-    });
-  });
-  // Guardar datos del formulario de staff
+  // Guardar datos del formulario de staff, agregar categoria y anime, y editar anime
   agregarDatos(".agregarCat", "agregar_categoria");
   agregarDatos(".formularios", "guardar_staff");
   agregarDatos(".agregarAnime", "agregar_anime");
   agregarDatos(".editarA", "editar_anime&id_anime=", true);
+  agregarDatos(".formEditar", "editar_categoria&id_categoria=", true);
 
   function agregarDatos(clase, action, llevaId){
     $(document).on("submit", clase, function (ev) {
@@ -84,13 +62,27 @@ $( document ).ready(function() {
         $(".contenido").html(data);  
        }
     });
-
-
-
-
   });
   }
 
+  // Al hacer click en el editar de una categoria, se crea un nuevo input para editarla
+  $(document).on("click", ".editarCat", function(ev){
+    var categoria = $(this).parent().attr("data-name");
+    $(this).parent().parent().next().toggleClass("hidden");
+    $(this).parent().html('<input type="text"  class="form-control" name="nombre" value=' + categoria + '>');
+
+  });
+
+
+
+ // Eliminacion de categoria
+  $(document).on("click", ".eliminarCat", function(ev){
+    ev.preventDefault();
+    var id = $(this).attr("data-id");
+    $.post( "index.php?action=eliminar_categoria&id_categoria=" + id, function(data){
+      $(".contenido").html(data);
+    });
+  });
 //eliminacion del anime
  $(document).on("click", ".eliminarAnime", function(ev){
     ev.preventDefault();
@@ -101,12 +93,8 @@ $( document ).ready(function() {
   });
 
 
-//editar anime (TERMINAR)
 
+//hacer   que se borre la categoria con los animes en la base de datos, ver si hacer una funcion que se llame eliminaCatDb
+//ver lo de las imagenes que quedan en el disco
 
 });
-
-  
- //cosas que faltan hacer:
-
-//admin anime: ajax en editar
