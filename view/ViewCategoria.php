@@ -4,15 +4,13 @@ require_once('libs/Smarty.class.php');
 class ViewCategoria{
 
   private $smarty;
-  private $categorias;
 
   function __construct(){
     $this->smarty = new Smarty();
   }
 
   function assignCategorias($categorias){
-    $this->categorias = $categorias;
-    $this->smarty->assign('categorias',$this->categorias);
+    $this->smarty->assign('categorias',$categorias);
   }
 
   function listar_categorias(){

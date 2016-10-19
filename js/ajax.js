@@ -94,7 +94,6 @@ $( document ).ready(function() {
 
 
 
-//hacer   que se borre la categoria con los animes en la base de datos, ver si hacer una funcion que se llame eliminaCatDb
-//ver lo de las imagenes que quedan en el disco
+
 
 });
