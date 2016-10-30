@@ -9,14 +9,14 @@ class ModelAnime{
     $this->db = $this->db->getDB();
   }
 
-  //obtengo los animes
+  
   function getAnimes(){
     $sentencia = $this->db->prepare( "select * from anime");
     $sentencia->execute();
     $animes = $sentencia->fetchAll(PDO::FETCH_ASSOC);
     return $animes;
   }
-  //obtengo los datos un anime
+ 
   function getAnime($id_anime){
     $sentencia = $this->db->prepare( "select * from anime where id_anime=?");
     $sentencia->execute(array($id_anime));

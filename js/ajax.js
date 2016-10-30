@@ -75,7 +75,7 @@ $( document ).ready(function() {
 
 
 
- // Eliminacion de categoria
+
   $(document).on("click", ".eliminarCat", function(ev){
     ev.preventDefault();
     var id = $(this).attr("data-id");
@@ -83,7 +83,7 @@ $( document ).ready(function() {
       $(".contenido").html(data);
     });
   });
-//eliminacion del anime
+
  $(document).on("click", ".eliminarAnime", function(ev){
     ev.preventDefault();
     var id = $(this).attr("data-id");
