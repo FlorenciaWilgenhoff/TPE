@@ -1,14 +1,14 @@
 <?php
 require('config/ConfigApp.php');
-
 require("controller/ControllerAnime.php");
 require("controller/ControllerCategoria.php");
 require('controller/ControllerPagina.php');
-require('controller/ControllerDescarga.php');
 require('controller/ControllerStaff.php');
+
 $controller = new ControllerPagina();
 $controllerAnime = new ControllerAnime();
 $controllerCategoria = new ControllerCategoria();
+
 if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
   $controller->mostrar();
   die();
@@ -56,23 +56,22 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
      $controllerCategoria->eliminarCat();
     break;
     case ConfigApp::$ACTION_MOSTRAR_DESCARGAS:
-  	$descarga = new ControllerDescarga();
-    $descarga->mostrar();
+      $controller->mostrarDescargas();
     break;
 	  case ConfigApp::$ACTION_MOSTRAR_STAFF:
-  	$staff = new ControllerStaff();
-    $staff->mostrar();
+    	$staff = new ControllerStaff();
+      $staff->mostrar();
     break;
     case ConfigApp::$ACTION_GUARDAR_STAFF:
-    $staff = new ControllerStaff();
-    $staff->nuevoStaff();
+      $staff = new ControllerStaff();
+      $staff->nuevoStaff();
     break;
     case ConfigApp::$ACTION_HOME:
-    $controller->mostrarHome();
+      $controller->mostrarHome();
     break;
-  default:
-    $controller->mostrar();
-    break;
+    default:
+      $controller->mostrar();
+      break;
 }
 
 
