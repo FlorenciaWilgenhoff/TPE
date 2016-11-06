@@ -7,13 +7,13 @@
     {/foreach}
   </ul>
 
-  <h1>Listado de Animes</h1>
-  <ul> <!--VER PORQUE NO MUESTRA EL LISTADO -->
+  <h1>Listado de Series</h1>
+  <ul> 
     {foreach from=$categorias item=categoria}
-      {foreach from=$animes item=anime}
-      {if $anime["fk_id_categoria"] == $categoria["id_categoria"]}
-        <li>{$anime["nombre"]} - {$categoria["nombre"]}
-          <a class="anime" data-id="{$anime['id_anime']}" href="index.php?action=mostrar_anime&id_anime={$anime['id_anime']}">Ver mas</a>
+      {foreach from=$series item=serie}
+      {if $serie["fk_id_categoria"] == $categoria["id_categoria"]}
+        <li>{$serie["nombre"]} - {$categoria["nombre"]}
+          <a class="serie" data-id="{$serie['id_serie']}" href="index.php?action=mostrar_serie&id_serie={$serie['id_serie']}">Ver mas</a>
         </li>
       {/if}
       {/foreach}

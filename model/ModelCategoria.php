@@ -27,6 +27,8 @@ class ModelCategoria {
   function crearCat($categoria){
     $sentencia = $this->db->prepare("INSERT INTO categoria(nombre) VALUES(?)");
     $sentencia->execute(array($categoria));
+    $id_categoria = $this->db->lastInsertId();
+    return $id_categoria;
   }
   
   function editarCat ($categoria, $id_categoria){
@@ -38,6 +40,7 @@ class ModelCategoria {
   function eliminarCat($id_categoria){
     $sentencia = $this->db->prepare("delete from categoria where id_categoria=?");
     $sentencia->execute(array($id_categoria));
+    return $sentencia->rowCount();
   }
 
 }

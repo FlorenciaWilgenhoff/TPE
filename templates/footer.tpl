@@ -7,7 +7,6 @@
             <div class="col-md-12">
               <h3>Nuestros Editores</h3>
                 <ul>
-                  <li><a href="https://www.facebook.com/sofi.cast.7/"target="_blank">Sofía Barea</a></li>
                   <li><a href="https://www.facebook.com/florencia.wilgenhoff/"target="_blank">Florencia Wilgenhoff</a></li>
                 </ul>
             </div>

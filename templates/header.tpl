@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Noticias Anime</title>
+  <title>Series</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/one-page-wonder.css" rel="stylesheet">
 </head>
@@ -22,13 +22,14 @@
           <span class="icon-bar"></span>
         </button>
       </div>
+
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a id="inicio">Inicio <span class="sr-only">(actual)</span></a></li>
-          <li><a id="animes">Anime mas vistos <span class="sr-only">(actual)</span></a></li>
+          <li><a id="series">Series mas vistas <span class="sr-only">(actual)</span></a></li>
           <li><a id="descargas">Descargas <span class="sr-only">(actual)</span></a></li>
           <li><a id="staff">Unete a nuestro staff <span class="sr-only">(actual)</span></a></li>
-          <li><a id="aAnime">A-Anime<span class="sr-only">(actual)</span></a></li>
+          <li><a id="aSerie">A-Serie<span class="sr-only">(actual)</span></a></li>
           <li><a id="aCategoria">A-Categorias<span class="sr-only">(actual)</span></a></li>
         </ul>
 
@@ -53,3 +54,6 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-12" id="principal">
+        <!-- <li><a id="inicio"> <span class="glyphicon glyphicon-home"></span></a></li>
+          <li><a id="series"><span class="glyphicon glyphicon-eye-open"></span></a></li>
+          <li><a id="descargas"><span class="glyphicon glyphicon-download-alt"></span></a></li>  --!>

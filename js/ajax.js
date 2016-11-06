@@ -4,10 +4,10 @@ $( document ).ready(function() {
   $.get("index.php?action=go_home", function(data) { $(".contenido").html(data); });
 
   partialRender("go_home", "#inicio");
-  partialRender("listar_animes", "#animes");
+  partialRender("listar_series", "#series");
   partialRender("mostrar_descargas", "#descargas");
   partialRender("mostrar_staff", "#staff");
-  partialRender("admin_anime", "#aAnime");
+  partialRender("admin_serie", "#aSerie");
   partialRender("admin_categoria", "#aCategoria");
 
   // Creo ajax para moverme a traves de los menus
@@ -23,26 +23,26 @@ $( document ).ready(function() {
     });
   }
 
-  // Ajax para ir a un anime especifico, muestra anime y edite anime
-  mostrarDatos(".anime", "mostrar_anime&id_anime=");
-  mostrarDatos(".editarAnime", "editar_anime&id_anime=");
+  // Ajax para ir a una serie en especifico, muestra serie y edita serie
+  mostrarDatos(".serie", "mostrar_serie&id_serie=");
+  mostrarDatos(".editarSerie", "editar_serie&id_serie=");
 
 
   function mostrarDatos(clase, action){
     $(document).on("click", clase, function(ev){
       ev.preventDefault();
-      var idAnime = $(this).attr("data-id");
-      $.get("index.php?action=" + action + idAnime, function(data) {
+      var idSerie = $(this).attr("data-id");
+      $.get("index.php?action=" + action + idSerie, function(data) {
         $(".contenido").html(data);
       });
     });
   }
 
-  // Guardar datos del formulario de staff, agregar categoria y anime, y editar anime
+  // Guardar datos del formulario de staff, agregar categoria y serie, y editar serie
   agregarDatos(".agregarCat", "agregar_categoria");
   agregarDatos(".formularios", "guardar_staff");
-  agregarDatos(".agregarAnime", "agregar_anime");
-  agregarDatos(".editarA", "editar_anime&id_anime=", true);
+  agregarDatos(".agregarSerie", "agregar_serie");
+  agregarDatos(".editarS", "editar_serie&id_serie=", true);
   agregarDatos(".formEditar", "editar_categoria&id_categoria=", true);
 
   function agregarDatos(clase, action, llevaId){
@@ -74,20 +74,23 @@ $( document ).ready(function() {
   });
 
 
-
-
-  $(document).on("click", ".eliminarCat", function(ev){
+ $(document).on("click", ".eliminarCat", function(ev){
     ev.preventDefault();
     var id = $(this).attr("data-id");
-    $.post( "index.php?action=eliminar_categoria&id_categoria=" + id, function(data){
-      $(".contenido").html(data);
+    var categoria = $(this);
+     $.ajax({
+       method: "DELETE",
+      url:"api/apiSerie/" + id,
+       success: function(data){
+         $(categoria).parents("li").remove();
+       }
     });
   });
 
- $(document).on("click", ".eliminarAnime", function(ev){
+ $(document).on("click", ".eliminarSerie", function(ev){
     ev.preventDefault();
     var id = $(this).attr("data-id");
-    $.post( "index.php?action=eliminar_anime&id_anime=" + id, function(data){
+    $.post( "index.php?action=eliminar_serie&id_serie=" + id, function(data){
       $(".contenido").html(data);
     });
   });

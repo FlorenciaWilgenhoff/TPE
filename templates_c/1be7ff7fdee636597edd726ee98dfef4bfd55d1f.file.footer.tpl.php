@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-16 20:14:53
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-05 15:58:15
          compiled from ".\templates\footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2180057f144c9730e30-71570716%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1be7ff7fdee636597edd726ee98dfef4bfd55d1f' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1476447462,
+      1 => 1478271129,
       2 => 'file',
     ),
   ),
@@ -28,7 +28,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="col-md-12">
               <h3>Nuestros Editores</h3>
                 <ul>
-                  <li><a href="https://www.facebook.com/sofi.cast.7/"target="_blank">Sofía Barea</a></li>
                   <li><a href="https://www.facebook.com/florencia.wilgenhoff/"target="_blank">Florencia Wilgenhoff</a></li>
                 </ul>
             </div>

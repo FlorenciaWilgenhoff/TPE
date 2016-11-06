@@ -2,53 +2,79 @@
   <div class="media">
     <div class="media-left">
       <a href="#">
-        <img class="media-object" src="http://koi-nya.net/img/subidos_posts/2015/06/Hatsukoi-Monster-anime.jpg" alt="Ajin">
+        <img class="media-object" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoUe6eqWfQKqEpr0fVDpPd4cGr3VP17_dgSFGaNH-G4YGcnQ6u" alt="TheWalkingDead">
       </a>
     </div>
     <div class="media-body">
-      <h3 class="media-heading">Se anuncia fecha de estreno del anime “Hatsukoi Monster”</h3>
-      <p>La web oficial de la adaptación televisiva animada del manga Hatsukoi Monster de Akira Hiyoshimaru ha revelado que la serie se estrenará el día 2 de julio a las 23:00 en AT-X. También podrá verse en Tokyo MX, KBS Kyoto, Sun TV y BS11.</p>
-      <p>También se han anunciado nuevas voces para su reparto:</p>
-      <ul>
-        <li>Mizuki Wai como Chiaki Yokouchi</li>
-        <li>Ai Kayano como Mafuyu Hayashi</li>
-        <li>Shunsuke Takeuchi como Shugo Takahashi</li>
-        <li>And Iori Nomizu como Yuki Fukaya</li>
-      </ul>
+      <h3 class="media-heading">'The Walking Dead': Esta trama clave del cómic cambiará menos de lo pensábamos en su adaptación a la serie
+      </h3>
+        <p>La séptima temporada de la ficción de AMC se ha estrenado con un enorme éxito de audiencia, ¿preparado para más zombis?
+        Sí, todos los que leen el cómic de Robert Kirman y Tony Roma, The Walking Dead, y lo comparan con la serie, tienen claro que muchas tramas han cambiado de forma radical en su adaptación a la pequeña pantalla, pero aquí tienes otra que puede mantenerse aunque con cambios. 
+          <strong>ATENCIÓN: Esta noticia contiene SPOILERS sobre el comienzo de la séptima temporada</strong>
+           En la novela gráfica, Sophia, la hija de Carol, sigue con vida y forma parte del grupo de Rick y compañía, mientras que su madre sí ha fallecido. Esta situación de orfandad provoca que Maggie y Glenn se vuelquen con ella y se conviertan en las figuras paternas que la pequeña necesita. Además, Sophia y Carl mantienen una especie de relación. 
+          Debido a que en la serie, Sophia está muerta -tal y como se pudo ver en la segunda temporada- mientras que su madre sigue viva, se espera que uno de los nuevos personajes rellene sus huecos. La elegida para ello parece ser Enid (Katelyn Nacon), tal y como ha explicado la propia joven en la Walker Stalker Convention de Atlanta -según Comic Book-.
+          La joven reconoce saber cómo es la historia de Sophia en la novela gráfica, y parece que su personaje, además de sus propias tramas, vivirá estas siendo un punto de apoyo clave para Maggie en estos duros momentos tras la muerte de Glenn y con un bebé en camino, ya que tanto ella como Glenn ha cuidado mucho de ella en este tiempo, convirtiéndose en algo parecido a unos padres. 
+          
+</p>
+      
     </div>
   </div>
 
   <div class="media">
     <div class="media-left">
       <a href="#">
-        <img class="media-object" src="http://i.imgur.com/QEeJo6K.jpg" alt="Ajin">
+        <img class="media-object" src="https://s-media-cache-ak0.pinimg.com/originals/93/fa/34/93fa34f3b237b5e4ebfe4258f0455e6f.jpg" alt="SuperGirl">
       </a>
     </div>
     <div class="media-body">
-      <h3 class="media-heading">El anime Ajin tendrá segunda temporada en octubre</h3>
-      <p>El cintillo del octavo tomo recopilatorio del manga Ajin de Gamon Sakurai revela que su adaptación televisiva animada contará con una segunda temporada en octubre. La primera temporada se estrenaba el pasado 15 de enero y contó con 13 episodios, los cuales pueden verse desde el pasado 12 de abril vía Netflix en todo el mundo.</p>
-      <p>"Los Ajin son humanos que no pueden morir que aparecieron por primera vez en un campo de batalla en África hace 17 años. Desde entonces, se han ido descubriendo más entre el resto de miembros de la sociedad humana. Al ser tan poco comunes, el gobierno está dispuesto a recompensar generosamente a cualquiera que capture a uno para sus experimentos. En el presente, la vida de un estudiante de instituto normal llamado Kei da un giro de 180 grados cuando después de un accidente mortal descubre ser un Ajin. Con ayuda de su mejor amigo, Kei intentará ocultar al resto lo que es realmente, hasta que un grupo de Ajin lo encuentra y le ofrece unirse a ellos para preparar una ofensiva contra la humanidad."</p>
+      <h3 class="media-heading"> 'Supergirl': Cyborg Superman aparecerá en la segunda temporada</h3>
+      <p> El icónico personaje de DC Comics se dejará ver en el episodio ‘The Darkest Place’ (2x07) que se emitirá en Estados Unidos el próximo 28 de noviembre.
+      Después de varios rumores, la sinopsis oficial del episodio ‘The Darkest Place’ (2x07) de Supergirl ha confirmado la presencia de Cyborg Superman.
+      La descripción de este esperado capítulo, que se emitirá el próximo 28 de noviembre, dice así:
+      <strong>Mientras el Guardían (Mehcad Brooks) intenta limpiar su nombre después de haber sido acusado de un asesinato cometido por otro vigilante, Supergirl (Melissa Benoist) se dirigir a una misión en solitario para rescatar a Mon-El (Chris Wood) que ha sido capturado por CADMUS. Mientras lucha para liberar a Mon-El, Supergirl se encuentra cara a cara con Cyborg Superman".
+      </strong>
+      En esta segunda temporada, CW ha decidido optar por presentar al nuevo Superman de la cadena tras la emisión de Smallville y lo ha hecho confiando en Tyler Hoechlin, actor reconocido por su participación en Teen Wolf y el mismo que posiblemente interprete a Cyborg Superman.
+      </p>
+      
     </div>
   </div>
 
   <div class="media">
     <div class="media-left">
       <a href="#">
-        <img class="media-object" src="http://i.imgur.com/9FLJPGl.jpg" alt="Saiki Kusuo no Psi Nan">
+        <img class="media-object" src="http://cdn.vogue.es/uploads/images/thumbs/201410/todos_los_looks_de_las_fiesta_post_oscars_de_vanity_fair_2014_122123343_800x.jpg" alt="LadyGagaYDonatella">
       </a>
     </div>
     <div class="media-body">
-      <h3 class="media-heading">El manga ‘Saiki Kusuo no Psi Nan’ tendrá adaptación animada en julio</h3>
-      <p>El número 23 del año de la revista Weekly Shonen Jump de Shueisha anuncia que el manga Saiki Kusuo no Psi Nan de Shuichi Aso recibirá una adaptación animada. El anime podrá verse en julio con “emisión doble”, emitiéndose por las mañanas en el programa Oha-Suta de TV Tokyo y por las noches en TV Tokyo y otras cadenas.</p>
-      <p>El anime contará en su reparto con:</p>
-      <ul>
-        <li>Hiroshi Kamiya como Kasuo Saiki</li>
-        <li>Mitsuo Iwata como Kuniharu Saiki</li>
-        <li>Rikako Aikawa como Kurumi Saiki</li>
-        <li>Nobunaga Shimazaki como Shun Kaido</li>
-        <li>Daisuke Ono como Riki Nendo</li>
-      </ul>
-      <p>EGG FIRM y J.C. Staff se encargarán de animar la serie, contando con Hiroaki Sakurai (Kaichou wa Maid-sama!) en la dirección y Michiko Yokote (Shirobako, Kyoukai no Rinne) en la composición de serie. Masayuki Onji (Kimi to Boku, Aoi Hana) se encarga de los diseños de personajes.</p>
+      <h3 class="media-heading"> 'American Crime Story': Lady Gaga interpretará a Donatella Versace en la tercera temporada</h3>
+      <p>La segunda entrega de la exitosa serie de Ryan Murphy girará en torno a los hechos acontecidos tras el huracán Katrina en Nueva Orleans y se estrenará en algún momento de 2017.
+      Aunque no se haya aún estrenado la segunda temporada, Ryan Murphy ya trabaja en la tercera entrega de American Crime Story centrada en el asesinato del diseñador Gianni Versace en 1997 y cuenta ya con su primer protagonista.
+      Según informa Us Magazine, Lady Gaga ha sido la elegida para interpretar a Donatella Versace, amiga íntima también de la cantante y cuyos diseños ha llevado en varias ocasiones en la Alfombra Roja e incluso acompañada de la propia diseñadora.
+      Esta nueva entrega llevará como título Versace/Cunanan: American Crime Storyy estará basada en el libro Vulgar Favors de Maureen Orth. Versace fue asesinado por Andrew Cunanan en los exteriores de la casa del diseñador en Miami. Posteriormente, el asesino se suicidó antes de que la policía pudiese descubrir el motivo de la muerte.
+      A pesar de todo, FX aún tiene pendiente de estreno la segunda temporada de American Crime Story  centrado en los hechos acontecidos tras el paso del huracán Katrina en Nueva Orleans.
+    </p>
+      
+    
+    </div>
+  </div>
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcREUEoFmQNixeA8jL-JOT3d8orW-4sFClR_uS2rpeljO2xB973O" alt="bartSimpson">
+      </a>
+    </div>
+    <div class="media-body">
+      <h3 class="media-heading"> 'Los Simpson' hacen historia: Fox renueva la serie por las temporadas 29 y 30
+      </h3>
+      <p>Esto convertirá a la comedia de Matt Groening en la serie con más episodios de la historia de la televisión estadounidense, 669 episodios.
+  
+      ¡Los Simpson hacen historia! La serie de Matt Groening acaba de ser renovada por Fox por las temporadas 29 y 30. Esta noticia, publicada por Deadline,  adelanta que con este cambio conseguirá que la serie tenga 669 episodios, lo que la convierte en la serie guionizada por mayor número de episodios rompiendo así el récord de Gunsmoke con 635 capítulos. 
+      Además, está confirmado el regreso de los dobladores Dan Castellaneta, Julie Kavner, Nancy Cartwright, Yeardley Smith, Hank Azaria y Harry Shearer. Los Simpson cuenta en su haber con cientos de premios, entre los que destacan los 32 Emmys conseguidos a lo largo de sus casi 30 años en antena. Pese a que los fans y los críticos no están tan contentos con las nuevas temporadas como lo estaban con las primeras, la comedia sigue triunfando, es más, su recién emitido episodio 600 consiguió un 3,6 en demos y casi 10 millones de espectadores. 
+      A esta noticia, hay que sumar las declaraciones que realizó recientemente James L. Brooks sobre la posibilidad de hacer una secuela de la película sobre la familia amarilla de Springfield. Aquella cinta tuvo un buen recibimiento por parte del público o de los fans, recaudando más de 500 millones de dólares en todo el mundo, por ello Brooks ha dicho lo siguiente: "Fox realmente quiere que hagamos otra y quizás lo hagamos o quizás no. Así están las cosas. ¿Cómo dividimos nuestras funciones y creemos en la idea que tenemos? Quizás hagamos un poco más de exploración activa para la segunda película muy pronto". 
+
+    </p>
+      
+    
     </div>
   </div>
 </section>

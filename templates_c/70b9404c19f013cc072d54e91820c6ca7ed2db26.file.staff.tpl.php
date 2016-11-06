@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-14 17:14:48
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-05 16:44:08
          compiled from ".\templates\staff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1305857f16c4096ed04-52297892%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '70b9404c19f013cc072d54e91820c6ca7ed2db26' => 
     array (
       0 => '.\\templates\\staff.tpl',
-      1 => 1476458043,
+      1 => 1478357346,
       2 => 'file',
     ),
   ),
@@ -24,10 +24,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="cuerpotexto">
   <h1>¿Te gustaria formar parte de nuestro staff?</h1>
   <h2>¿Quienes somos?</h2>
-  <p>Fans del Anime News nació a principios del 2016 con la idea de informar sobre las novedades en el  mundo del manga/anime, poco a poco este blog ha crecido y sigue creciendo gracias a las visitas de todas las personas de distintos países de Latinoamérica, Europa y otras partes del mundo.</p>
-  <p>El staff de F.A.N actualmente solo está compuesto por 2 personas</p>
+  <p>Fans de Series News nació a principios del 2016 con la idea de informar sobre las novedades en el  mundo de series, poco a poco este blog ha crecido y sigue creciendo gracias a las visitas de todas las personas de distintos países de Latinoamérica, Europa y otras partes del mundo.</p>
+  <p>El staff de F.S.N actualmente solo está compuesto por 2 personas</p>
   <h2>¿Que buscamos?</h2>
-  <p>Buscamos Fans del anime, que sean creativos y les guste trabajar en equipo, escribir, investigar y debatir</p>
+  <p>Buscamos Fans de series, que sean creativos y les guste trabajar en equipo, escribir, investigar y debatir</p>
   <p>Si crees que cumplís con estas cualidades te proponemos ser parte de alguno de estos puestos:</p>
   <ul class="listaStaff">
     <li>Editores</li>
