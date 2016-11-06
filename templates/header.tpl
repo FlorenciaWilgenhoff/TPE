@@ -56,4 +56,4 @@
       <div class="col-sm-12 col-md-12" id="principal">
         <!-- <li><a id="inicio"> <span class="glyphicon glyphicon-home"></span></a></li>
           <li><a id="series"><span class="glyphicon glyphicon-eye-open"></span></a></li>
-          <li><a id="descargas"><span class="glyphicon glyphicon-download-alt"></span></a></li>  --!>
+          <li><a id="descargas"><span class="glyphicon glyphicon-download-alt"></span></a></li>  --!> 

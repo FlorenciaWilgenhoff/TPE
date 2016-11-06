@@ -4,10 +4,12 @@ require("controller/ControllerSerie.php");
 require("controller/ControllerCategoria.php");
 require('controller/ControllerPagina.php');
 require('controller/ControllerStaff.php');
+require('controller/ControllerLogin.php');
 
 $controller = new ControllerPagina();
-$ControllerSerie = new ControllerSerie();
+$controllerSerie = new ControllerSerie();
 $controllerCategoria = new ControllerCategoria();
+$controllerlogin = new ControllerLogin();
 
 if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
   $controller->mostrar();
@@ -69,6 +71,9 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
     case ConfigApp::$ACTION_HOME:
       $controller->mostrarHome();
     break;
+    case ConfigApp::$ACTION_LOGIN:
+      $loginController->login();
+      break;
     default:
       $controller->mostrar();
       break;

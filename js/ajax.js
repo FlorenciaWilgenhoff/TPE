@@ -4,10 +4,10 @@ $( document ).ready(function() {
   $.get("index.php?action=go_home", function(data) { $(".contenido").html(data); });
 
   partialRender("go_home", "#inicio");
-  partialRender("listar_series", "#series");
+  partialRender("listar_animes", "#series");
   partialRender("mostrar_descargas", "#descargas");
   partialRender("mostrar_staff", "#staff");
-  partialRender("admin_serie", "#aSerie");
+  partialRender("admin_series", "#aAnime");
   partialRender("admin_categoria", "#aCategoria");
 
   // Creo ajax para moverme a traves de los menus
@@ -23,7 +23,7 @@ $( document ).ready(function() {
     });
   }
 
-  // Ajax para ir a una serie en especifico, muestra serie y edita serie
+  // Ajax para ir a una serie en especifica, muestra serie y edita serie
   mostrarDatos(".serie", "mostrar_serie&id_serie=");
   mostrarDatos(".editarSerie", "editar_serie&id_serie=");
 
@@ -74,19 +74,16 @@ $( document ).ready(function() {
   });
 
 
- $(document).on("click", ".eliminarCat", function(ev){
+
+ // Eliminacion de categoria
+  $(document).on("click", ".eliminarCat", function(ev){
     ev.preventDefault();
     var id = $(this).attr("data-id");
-    var categoria = $(this);
-     $.ajax({
-       method: "DELETE",
-      url:"api/apiSerie/" + id,
-       success: function(data){
-         $(categoria).parents("li").remove();
-       }
+    $.post( "index.php?action=eliminar_categoria&id_categoria=" + id, function(data){
+      $(".contenido").html(data);
     });
   });
-
+//eliminacion de serie
  $(document).on("click", ".eliminarSerie", function(ev){
     ev.preventDefault();
     var id = $(this).attr("data-id");

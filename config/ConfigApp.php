@@ -18,6 +18,8 @@ class ConfigApp{
   public static $ACTION_ELIMINAR_CATEGORIAS = 'eliminar_categoria';
   public static $ACTION_MOSTRAR_STAFF = "mostrar_staff";
   public static $ACTION_GUARDAR_STAFF = "guardar_staff";
+  public static $ACTION_LOGIN = 'login';
+  public static $ACTION_LOGOUT = 'logout';
 
   
   
