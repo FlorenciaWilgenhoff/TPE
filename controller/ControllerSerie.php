@@ -38,11 +38,25 @@ class ControllerSerie {
     $this->view->mostrarSerie($serie, $categoria);
 
   }
+
+
+  function mostrarSeries(){
+    if(isset($_GET["categoria"])){
+      $this->view->filtrar($this->model->getSeriesCat($_GET["categoria"]));
+    }
+    else {
+      $this->editar();
+      $this->view->mostrar_admin();
+    }
+  }
+
+  
   function iniciar(){
     $series = $this->model->getSeries();
 
     $this->view->mostrar($series, $categorias);
   }
+
 
   function getDatosVerificados(){
     $serie = [];
@@ -104,6 +118,13 @@ class ControllerSerie {
     $id = $_GET['id_serie'];
     $this->model->eliminarSerie($id);
     $this->mostrarAdmin();
+  }
+   function filtroCat() {
+    if (isset($_GET["id_categoria"])) {
+      $categoria = $this->modelCategoria->getCategorias($_GET["id_categoria"]);
+      $series = $this->model->getSeriesCat($_GET["id_categoria"]);
+      $this->view->filtrar($series, $categoria);
+    }
   }
 
 

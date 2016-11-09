@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-31 19:25:02
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-06 19:51:40
          compiled from ".\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:633757f18e7bbb7ba0-83436203%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '749422d4cfc3eb5677cf499730392b6accd4d1c7' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1477938296,
+      1 => 1478456899,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
     <div class="contenido">
-    
+    <!--VER SI ACA PONGO LO DEL LOGIN O EN OTRA PARTE-->
     </div>
 
 

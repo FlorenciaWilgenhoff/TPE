@@ -20,7 +20,7 @@ class ConfigApp{
   public static $ACTION_GUARDAR_STAFF = "guardar_staff";
   public static $ACTION_LOGIN = 'login';
   public static $ACTION_LOGOUT = 'logout';
-
+  public static $ACTION_FILTRAR_CATEGORIA = "filtrar_categorias";
   
   
   

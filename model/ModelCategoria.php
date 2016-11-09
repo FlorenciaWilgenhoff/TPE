@@ -1,14 +1,13 @@
 <?php
-include_once 'model/ModelDB.php';
-class ModelCategoria {
 
-  private $db;
+require_once ("model/ModelDB.php");
+
+class ModelCategoria extends DB{
 
   function __construct() {
-    $this->db = new DB();
-    $this->db = $this->db->getDB();
-  }
 
+    parent::__construct();
+  }
   
   function getCategorias(){
     $sentencia = $this->db->prepare( "select * from categoria");

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-11-06 18:55:01
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-07 18:43:18
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3053957f144c9482007-37375896%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1478453710,
+      1 => 1478479488,
       2 => 'file',
     ),
   ),
@@ -30,9 +30,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <title>Series</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/one-page-wonder.css" rel="stylesheet">
+ <!-- <link href="css/login.css" rel="stylesheet"> -->
 </head>
 <body>
-
+  
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -64,13 +65,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </div>
     </div>
   </nav>
-
-  <header class="header-image">
-    <div class="headline">
-      <div class="container">
-      </div>
-    </div>
-  </header>
+      <header class="header-image">
+          <div class="headline">
+            <div class="container">
+            </div>
+          </div>
+        </header>
+  
 
   <div class="container">
     <div class="row">

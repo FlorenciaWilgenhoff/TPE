@@ -1,6 +1,6 @@
 <?php
-require_once('view/LoginView.php');
-//require_once('models/UserModel.php');
+require_once('view/ViewLogin.php');
+require_once('model/ModelLogin.php');
 require_once('controller/ControllerSerie.php');
 class ControllerLogin
 {
@@ -8,18 +8,19 @@ class ControllerLogin
   private $model;
   function __construct()
   {
-   // $this->model = new UserModel();
+    $this->model = new ModelLogin();
     $this->view = new ViewLogin();
   }
+
   public function validar(){
   }
   public function login(){
     if(!isset($_REQUEST['txtUser']))
       $this->view->mostrar([]);
     else {
-      $user = $_REQUEST['txtUser'];
+      $usuario = $_REQUEST['txtUser'];
       $pass = $_REQUEST['txtPass'];
-      $hash = $this->modelo->getUser($user)["password"];
+      $hash = $this->model->getUsuario($usuario)["password"];
       // falta controlar el caso de que el usuario no exista
       if(password_verify($pass, $hash))
       {

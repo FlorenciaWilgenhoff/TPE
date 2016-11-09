@@ -7,9 +7,8 @@ body {
 .header-image {
     display: block;
     width: 100%;
-    height: 50%;
     text-align: center;
-    background: url('../images/bannerSeries.jpg') no-repeat center center scroll;
+    background: url('../images/bannerSeries3.jpg') no-repeat center center scroll;
     background-size: cover;
 }
 .row {

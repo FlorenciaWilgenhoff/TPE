@@ -1,13 +1,14 @@
 $( document ).ready(function() {
 
   // Cargo la home al entrar al index
+
   $.get("index.php?action=go_home", function(data) { $(".contenido").html(data); });
 
   partialRender("go_home", "#inicio");
-  partialRender("listar_animes", "#series");
+  partialRender("listar_series", "#series");
   partialRender("mostrar_descargas", "#descargas");
   partialRender("mostrar_staff", "#staff");
-  partialRender("admin_series", "#aAnime");
+  partialRender("admin_serie", "#aSerie");
   partialRender("admin_categoria", "#aCategoria");
 
   // Creo ajax para moverme a traves de los menus

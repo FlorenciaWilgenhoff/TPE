@@ -1,15 +1,16 @@
 <?php
-include_once 'model/ModelDB.php';
-class ModelSerie{
+require_once ("model/ModelDB.php");
 
-  private $db;
+class ModelSerie extends DB{
 
   function __construct() {
-    $this->db = new DB();
-    $this->db = $this->db->getDB();
+
+    parent::__construct();
+
+
   }
 
-  
+
   function getSeries(){
     $sentencia = $this->db->prepare( "select * from serie");
     $sentencia->execute();
@@ -22,6 +23,7 @@ class ModelSerie{
     $sentencia->execute(array($id_serie));
     return $sentencia->fetch(PDO::FETCH_ASSOC);
   }
+
 
   function addImagenes($imagenes, $id_serie){
     foreach ($imagenes as $key => $imagen) {
@@ -67,6 +69,12 @@ class ModelSerie{
   }
 
 
+   function getSerieCat($id_categoria)
+  {
+    $series = $this->db->prepare("SELECT * FROM serie WHERE fk_id_categoria = ?");
+    $series->execute(array($id_categoria));
+    return $series->fetchAll(PDO::FETCH_ASSOC);
+  }
 
 }
 

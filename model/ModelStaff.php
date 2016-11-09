@@ -1,14 +1,11 @@
 <?php
-include_once 'model/ModelDB.php';
-class ModelStaff {
+require_once 'model/ModelDB.php';
+class ModelStaff extends DB{
 
-	private $db;
 
   function __construct() {
-    $this->db = new DB();
-    $this->db = $this->db->getDB();
+  	parent::__construct();
   }
-
 	function nuevoStaff($staff) {
 		$sentencia = $this->db->prepare("INSERT INTO staff(nombre,apellido,edad,email,puesto,motivo) VALUES(?,?,?,?,?,?)");
     $sentencia->execute($staff);

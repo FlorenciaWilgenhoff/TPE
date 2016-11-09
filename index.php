@@ -9,7 +9,7 @@ require('controller/ControllerLogin.php');
 $controller = new ControllerPagina();
 $controllerSerie = new ControllerSerie();
 $controllerCategoria = new ControllerCategoria();
-$controllerlogin = new ControllerLogin();
+$controllerLogin = new ControllerLogin();
 
 if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
   $controller->mostrar();
@@ -72,8 +72,18 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
       $controller->mostrarHome();
     break;
     case ConfigApp::$ACTION_LOGIN:
-      $loginController->login();
-      break;
+    $controllerLogin->login();
+    break;
+    case ConfigApp::$ACTION_LOGOUT:
+    $controllerLogin->logout();
+    break;
+    case ConfigApp::$ACTION_FILTRAR_CATEGORIA:
+    $controllerSerie->filtroCat();
+    break;
+    default:
+    $controller = ($controllerLogin); //VER SI ESTO ESTA BIEN
+    
+    $controller->iniciar();
     default:
       $controller->mostrar();
       break;
