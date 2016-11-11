@@ -10,7 +10,9 @@ class ViewPagina{
   }
 
 	function MostrarPagina(){
-		$this->smarty->display("index.tpl");
+    session_start();
+    $this->smarty->assign("usuario", $_SESSION["USER"]);
+		$this->smarty->display("header.tpl");
 	}
 	function MostrarHome(){
 		$this->smarty->display("home.tpl");

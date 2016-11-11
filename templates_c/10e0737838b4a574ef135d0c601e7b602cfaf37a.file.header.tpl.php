@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-11-07 18:43:18
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-11 16:29:20
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3053957f144c9482007-37375896%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1478479488,
+      1 => 1478878157,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_57f144c9547ff3_37229255',
+  'variables' => 
+  array (
+    'usuario' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_57f144c9547ff3_37229255')) {function content_57f144c9547ff3_37229255($_smarty_tpl) {?><!DOCTYPE html>
@@ -53,14 +57,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <li><a id="staff">Unete a nuestro staff <span class="sr-only">(actual)</span></a></li>
           <li><a id="aSerie">A-Serie<span class="sr-only">(actual)</span></a></li>
           <li><a id="aCategoria">A-Categorias<span class="sr-only">(actual)</span></a></li>
+          <li><a href="index.php?action=login"><span class="glyphicon glyphicon-user"> <?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
+</span></a></li>
         </ul>
 
-        <ul class="nav navbar-nav navbar-right iconos">
-          <li><a href="https://www.facebook.com/" target="_blank"><img alt="siguenos en facebook" src="images/iconos/iconoface.png" title="siguenos en facebook" /></a></li>
-          <li><a href="https://plus.google.com/" target="_blank"><img alt="siguenos en Google+" src="images/iconos/iconogoogle+.png" title="siguenos en Google+" /></a></li>
-          <li><a href="https://twitter.com/" target="_blank"><img alt="siguenos en Twitter" src="images/iconos/iconotwitter.png" title="siguenos en Twitter" /></a></li>
-          <li><a href="https://www.youtube.com/" target="_blank"><img alt="Canal de youtube" src="images/iconos/iconoyoutube.png" title="Canal de youtube" /></a></li>
-        </ul>
+        
         </div>
       </div>
     </div>
@@ -78,4 +79,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <div class="col-sm-12 col-md-12" id="principal">
         <!-- <li><a id="inicio"> <span class="glyphicon glyphicon-home"></span></a></li>
           <li><a id="series"><span class="glyphicon glyphicon-eye-open"></span></a></li>
-          <li><a id="descargas"><span class="glyphicon glyphicon-download-alt"></span></a></li>  --!> <?php }} ?>
+          <li><a id="descargas"><span class="glyphicon glyphicon-download-alt"></span></a></li>  --> 
+
+    <div class="contenido">
+
+
+
+<?php echo $_smarty_tpl->getSubTemplate ('footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php }} ?>

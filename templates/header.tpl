@@ -32,14 +32,10 @@
           <li><a id="staff">Unete a nuestro staff <span class="sr-only">(actual)</span></a></li>
           <li><a id="aSerie">A-Serie<span class="sr-only">(actual)</span></a></li>
           <li><a id="aCategoria">A-Categorias<span class="sr-only">(actual)</span></a></li>
+          <li><a href="index.php?action=login"><span class="glyphicon glyphicon-user"> {$usuario}</span></a></li>
         </ul>
 
-        <ul class="nav navbar-nav navbar-right iconos">
-          <li><a href="https://www.facebook.com/" target="_blank"><img alt="siguenos en facebook" src="images/iconos/iconoface.png" title="siguenos en facebook" /></a></li>
-          <li><a href="https://plus.google.com/" target="_blank"><img alt="siguenos en Google+" src="images/iconos/iconogoogle+.png" title="siguenos en Google+" /></a></li>
-          <li><a href="https://twitter.com/" target="_blank"><img alt="siguenos en Twitter" src="images/iconos/iconotwitter.png" title="siguenos en Twitter" /></a></li>
-          <li><a href="https://www.youtube.com/" target="_blank"><img alt="Canal de youtube" src="images/iconos/iconoyoutube.png" title="Canal de youtube" /></a></li>
-        </ul>
+        
         </div>
       </div>
     </div>
@@ -57,4 +53,10 @@
       <div class="col-sm-12 col-md-12" id="principal">
         <!-- <li><a id="inicio"> <span class="glyphicon glyphicon-home"></span></a></li>
           <li><a id="series"><span class="glyphicon glyphicon-eye-open"></span></a></li>
-          <li><a id="descargas"><span class="glyphicon glyphicon-download-alt"></span></a></li>  --!> 
+          <li><a id="descargas"><span class="glyphicon glyphicon-download-alt"></span></a></li>  --> 
+
+    <div class="contenido">
+
+
+
+{include file='footer.tpl'}

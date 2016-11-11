@@ -37,9 +37,8 @@ class ViewSerie{
    function filtrar($series, $categoria)
   {
     $this->smarty->assign("series", $series);
-    $this->smarty->assign("categorias", $categoria); 
-    $this->smarty->assign("filtro", true);
-    $this->smarty->display("adminCategoria.tpl");
+    $this->smarty->assign("categorias", $categoria);
+    $this->smarty->display("filtrar.tpl");
   }
 
 

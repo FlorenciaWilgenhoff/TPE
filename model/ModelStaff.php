@@ -1,6 +1,6 @@
 <?php
-require_once 'model/ModelDB.php';
-class ModelStaff extends DB{
+require_once 'model/Model.php';
+class ModelStaff extends Model{
 
 
   function __construct() {

@@ -25,8 +25,9 @@ class ControllerLogin
       if(password_verify($pass, $hash))
       {
         session_start();
-        $_SESSION['USER'] = $user;
-        header("Location: mostrar_tareas");
+        echo "anduvo";
+        $_SESSION['USER'] = $usuario;
+        header("Location: index.php");
         die();
       }
       else

@@ -1,8 +1,8 @@
 <?php
 
-require_once ("model/ModelDB.php");
+require_once ("model/Model.php");
 
-class ModelCategoria extends DB{
+class ModelCategoria extends Model{
 
   function __construct() {
 

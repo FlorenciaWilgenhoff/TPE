@@ -122,7 +122,7 @@ class ControllerSerie {
    function filtroCat() {
     if (isset($_GET["id_categoria"])) {
       $categoria = $this->modelCategoria->getCategorias($_GET["id_categoria"]);
-      $series = $this->model->getSeriesCat($_GET["id_categoria"]);
+      $series = $this->model->getSerieCat($_GET["id_categoria"]);
       $this->view->filtrar($series, $categoria);
     }
   }

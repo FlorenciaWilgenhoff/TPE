@@ -17,19 +17,20 @@
 
   {/foreach}
 </ul>
-<!--ARREGLAR ESTO -->
-<h1>Filtre su categoria:</h1>
-{if isset($series)}
+
+
 <div class="bs_example">
     <label for="grupo">Filtrado de categorias</label>
 
-    <select class="form-control" name="categoria">
-        {foreach from=$series item=serie}
-        <option value="{$serie["id_serie"]}">{$serie["nombre"]}</option>
+    <select class="form-control filtro" name="categoria">
+        <option selected>Elija categoría</option>
+        {foreach from=$categorias item=categoria}
+        <option value="{$categoria["id_categoria"]}">{$categoria["nombre"]}</option>
         {/foreach}
-      </select>
+    </select>
+    <div class="mostrarFiltro"></div>
   </div>
-{/if}
+
 
 <h1>Agregar Categoria</h1>
 <form class="form-inline agregarCat" method="POST" action="index.php?action=agregar_categoria">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-11-09 19:10:44
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-11 15:53:57
          compiled from ".\templates\adminCategoria.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2314457fe83f2b064a3-20176220%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0750831271c774abc73a4f23a7062066151d5a18' => 
     array (
       0 => '.\\templates\\adminCategoria.tpl',
-      1 => 1478713859,
+      1 => 1478876032,
       2 => 'file',
     ),
   ),
@@ -21,8 +21,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'categorias' => 0,
     'categoria' => 0,
-    'series' => 0,
-    'serie' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -57,25 +55,26 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
 
   <?php } ?>
 </ul>
-<!--ARREGLAR ESTO -->
-<h1>Filtre su categoria:</h1>
-<?php if (isset($_smarty_tpl->tpl_vars['series']->value)){?>
+
+
 <div class="bs_example">
     <label for="grupo">Filtrado de categorias</label>
 
-    <select class="form-control" name="categoria">
-        <?php  $_smarty_tpl->tpl_vars['serie'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['serie']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['series']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['serie']->key => $_smarty_tpl->tpl_vars['serie']->value){
-$_smarty_tpl->tpl_vars['serie']->_loop = true;
+    <select class="form-control filtro" name="categoria">
+        <option selected>Elija categoría</option>
+        <?php  $_smarty_tpl->tpl_vars['categoria'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['categoria']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['categorias']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->key => $_smarty_tpl->tpl_vars['categoria']->value){
+$_smarty_tpl->tpl_vars['categoria']->_loop = true;
 ?>
-        <option value="<?php echo $_smarty_tpl->tpl_vars['serie']->value["id_serie"];?>
-"><?php echo $_smarty_tpl->tpl_vars['serie']->value["nombre"];?>
+        <option value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value["id_categoria"];?>
+"><?php echo $_smarty_tpl->tpl_vars['categoria']->value["nombre"];?>
 </option>
         <?php } ?>
-      </select>
+    </select>
+    <div class="mostrarFiltro"></div>
   </div>
-<?php }?>
+
 
 <h1>Agregar Categoria</h1>
 <form class="form-inline agregarCat" method="POST" action="index.php?action=agregar_categoria">

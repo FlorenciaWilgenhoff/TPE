@@ -1,7 +1,7 @@
 <?php
-require_once ("model/ModelDB.php");
+require_once ("model/Model.php");
 
-class ModelSerie extends DB{
+class ModelSerie extends Model{
 
   function __construct() {
 

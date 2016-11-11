@@ -76,7 +76,6 @@ $( document ).ready(function() {
 
 
 
- // Eliminacion de categoria
   $(document).on("click", ".eliminarCat", function(ev){
     ev.preventDefault();
     var id = $(this).attr("data-id");
@@ -84,15 +83,23 @@ $( document ).ready(function() {
       $(".contenido").html(data);
     });
   });
-//eliminacion de serie
- $(document).on("click", ".eliminarSerie", function(ev){
+
+ $(document).on("change", ".filtro", function(ev){
+    ev.preventDefault();
+    var id = $(this).val();
+    $.post( "index.php?action=filtrar_categorias&id_categoria=" + id, function(data){
+      $(".mostrarFiltro").html(data);
+    });
+  });
+
+
+ $(document).on("ca", ".eliminarSerie", function(ev){
     ev.preventDefault();
     var id = $(this).attr("data-id");
     $.post( "index.php?action=eliminar_serie&id_serie=" + id, function(data){
       $(".contenido").html(data);
     });
   });
-
 
 
 
