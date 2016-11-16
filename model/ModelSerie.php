@@ -12,14 +12,14 @@ class ModelSerie extends Model{
 
 
   function getSeries(){
-    $sentencia = $this->db->prepare( "select * from serie");
+    $sentencia = $this->db->prepare( "SELECT * from serie");
     $sentencia->execute();
     $series = $sentencia->fetchAll(PDO::FETCH_ASSOC);
     return $series;
   }
  
   function getSerie($id_serie){
-    $sentencia = $this->db->prepare( "select * from serie where id_serie=?");
+    $sentencia = $this->db->prepare( "SELECT* from serie where id_serie=?");
     $sentencia->execute(array($id_serie));
     return $sentencia->fetch(PDO::FETCH_ASSOC);
   }
@@ -65,7 +65,7 @@ class ModelSerie extends Model{
 
     $sentencia = $this->db->prepare("delete from serie where id_serie=?");
     $sentencia->execute(array($id_serie));
-    return $sentencia->rowCount();
+    //return $sentencia->rowCount();
   }
 
 

@@ -11,7 +11,9 @@ class ViewPagina{
 
 	function MostrarPagina(){
     session_start();
-    $this->smarty->assign("usuario", $_SESSION["USER"]);
+    if (isset($_SESSION["USER"]))
+    $this->smarty->assign("usuario", $_SESSION["USER"]); 
+
 		$this->smarty->display("header.tpl");
 	}
 	function MostrarHome(){

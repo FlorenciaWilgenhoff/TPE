@@ -14,10 +14,12 @@ class ViewLogin
     $this->smarty->assign('error',$error);
   }
 
-  function mostrar($error){
+  function mostrar(){
     $this->smarty->display('login.tpl');
   }
-
+  function mostrarRegistro(){   
+      $this->smarty->display('formLogin.tpl');
+    }
 }
 
 

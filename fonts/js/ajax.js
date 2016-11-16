@@ -92,8 +92,8 @@ $( document ).ready(function() {
     });
   });
 
-//VER PORUQE NO ME ANDA ESTO
- $(document).on("click", ".eliminarSerie", function(ev){
+
+ $(document).on("ca", ".eliminarSerie", function(ev){
     ev.preventDefault();
     var id = $(this).attr("data-id");
     $.post( "index.php?action=eliminar_serie&id_serie=" + id, function(data){

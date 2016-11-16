@@ -5,11 +5,13 @@ require("controller/ControllerCategoria.php");
 require('controller/ControllerPagina.php');
 require('controller/ControllerStaff.php');
 require('controller/ControllerLogin.php');
+require("controller/ControllerComentario.php");
 
 $controller = new ControllerPagina();
 $controllerSerie = new ControllerSerie();
 $controllerCategoria = new ControllerCategoria();
 $controllerLogin = new ControllerLogin();
+$controllerComentario = new ControllerComentario();
 
 if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
   $controller->mostrar();
@@ -77,9 +79,27 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
     case ConfigApp::$ACTION_LOGOUT:
     $controllerLogin->logout();
     break;
+    case ConfigApp::$ACTION_FORMULARIO_LOGIN:
+    $controllerLogin->formLogin();
+    break;
+    case ConfigApp::$ACTION_REGISTRARSE:
+    $controllerLogin->registrarse();
+    break;
     case ConfigApp::$ACTION_FILTRAR_CATEGORIA:
     $controllerSerie->filtroCat();
     break;
+
+    case ConfigApp::$ACTION_MOSTRAR_COMENTARIO:
+    $controllerComentario->mostrarComentario();
+    break;
+    case ConfigApp::$ACTION_AGREGAR_COMENTARIO:
+    $controllerComentario->agregarComentario();
+    break;
+    case ConfigApp::$ACTION_ELIMINAR_COMENTARIO:
+    $controllerComentario->eliminar();
+    break;
+
+
     default:
     $controller = ($controllerLogin); //VER SI ESTO ESTA BIEN
     

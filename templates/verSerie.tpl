@@ -10,6 +10,8 @@
       <p>{$serie["noticia"]}</p>
       <a href="{$serie['link']}">Link de descarga</a>
 
+
     </li>
-  </ul>
+  </ul> 
+  <!-- PONER BOTON PARA QUE ME MANDE AL VER COMENTARIO <a data-id="{$comentario["id_comentario"]}" href="index.php?action=editar_serie&id_serie={$serie['id_serie']}" class="editarSerie">Editar</a> -->
 </div>

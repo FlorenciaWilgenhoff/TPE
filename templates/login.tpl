@@ -8,13 +8,14 @@
                 <input type="password" name="txtPass"id="inputPassword" class="form-control" placeholder="Password" required>
                 <div id="remember" class="checkbox">
                     <label>
-                        <input type="checkbox" value="remember-me"> Remember me
+                        <input type="checkbox" value="remember-me"> Recuerdame
                     </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Entrar</button>  <!--VER SI ESO ESTA BIEN , que cuando haga click en registrarme me mande al formulario-->
+                 <a href="index.php?action=registrarse" class="registrarme">Registrarme</a>
             </form><!-- /form -->
             <a href="#" class="forgot-password">
-                Forgot the password?
+                Olvido su contraseña?
             </a>
         </div><!-- /card-container -->
     </div><!-- /container -->

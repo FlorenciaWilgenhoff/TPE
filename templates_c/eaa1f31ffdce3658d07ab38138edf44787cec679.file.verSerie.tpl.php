@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-11-06 20:39:28
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-16 23:22:43
          compiled from ".\templates\verSerie.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12344581f86f06ea854-14681679%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3431582cdc33b3ceb7-98220517%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'eaa1f31ffdce3658d07ab38138edf44787cec679' => 
     array (
       0 => '.\\templates\\verSerie.tpl',
-      1 => 1478274057,
+      1 => 1479334470,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12344581f86f06ea854-14681679',
+  'nocache_hash' => '3431582cdc33b3ceb7-98220517',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_581f86f0b12f38_38050588',
+  'unifunc' => 'content_582cdc33ea31c3_81850864',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_581f86f0b12f38_38050588')) {function content_581f86f0b12f38_38050588($_smarty_tpl) {?><div class="container">
+<?php if ($_valid && !is_callable('content_582cdc33ea31c3_81850864')) {function content_582cdc33ea31c3_81850864($_smarty_tpl) {?><div class="container">
   <h1><?php echo $_smarty_tpl->tpl_vars['serie']->value["nombre"];?>
  <small> - <?php echo $_smarty_tpl->tpl_vars['serie']->value["año"];?>
  - <?php echo $_smarty_tpl->tpl_vars['categoria']->value["nombre"];?>
@@ -50,6 +50,39 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
       <a href="<?php echo $_smarty_tpl->tpl_vars['serie']->value['link'];?>
 ">Link de descarga</a>
 
+<!--PONER COMENTARIOS ACA.-->
+<h1>Agregar Comentario</h1>
+
+<form method="POST" class="agregarComentario" action="index.php?action=agregar_comentario" enctype="multipart/form-data">
+
+  <div class="form-group">
+    <label for="grupo">Ingrese su nombre</label>
+    <input type="text" class="form-control" name="nombre" placeholder="juan" required />
+  </div>
+
+  <div class="form-group">
+    <label for="grupo">Ingrese su email</label>
+    <input type="text" class="form-control" name="email" placeholder="juanperez@gmail.com" required />
+  </div>
+  <div class="form-group">
+    <label for="sel1">Indique puntaje:</label>
+    <select class="form-control" name="puntaje">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="comentario">Escriba comentario</label>
+    <textarea name="comentario" class="form-control" rows="3"></textarea>
+  </div>
+
+
+  <input type="submit" class="btn btn-default" value="Agregar">
+
+</form>
     </li>
   </ul>
 </div>

@@ -32,7 +32,8 @@
           <li><a id="staff">Unete a nuestro staff <span class="sr-only">(actual)</span></a></li>
           <li><a id="aSerie">A-Serie<span class="sr-only">(actual)</span></a></li>
           <li><a id="aCategoria">A-Categorias<span class="sr-only">(actual)</span></a></li>
-          <li><a href="index.php?action=login"><span class="glyphicon glyphicon-user"> {$usuario}</span></a></li>
+          <li><a href="index.php?action=login"><span class="glyphicon glyphicon-user">
+           {if isset($usuario)}{$usuario}{/if}</span></a></li>
         </ul>
 
         

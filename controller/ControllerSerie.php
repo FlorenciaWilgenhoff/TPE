@@ -2,17 +2,20 @@
 
 require_once("model/ModelSerie.php");
 require_once("model/ModelCategoria.php");
+require_once("model/ModelLogin.php");
 require_once("view/ViewSerie.php");
 
 class ControllerSerie {
 
   private $model;
+  private $ModelLogin;
   private $view;
   private $modelCategoria;
 
   function __construct(){
     $this->model = new ModelSerie();
     $this->modelCategoria = new ModelCategoria();
+    $this->modelLogin = new ModelLogin();
     $this->view = new ViewSerie();
   }
 
@@ -24,10 +27,23 @@ class ControllerSerie {
 
 
   function mostrarAdmin(){
-    $categorias = $this->modelCategoria->getCategorias();
-    $series = $this->model->getSeries();
-    $this->view->mostrar_admin($series, $categorias);
-  }
+    $usuario = ""; //hacer de esto una funcion, y arreglar de que si no estoy logueado me redireccione al index
+    session_start();
+    if (isset($_SESSION['USER'])){
+       $usuario = $this->modelLogin->getUsuario($_SESSION['USER']);
+        if ($usuario["administrador"]==1){
+        $categorias = $this->modelCategoria->getCategorias();
+        $series = $this->model->getSeries();
+        $this->view->mostrar_admin($series, $categorias);
+        }
+            else {
+        header("Location: index.php");
+        die();
+    }
+    }
+
+    }
+    
 
   function mostrarSerie(){
     $idSerie = $_GET["id_serie"];
@@ -126,7 +142,7 @@ class ControllerSerie {
       $this->view->filtrar($series, $categoria);
     }
   }
-
+  
 
 }
 
