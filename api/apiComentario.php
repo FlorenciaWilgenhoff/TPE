@@ -3,13 +3,13 @@
  require '../model/ModelComentario.php';
 
 
-class apiSerie extends Api
+class apiComentario extends Api
  {
-   private $model;
+   private $ModelComentario;
    public function __construct($request)
   {
      parent::__construct($request);
-     $this->model = new ModelComentario();
+     $this->ModelComentario = new ModelComentario();
    }
  protected function comentario($argumentos){
      switch ($this->method) {

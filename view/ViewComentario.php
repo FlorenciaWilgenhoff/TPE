@@ -10,8 +10,8 @@ class ViewComentario{
   }
 
   function mostrarComentario($comentario){
-    $this->smarty->assign('comentario',$comentario);
-    $this->smarty->display("verComentario.tpl");
+    $this->smarty->assign('comentarios',$comentario);
+    $this->smarty->display("verComentarios.tpl");
   }
 
  

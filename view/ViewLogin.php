@@ -19,6 +19,13 @@ class ViewLogin
   }
   function mostrarRegistro(){   
       $this->smarty->display('formLogin.tpl');
+
+    }
+ 
+
+  function mostrarAdminUser($usuarios){ 
+      $this->smarty->assign('usuarios',$usuarios);
+      $this->smarty->display('adminUsuario.tpl');
     }
 }
 

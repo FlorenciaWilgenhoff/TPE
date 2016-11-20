@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2016 a las 17:43:05
+-- Tiempo de generación: 20-11-2016 a las 16:47:24
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.6.21
 
@@ -40,9 +40,32 @@ INSERT INTO `categoria` (`id_categoria`, `nombre`) VALUES
 (3, 'Comedia'),
 (4, 'Terror'),
 (5, 'Suspenso'),
-(6, 'Comedias'),
-(7, 'Array'),
-(9, 'Thiller');
+(8, 'Aventura');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentario`
+--
+
+CREATE TABLE `comentario` (
+  `id_comentario` int(11) NOT NULL,
+  `nombre` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `puntaje` int(11) NOT NULL,
+  `comentario` varchar(500) NOT NULL,
+  `fk_id_serie` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `comentario`
+--
+
+INSERT INTO `comentario` (`id_comentario`, `nombre`, `email`, `puntaje`, `comentario`, `fk_id_serie`) VALUES
+(1, 'jose', 'jose@gmail.com', 4, 'me gusta mucho esa serie', 1),
+(2, 'axel', 'axelbau@gmail.com', 3, 'Estuvo piola la serie', 0),
+(3, 'axel', 'axelbau@gmail.com', 3, 'Estuvo piola la serie', 0),
+(4, 'axel', 'axelbau@gmail.com', 3, 'Estuvo piola la serie', 0);
 
 -- --------------------------------------------------------
 
@@ -76,11 +99,9 @@ CREATE TABLE `serie` (
 --
 
 INSERT INTO `serie` (`id_serie`, `nombre`, `año`, `link`, `noticia`, `fk_id_categoria`) VALUES
-(46, 'lalal', 2012, 'cjdsknks.com', ' la descripcion', 3),
-(47, 'the ig bang theory', 20120, 'series.com', '', 3),
-(48, 'exorcista', 2016, 'serie.com', '', 4),
-(49, 'unaserie', 2013, 'cjdnsk.com', '', 5),
-(50, 'serie', 2010, 'serie.com', '', 2);
+(47, 'The big bang theory', 2010, 'series.com', '  ', 2),
+(52, 'the walking dead', 2013, 'cjsk.com', '', 5),
+(53, 'The exorcist', 2016, 'elexorcits.com', '', 4);
 
 -- --------------------------------------------------------
 
@@ -114,15 +135,21 @@ INSERT INTO `staff` (`id_staff`, `nombre`, `apellido`, `edad`, `email`, `puesto`
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `administrador` tinyint(1) NOT NULL,
+  `nombre` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `email`, `password`) VALUES
-(1, 'miemail@gmail.com', '$2y$10$feT6KO3cjGlyDmynsNmsGu8Q6TJytVx7YzRBfpAXnDH5t9XYYKalG');
+INSERT INTO `usuario` (`id_usuario`, `email`, `password`, `administrador`, `nombre`) VALUES
+(1, 'miemail@gmail.com', '$2y$10$feT6KO3cjGlyDmynsNmsGu8Q6TJytVx7YzRBfpAXnDH5t9XYYKalG', 1, 'Carlos'),
+(5, 'eze@gmail.com', '$2y$10$21iNgN3GpyV8Ea1kbUcmy.h8JQPnYFDvyUVNT2bjnY/5jTk0SN.du', 0, 'Lucas'),
+(6, 'eze@gmail.com', '$2y$10$L05wEC2UwfTBpGshztZLEeB8FNk42yTtzOr28Z1941xr8K9w1k2ku', 1, 'Josefina'),
+(7, 'eze@gmail.com', '$2y$10$L05wEC2UwfTBpGshztZLEeB8FNk42yTtzOr28Z1941xr8K9w1k2ku', 0, 'Jose'),
+(8, 'eze@gmail.com', '$2y$10$L05wEC2UwfTBpGshztZLEeB8FNk42yTtzOr28Z1941xr8K9w1k2ku', 0, 'Juan');
 
 --
 -- Índices para tablas volcadas
@@ -133,6 +160,12 @@ INSERT INTO `usuario` (`id_usuario`, `email`, `password`) VALUES
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id_categoria`);
+
+--
+-- Indices de la tabla `comentario`
+--
+ALTER TABLE `comentario`
+  ADD PRIMARY KEY (`id_comentario`);
 
 --
 -- Indices de la tabla `imagen_serie`
@@ -168,7 +201,12 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT de la tabla `comentario`
+--
+ALTER TABLE `comentario`
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `imagen_serie`
 --
@@ -178,7 +216,7 @@ ALTER TABLE `imagen_serie`
 -- AUTO_INCREMENT de la tabla `serie`
 --
 ALTER TABLE `serie`
-  MODIFY `id_serie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id_serie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 --
 -- AUTO_INCREMENT de la tabla `staff`
 --
@@ -188,7 +226,7 @@ ALTER TABLE `staff`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- Restricciones para tablas volcadas
 --

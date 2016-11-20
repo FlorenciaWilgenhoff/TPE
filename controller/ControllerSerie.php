@@ -2,20 +2,19 @@
 
 require_once("model/ModelSerie.php");
 require_once("model/ModelCategoria.php");
-require_once("model/ModelLogin.php");
 require_once("view/ViewSerie.php");
+require_once("controller/Controller.php");
 
-class ControllerSerie {
+class ControllerSerie extends Controller{
 
   private $model;
-  private $ModelLogin;
   private $view;
   private $modelCategoria;
 
   function __construct(){
+    parent::__construct();
     $this->model = new ModelSerie();
     $this->modelCategoria = new ModelCategoria();
-    $this->modelLogin = new ModelLogin();
     $this->view = new ViewSerie();
   }
 
@@ -27,20 +26,10 @@ class ControllerSerie {
 
 
   function mostrarAdmin(){
-    $usuario = ""; //hacer de esto una funcion, y arreglar de que si no estoy logueado me redireccione al index
-    session_start();
-    if (isset($_SESSION['USER'])){
-       $usuario = $this->modelLogin->getUsuario($_SESSION['USER']);
-        if ($usuario["administrador"]==1){
+        $this->comprobarAdmin();
         $categorias = $this->modelCategoria->getCategorias();
         $series = $this->model->getSeries();
         $this->view->mostrar_admin($series, $categorias);
-        }
-            else {
-        header("Location: index.php");
-        die();
-    }
-    }
 
     }
     
@@ -87,6 +76,7 @@ class ControllerSerie {
   }
 
   function agregar(){
+    $this->comprobarAdmin();
     $serie = $this->getDatosVerificados();
     if (count($serie) > 0){
       $this->model->crearSerie($serie, $this->getImagenesVerificadas($_FILES['imagenes']) );
@@ -95,6 +85,7 @@ class ControllerSerie {
 
   }
   function editar(){
+    $this->comprobarAdmin();
     $id_serie = $_GET["id_serie"];
     $imagenes = $this->model->getImagenes($id_serie);
     $serieNueva = $this->getDatosVerificados();
@@ -131,11 +122,13 @@ class ControllerSerie {
   }
 
   function eliminar(){
+    $this->comprobarAdmin();
     $id = $_GET['id_serie'];
     $this->model->eliminarSerie($id);
     $this->mostrarAdmin();
   }
    function filtroCat() {
+    $this->comprobarAdmin();
     if (isset($_GET["id_categoria"])) {
       $categoria = $this->modelCategoria->getCategorias($_GET["id_categoria"]);
       $series = $this->model->getSerieCat($_GET["id_categoria"]);

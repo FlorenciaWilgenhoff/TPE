@@ -26,8 +26,8 @@ class ConfigApp{
   public static $ACTION_MOSTRAR_COMENTARIO = 'mostrar_comentario';
   public static $ACTION_AGREGAR_COMENTARIO = "agregar_comentario";
   public static $ACTION_ELIMINAR_COMENTARIO = 'eliminar_comentario';
-  
-  
+  public static $ACTION_ADMIN_USUARIO = "admin_usuario";
+  public static $ACTION_ACTUALIZAR_PERMISOS = "actualizar_permisos";
   
 }
 

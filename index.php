@@ -99,6 +99,14 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
     $controllerComentario->eliminar();
     break;
 
+    case ConfigApp::$ACTION_ADMIN_USUARIO:
+    $controllerLogin->mostrarAdminUsuario();
+    break;
+    case ConfigApp::$ACTION_ACTUALIZAR_PERMISOS:
+    $controllerLogin->cambiarPermisos();
+    break;
+
+
 
     default:
     $controller = ($controllerLogin); //VER SI ESTO ESTA BIEN

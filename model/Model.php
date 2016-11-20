@@ -1,12 +1,14 @@
-<?php
-class Model {
-
+ <?php
+$path = "db/";
+if(strpos(pathinfo($_SERVER["SCRIPT_FILENAME"])["dirname"], 'api')) $path = "../" . $path;
+include_once $path .'ConfigApp.php';
+abstract class Model{
   protected $db;
   function __construct() {
     try {
-      $this->db = new PDO('mysql:host=localhost;dbname=tpe;charset=utf8', "root", "");
+      $this->db = new PDO('mysql:host='.HOST.';dbname='.rtrim(DBNAME).';charset=utf8', USUARIO, DBPASS);
     } catch (PDOException $e) {
-        header('Location: db');
+        header('Location: db/index.php');
         die();
     }
   }

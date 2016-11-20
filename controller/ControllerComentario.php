@@ -17,17 +17,17 @@ class ControllerComentario {
  
 
   function mostrarComentario(){
-    $idComentario = $_GET["id_comentario"];
-    $comentario = $this->model->getComentario($idComentario);
+    $idSerie = $_GET["fk_id_serie"]; 
+    $comentario = $this->model->getComentarios($idSerie);
     $this->view->mostrarComentario($comentario);
 
   }
 
   
   //function iniciar(){
-    //7$comentarios = $this->model->getComentarios();
+    //$comentarios = $this->model->getComentarios();
 
-    //$this->view->mostrar($comentarios);
+    //$this->view->mostrarComentario($comentarios);
   //}
 
 
@@ -43,9 +43,10 @@ class ControllerComentario {
   }
 
   function agregarComentario(){
+    $id = $_GET['fk_id_serie'];
     $comentario = $this->getDatosVerificados();
     if (count($comentario) > 0){
-      $this->model->agregarComentario($comentario);
+      $this->model->agregarComentario($comentario, $id);
     }
     $this->mostrarComentario(); //VER SI ESTO ES LO QUE QUIERO QUE MUESTRE
 

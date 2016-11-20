@@ -9,6 +9,7 @@ $( document ).ready(function() {
   partialRender("mostrar_descargas", "#descargas");
   partialRender("mostrar_staff", "#staff");
   partialRender("admin_serie", "#aSerie");
+  partialRender("admin_usuario", "#aUsuario");
   partialRender("admin_categoria", "#aCategoria");
 
   // Creo ajax para moverme a traves de los menus
@@ -92,7 +93,7 @@ $( document ).ready(function() {
     });
   });
 
-//VER PORUQE NO ME ANDA ESTO
+
  $(document).on("click", ".eliminarSerie", function(ev){
     ev.preventDefault();
     var id = $(this).attr("data-id");

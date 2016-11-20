@@ -12,7 +12,11 @@ class ControllerLogin
     $this->view = new ViewLogin();
   }
 
-  public function validar(){
+  public function cambiarPermisos(){
+    $id = $_GET["id_usuario"];
+    $usuario = $this->model->getUsuario2($id);
+    $this->model->cambiarPermiso($usuario);
+
   }
   public function login(){
     if(!isset($_REQUEST['txtUser']))
@@ -48,7 +52,7 @@ class ControllerLogin
     header("Location: login");
     die();
   }
-  //crear funcion para registrarse
+  
   public function registrarse (){
     $usuario = []; 
     if (isset($_POST["email"]) && isset( $_POST["password"])){
@@ -62,6 +66,11 @@ class ControllerLogin
      $this->view->mostrarRegistro(); 
      
   }
-  
+  function mostrarAdminUsuario(){
+   
+    $usuarios = $this->model->getUsuarios();
+    $this->view->mostrarAdminUser($usuarios);
+  }
+ 
 }
  ?>

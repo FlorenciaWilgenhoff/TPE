@@ -1,7 +1,5 @@
 <!-- Como usuario: Poder postear comentarios en los ítems del sitio asignándoles un puntaje de 1 a 5.
 Que los comentarios se actualicen en tiempo real, con una demora de 2 segundos.
-COMO ARQUITECTO DEL SISTEMA:
-Quiero que todo el sistema de comentarios funcione por medio de una API REST. 
 COMO ADMIN DEL SITIO:
 Quiero poder borrar comentarios.
 -->
@@ -18,9 +16,9 @@ class ModelComentario extends Model{
   }
 
 
-  function getComentarios(){
-    $sentencia = $this->db->prepare( "SELECT * from comentario");
-    $sentencia->execute();
+  function getComentarios($fk_id_serie){
+    $sentencia = $this->db->prepare( "SELECT * from comentario where fk_id_serie=?");
+    $sentencia->execute(array($fk_id_serie));
     $comentarios = $sentencia->fetchAll(PDO::FETCH_ASSOC);
     return $comentarios;
   }

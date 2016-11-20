@@ -3,7 +3,7 @@
   <li>{$comentario["nombre"]}- {$comentario["email"]}- {$comentario["puntaje"]}
    <strong>{$comentario["comentario"]}</strong> 
  </li>
-    
+ {/foreach}   
   
 <h1>Agregar Comentario</h1>
 

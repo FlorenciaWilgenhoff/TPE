@@ -1,5 +1,5 @@
 <?php
-  require 'apiSerie.php';	
+  require 'apiComentario.php';	
   try {
     $api_handler = new apiAnime($_REQUEST['request']);
     echo $api_handler->processAPI();
