@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-11-20 18:04:25
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-21 18:27:58
          compiled from ".\templates\verComentarios.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13879582f0bfe3a0536-84006320%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3ecdeb90f50364b26013fab18ccda50b48d6ef84' => 
     array (
       0 => '.\\templates\\verComentarios.tpl',
-      1 => 1479661408,
+      1 => 1479748921,
       2 => 'file',
     ),
   ),
@@ -25,20 +25,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_582f0bfe43f424_61251600')) {function content_582f0bfe43f424_61251600($_smarty_tpl) {?><h1>Comentarios</h1>
+<ul>
 <?php  $_smarty_tpl->tpl_vars['comentario'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['comentario']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['comentarios']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['comentario']->key => $_smarty_tpl->tpl_vars['comentario']->value){
 $_smarty_tpl->tpl_vars['comentario']->_loop = true;
 ?>
   <li><?php echo $_smarty_tpl->tpl_vars['comentario']->value["nombre"];?>
-- <?php echo $_smarty_tpl->tpl_vars['comentario']->value["email"];?>
+ - <?php echo $_smarty_tpl->tpl_vars['comentario']->value["email"];?>
  - <?php echo $_smarty_tpl->tpl_vars['comentario']->value["puntaje"];?>
 
    <strong><?php echo $_smarty_tpl->tpl_vars['comentario']->value["comentario"];?>
 </strong> 
  </li>
  <?php } ?>   
-  
+</ul>
+
+
 <h1>Agregar Comentario</h1>
 
 <form method="POST" class="agregarComentario" action="index.php?action=agregar_comentario" enctype="multipart/form-data">

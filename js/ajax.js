@@ -40,11 +40,13 @@ $( document ).ready(function() {
     });
   }
 
+  
+
+
   // Guardar datos del formulario de staff, agregar categoria, serie y comentario, y editar serie
   agregarDatos(".agregarCat", "agregar_categoria");
   agregarDatos(".formularios", "guardar_staff");
   agregarDatos(".agregarSerie", "agregar_serie");
-   agregarDatos(".agregarComentario", "agregar_comentario");
   agregarDatos(".editarS", "editar_serie&id_serie=", true);
   agregarDatos(".formEditar", "editar_categoria&id_categoria=", true);
 
@@ -102,15 +104,59 @@ $( document ).ready(function() {
       $(".contenido").html(data);
     });
   });
+ //hacer con la api eliminar, mostrar, y agregar
+  var template;
+function getComentarios(id_serie){
+
+  $.ajax({ url: 'js/templates/comentarios.mst',
+   success: function(templateReceived) {
+     template = templateReceived;
+   }
+ });
+
+
+
+  $.get( "api/comentarios", function(data) {
+    var datos = [];
+    for (var i = 0; i < data.length; i++) {
+      if (id_serie == data[i].fk_id_serie) {
+        datos.push(data[i]);
+      }
+    }
+    console.log(datos.length);
+    var rendered = Mustache.render(template,{comentarios:datos});
+    $(".comentarios").append(rendered);
+
+  });
+}
+
+
+
+
+
+
 //ELIMINAR COMENTARIO
- $(document).on("click", ".eliminarComentario", function(ev){
+ $(document).on('click', '.eliminarComentario', function(ev) {
+      ev.preventDefault();
+      var comentario = $(this).parents(".comentario");
+      var id =  $(this).attr("data-id");
+      $.ajax({
+          type: "DELETE",
+          url: 'api/comentarios/' + id,
+          success: function(){
+            $(comentario).html("");
+          }
+        });
+
+      });
+ //AGREGAR COMENTARIO
+ $(document).on('submit', '.agregarComentario', function(ev) {
     ev.preventDefault();
-    var id = $(this).attr("data-id");
-    $.post( "index.php?action=eliminar_comentario&id_comentario=" + id, function(data){
-      $(".contenido").html(data);
+    var comentario = $(this).serialize();
+    $.post( "api/comentarios", comentario, function( comentarios ) {
+      var rendered = Mustache.render(template,{comentarios});
+      $( ".comentarios" ).append(rendered);
     });
   });
-
-
 
 });

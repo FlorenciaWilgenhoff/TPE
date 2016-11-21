@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <title>Series</title>
@@ -29,21 +30,24 @@
       <div class="panel panel-filled">
         <div class="panel-body">
           <form method="post" action="login">
+
+            <div class="form-group">
+             <label class="control-label" for="name">Nombre</label>
+             <input type="text" name="nombre" id="inputNombre" class="form-control" placeholder="Ingrese su Nombre" required autofocus>
+            </div>
+
             <div class="form-group">
              <label class="control-label" for="username">Email</label>
-             <input type="email" name="txtUser" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            
-              
+             <input type="email" name="txtUser" id="inputEmail" class="form-control" placeholder="Ingrese su Email" required autofocus>
             </div>
+
             <div class="form-group">
               <label class="control-label" for="password">Contraseña</label>
-              <input type="password" name="txtPass"id="inputPassword" class="form-control" placeholder="Password" required>
+              <input type="password" name="txtPass"id="inputPassword" class="form-control" placeholder="Ingrese su contraseña" required>
             </div>
-            <div class="form-group">
-             
-            </div>
+            
             <div>
-               <a href="index.php" button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Entrar</button> 
+               <button type="submit"class="btn btn-lg btn-primary btn-block btn-signin">Entrar</button> 
                <a href="index.php?action=registrarse" class="btn btn-default registrarme">Registrarme</a>
             </div>
             
@@ -52,5 +56,5 @@
     </div>
     <a href="index.php" class="btn btn-accent">Volver a inicio</a>
   </section>
-
+ {include file="footer.tpl"}
   

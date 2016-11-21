@@ -31,8 +31,8 @@ class ModelLogin extends Model{
     return $usuarios;
   }
   function agregarUsuario($usuario){
-  $sentencia = $this->db->prepare("INSERT INTO usuario(email, password) VALUES (?,?)");
-  $sentencia->execute(array($usuario["email"],$usuario["password"]));
+  $sentencia = $this->db->prepare("INSERT INTO usuario(email, password, nombre) VALUES (?,?)");
+  $sentencia->execute(array($usuario["email"],$usuario["password"], $usuario["nombre"]));
   }
 
 function cambiarPermiso($usuario){

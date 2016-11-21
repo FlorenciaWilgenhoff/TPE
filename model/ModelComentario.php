@@ -29,9 +29,9 @@ class ModelComentario extends Model{
     return $sentencia->fetch(PDO::FETCH_ASSOC);
   }
 
-  function agregarComentario($comentario){
-    $sentencia = $this->db->prepare("INSERT INTO comentario(nombre, puntaje, email, comentario) VALUES(?,?,?, ?)");
-    $sentencia->execute(array($comentario["nombre"], $comentario["puntaje"], $comentario["email"], $comentario["comentario"]));
+  function agregarComentario($comentario){ //le tengo que pasar algo mas aca?
+    $sentencia = $this->db->prepare("INSERT INTO comentario(nombre, puntaje, email, comentario, fk_id_serie) VALUES(?,?,?, ?,?)");
+    $sentencia->execute(array($comentario["nombre"], $comentario["puntaje"], $comentario["email"], $comentario["comentario"], $comentario["fk_id_serie"]));
     $id_comentario = $this->db->lastInsertId();
     return $id_comentario;
   }

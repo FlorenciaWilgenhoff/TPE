@@ -3,8 +3,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instalador de BBDD</title>
-   <link rel="stylesheet" href="css/bootstrap.css">
-  <link href="css/one-page-wonder.css" rel="stylesheet">
+   <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="../css/one-page-wonder.css" rel="stylesheet">
 
 </head>
 <body class="blank  pace-done">

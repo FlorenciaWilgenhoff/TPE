@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-11-20 19:37:21
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-21 17:33:40
          compiled from ".\templates\instalador.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:37275831d3be18a784-20882372%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4cd41257685957b7f9fd8b15b5d0d0705b589912' => 
     array (
       0 => '.\\templates\\instalador.tpl',
-      1 => 1479667037,
+      1 => 1479746014,
       2 => 'file',
     ),
   ),
@@ -24,8 +24,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instalador de BBDD</title>
-   <link rel="stylesheet" href="css/bootstrap.css">
-  <link href="css/one-page-wonder.css" rel="stylesheet">
+   <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="../css/one-page-wonder.css" rel="stylesheet">
 
 </head>
 <body class="blank  pace-done">

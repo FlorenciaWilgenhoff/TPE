@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <title>Series</title>
@@ -28,22 +29,25 @@
 
       <div class="panel panel-filled">
         <div class="panel-body">
-          <form method="post" action="login">
+          <form method="post" action="registrarse">
+
+             <div class="form-group">
+             <label class="control-label" for="name">Nombre</label>
+              <input type="text" name="nombre" id="inputNombre" class="form-control" placeholder="Ingrese un nombre" required autofocus>
+            </div>
+
             <div class="form-group">
              <label class="control-label" for="username">Email</label>
-              <input type="email" name="txtUser" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            
-              
+              <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Ingrese su email" required autofocus>
             </div>
+
             <div class="form-group">
               <label class="control-label" for="password">Contraseña</label>
-                <input type="password" name="txtPass"id="inputPassword" class="form-control" placeholder="Password" required>
-              <input type="password" class="form-control" name="password" id="password"  placeholder="Ingrese contraseña"/>
+                <input type="password" name="password"id="inputPassword" class="form-control" placeholder="Ingrese contraseña" required>
             </div>
            
             <div>
-               <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Registrarme</button> 
-              
+               <button type="submit"class="btn btn-lg btn-primary btn-block btn-signin">Registrarme</button> 
             </div>
           </form>
       </div>
@@ -51,3 +55,4 @@
     <a href="index.php" class="btn btn-accent">Volver a inicio</a>
   </section>
 
+ 

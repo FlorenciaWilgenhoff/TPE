@@ -55,10 +55,11 @@ class ControllerLogin
   
   public function registrarse (){
     $usuario = []; 
-    if (isset($_POST["email"]) && isset( $_POST["password"])){
+    if (isset($_POST["email"]) && isset( $_POST["password"])&& isset( $_POST["nombre"])){
       $usuario["email"] = $_POST["email"];
       $encriptar = password_hash($_POST["password"], PASSWORD_DEFAULT);
       $usuario["password"] = $encriptar;
+      $usuario["nombre"] = $_POST["nombre"];
       $this->model->agregarUsuario($usuario);
       header("Location: index.php");
       die();
