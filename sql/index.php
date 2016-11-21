@@ -9,7 +9,7 @@ if(isset($_POST["host"]) && isset($_POST["user"]) && isset($_POST["db-pw"]) && i
       $conexionValida = false;
   }
   if($conexionValida){
-    $configFile = "configApp.php";
+    $configFile = "ConfigApp.php";
     $archivo = file($configFile);
     $archivo[2] = changeValue($archivo[2], $_POST["host"]);
     $archivo[3] = changeValue($archivo[3], $_POST["user"]);

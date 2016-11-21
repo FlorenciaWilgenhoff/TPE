@@ -23,14 +23,6 @@ class ControllerComentario {
 
   }
 
-  
-  //function iniciar(){
-    //$comentarios = $this->model->getComentarios();
-
-    //$this->view->mostrarComentario($comentarios);
-  //}
-
-
   function getDatosVerificados(){
     $comentario = [];
     if (isset($_POST["nombre"]) && isset( $_POST["puntaje"]) && isset( $_POST["email"]) && isset( $_POST["comentario"])){

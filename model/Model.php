@@ -1,5 +1,5 @@
  <?php
-$path = "db/";
+$path = "sql/";
 if(strpos(pathinfo($_SERVER["SCRIPT_FILENAME"])["dirname"], 'api')) $path = "../" . $path;
 include_once $path .'ConfigApp.php';
 abstract class Model{
@@ -8,7 +8,7 @@ abstract class Model{
     try {
       $this->db = new PDO('mysql:host='.HOST.';dbname='.rtrim(DBNAME).';charset=utf8', USUARIO, DBPASS);
     } catch (PDOException $e) {
-        header('Location: db/index.php');
+        header('Location: sql/index.php');
         die();
     }
   }

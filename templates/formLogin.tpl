@@ -1,69 +1,53 @@
-<!--
 <!DOCTYPE html>
-<html lang="en">
-    <head> 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-		
-		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <title>Series</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link href="css/one-page-wonder.css" rel="stylesheet">
 
-		
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		
-		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+</head>
+<body class="blank  pace-done">
 
-		<title>Admin</title>
-	</head>
-	<body>
+  <section class="content">
+    <div class="back-link">
+    
+    </div>
 
-	-->
-		<div class="container">
-			<div class="row main">
-				<div class="panel-heading">
-	               <div class="panel-title text-center">
-	               		<h1 class="title">Registrarse</h1>
-	               	
-	               	</div>
-	            </div> 
-				<div class="main-login main-center">
-					<form class="form-horizontal" method="post">
-						
+    <div class="container-center">
 
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Escriba su Email</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
-								</div>
-							</div>
-						</div>
+      <div class="view-header">
+        <div class="header-icon">
+          <i class="pe page-header-icon pe-7s-unlock"></i>
+        </div>
+        <div class="header-title">
+          <h2>Registrarse</h2>
+          
+        </div>
+      </div>
 
-						<div  class="form-group">
-							<label for="password" class="cols-sm-2 control-label">Contraseña</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
-								</div>
-							</div>
-						</div>
+      <div class="panel panel-filled">
+        <div class="panel-body">
+          <form method="post" action="login">
+            <div class="form-group">
+             <label class="control-label" for="username">Email</label>
+              <input type="email" name="txtUser" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            
+              
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="password">Contraseña</label>
+                <input type="password" name="txtPass"id="inputPassword" class="form-control" placeholder="Password" required>
+              <input type="password" class="form-control" name="password" id="password"  placeholder="Ingrese contraseña"/>
+            </div>
+           
+            <div>
+               <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Registrarme</button> 
+              
+            </div>
+          </form>
+      </div>
+    </div>
+    <a href="index.php" class="btn btn-accent">Volver a inicio</a>
+  </section>
 
-						<div class="form-group ">
-							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Registrarse</button>
-						</div>
-						<div class="login-register">
-				            <a href="index.php">Login</a>
-				         </div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!--
-
-		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
-	</body>
-</html>
--->

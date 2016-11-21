@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-11-18 17:05:38
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-20 18:46:31
          compiled from ".\templates\adminUsuario.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10082582f2020acf160-75481620%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7436e5f639eeb4369a7185d8fde0c444b1fdb537' => 
     array (
       0 => '.\\templates\\adminUsuario.tpl',
-      1 => 1479485132,
+      1 => 1479663898,
       2 => 'file',
     ),
   ),
@@ -35,8 +35,8 @@ $_smarty_tpl->tpl_vars['usuario']->_loop = true;
   <li><?php echo $_smarty_tpl->tpl_vars['usuario']->value["nombre"];?>
 
   	<?php if ($_smarty_tpl->tpl_vars['usuario']->value["administrador"]==1){?>(Admin)<?php }?> <a href="index.php?action=actualizar_permisos&id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value["id_usuario"];?>
-"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></li> 
+"><span class="glyphicon glyphicon-record" aria-hidden="true"></span></a></li> 
   <?php } ?>
-<!--HACER BOTON PARA ASIGNAR O QUITAR PERMISO DE ADMIN-->
+
 
 </ul><?php }} ?>

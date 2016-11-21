@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-11-18 15:26:11
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-20 18:04:25
          compiled from ".\templates\verComentarios.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13879582f0bfe3a0536-84006320%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3ecdeb90f50364b26013fab18ccda50b48d6ef84' => 
     array (
       0 => '.\\templates\\verComentarios.tpl',
-      1 => 1479479150,
+      1 => 1479661408,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ $_smarty_tpl->tpl_vars['comentario']->_loop = true;
 ?>
   <li><?php echo $_smarty_tpl->tpl_vars['comentario']->value["nombre"];?>
 - <?php echo $_smarty_tpl->tpl_vars['comentario']->value["email"];?>
-- <?php echo $_smarty_tpl->tpl_vars['comentario']->value["puntaje"];?>
+ - <?php echo $_smarty_tpl->tpl_vars['comentario']->value["puntaje"];?>
 
    <strong><?php echo $_smarty_tpl->tpl_vars['comentario']->value["comentario"];?>
 </strong> 

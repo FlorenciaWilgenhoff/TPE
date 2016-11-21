@@ -9,7 +9,8 @@
   <title>Series</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/one-page-wonder.css" rel="stylesheet">
- <!-- <link href="css/login.css" rel="stylesheet"> -->
+
+ <link href="css/login.css" rel="stylesheet"> 
 </head>
 <body>
   

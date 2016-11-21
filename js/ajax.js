@@ -40,10 +40,11 @@ $( document ).ready(function() {
     });
   }
 
-  // Guardar datos del formulario de staff, agregar categoria y serie, y editar serie
+  // Guardar datos del formulario de staff, agregar categoria, serie y comentario, y editar serie
   agregarDatos(".agregarCat", "agregar_categoria");
   agregarDatos(".formularios", "guardar_staff");
   agregarDatos(".agregarSerie", "agregar_serie");
+   agregarDatos(".agregarComentario", "agregar_comentario");
   agregarDatos(".editarS", "editar_serie&id_serie=", true);
   agregarDatos(".formEditar", "editar_categoria&id_categoria=", true);
 
@@ -101,7 +102,14 @@ $( document ).ready(function() {
       $(".contenido").html(data);
     });
   });
-
+//ELIMINAR COMENTARIO
+ $(document).on("click", ".eliminarComentario", function(ev){
+    ev.preventDefault();
+    var id = $(this).attr("data-id");
+    $.post( "index.php?action=eliminar_comentario&id_comentario=" + id, function(data){
+      $(".contenido").html(data);
+    });
+  });
 
 
 

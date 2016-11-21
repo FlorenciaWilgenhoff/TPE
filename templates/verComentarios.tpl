@@ -1,6 +1,6 @@
 <h1>Comentarios</h1>
 {foreach from=$comentarios item=comentario}
-  <li>{$comentario["nombre"]}- {$comentario["email"]}- {$comentario["puntaje"]}
+  <li>{$comentario["nombre"]}- {$comentario["email"]} - {$comentario["puntaje"]}
    <strong>{$comentario["comentario"]}</strong> 
  </li>
  {/foreach}   

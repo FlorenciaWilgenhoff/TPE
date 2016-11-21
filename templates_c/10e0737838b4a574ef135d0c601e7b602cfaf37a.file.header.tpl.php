@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-11-18 16:51:18
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-20 18:38:51
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:28082582f08f326a425-70846193%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1479484273,
+      1 => 1479663410,
       2 => 'file',
     ),
   ),
@@ -34,7 +34,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <title>Series</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/one-page-wonder.css" rel="stylesheet">
- <!-- <link href="css/login.css" rel="stylesheet"> -->
+
+ <link href="css/login.css" rel="stylesheet"> 
 </head>
 <body>
   

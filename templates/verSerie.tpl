@@ -13,5 +13,12 @@
 
     </li>
   </ul> 
-  <!-- PONER BOTON PARA QUE ME MANDE AL VER COMENTARIO <a data-id="{$comentario["id_comentario"]}" href="index.php?action=editar_serie&id_serie={$serie['id_serie']}" class="editarSerie">Editar</a> -->
+  <ul>
+  {foreach from=$comentarios item=comentario}
+  <li>{$comentario["nombre"]}
+  <!--REVISAR ESTO-->
+  <a data-id="{$comentario["id_comentario"]}" href="index.php?action=agregar_comentario&id_comentario={$comentario['id_comentario']}" class="agregarComentario">Agregar</a> 
+   </li>
+  {/foreach}
+</ul>
 </div>
