@@ -2,20 +2,22 @@
 require_once('view/ViewLogin.php');
 require_once('model/ModelLogin.php');
 require_once('controller/ControllerSerie.php');
-class ControllerLogin
+class ControllerLogin extends Controller
 {
   private $view;
   private $model;
   function __construct()
   {
-    $this->model = new ModelLogin();
+    parent::__construct();
+    $this->model = $this->modelLogin;
     $this->view = new ViewLogin();
   }
 
   public function cambiarPermisos(){
     $id = $_GET["id_usuario"];
-    $usuario = $this->model->getUsuario2($id);
+    $usuario = $this->model->getUsuarioByID($id);
     $this->model->cambiarPermiso($usuario);
+    $this->mostrarAdminUsuario();
 
   }
   public function login(){
@@ -24,12 +26,13 @@ class ControllerLogin
     else {
       $usuario = $_REQUEST['txtUser'];
       $pass = $_REQUEST['txtPass'];
-      $hash = $this->model->getUsuario($usuario)["password"];
+      $user = $this->model->getUsuario($usuario);
       // falta controlar el caso de que el usuario no exista
-      if(password_verify($pass, $hash))
+      if(password_verify($pass, $user['password']))
       {
         session_start();
-        $_SESSION['USER'] = $usuario;
+        $_SESSION['id'] = $user['id_usuario'];
+        $_SESSION['USER'] = $user["email"];
         header("Location: index.php");
         die();
       }
@@ -61,14 +64,14 @@ class ControllerLogin
       $usuario["password"] = $encriptar;
       $usuario["nombre"] = $_POST["nombre"];
       $this->model->agregarUsuario($usuario);
-      header("Location: index.php");
+      header("Location: login");
       die();
      }
      $this->view->mostrarRegistro(); 
      
   }
   function mostrarAdminUsuario(){
-   
+    $this->comprobarAdmin();
     $usuarios = $this->model->getUsuarios();
     $this->view->mostrarAdminUser($usuarios);
   }

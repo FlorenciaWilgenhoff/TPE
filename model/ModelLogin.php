@@ -1,5 +1,5 @@
 <?php
-require_once ("model/Model.php");
+require_once (dirname(__DIR__) . "/model/Model.php");
 
 class ModelLogin extends Model{
 
@@ -18,7 +18,7 @@ class ModelLogin extends Model{
     
   }
 
-    function getUsuario2($usuario){
+    function getUsuarioByID($usuario){
     $sentencia = $this->db->prepare( "SELECT  * from usuario where id_usuario = ?");
     $sentencia->execute(array($usuario));
     return $sentencia->fetch(PDO::FETCH_ASSOC);
@@ -31,7 +31,7 @@ class ModelLogin extends Model{
     return $usuarios;
   }
   function agregarUsuario($usuario){
-  $sentencia = $this->db->prepare("INSERT INTO usuario(email, password, nombre) VALUES (?,?)");
+  $sentencia = $this->db->prepare("INSERT INTO usuario(email, password, nombre) VALUES (?,?,?)");
   $sentencia->execute(array($usuario["email"],$usuario["password"], $usuario["nombre"]));
   }
 

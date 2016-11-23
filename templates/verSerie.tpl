@@ -26,7 +26,7 @@
 
             <form method="POST" class="agregarComentario" >
                   <input type="hidden" name="id_serie" value="{$serie["id_serie"]}" class="id_serie">
-                  <input type="hidden" name="id_usuario" value="{$usuario["id_usuario"]}">
+                  <input type="hidden" name="id_usuario" value="{$usuario}">
                   <div class="form-group form-inline">
                     <label>Puntaje</label>
                     <select class="form-control" name="puntaje" placeholder="Seleccione un numero de puntaje">

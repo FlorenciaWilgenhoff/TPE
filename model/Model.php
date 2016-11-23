@@ -1,7 +1,6 @@
  <?php
-$path = "sql/";
-if(strpos(pathinfo($_SERVER["SCRIPT_FILENAME"])["dirname"], 'api')) $path = "../" . $path;
-include_once $path .'ConfigApp.php';
+
+include_once dirname(__DIR__) . '/sql/ConfigApp.php';
 abstract class Model{
   protected $db;
   function __construct() {

@@ -1,6 +1,6 @@
 <?php 
 
-require_once("model/ModelLogin.php");
+require_once(dirname(__DIR__) . "/model/ModelLogin.php");
 class Controller{
 
   

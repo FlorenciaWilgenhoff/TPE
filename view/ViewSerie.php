@@ -17,6 +17,10 @@ class ViewSerie{
 
   function mostrarSerie($serie, $categoria){
     $this->smarty->assign('serie',$serie);
+    session_start();
+    if(isset($_SESSION["id"]) && isset($_SESSION["USER"])){
+       $this->smarty->assign('usuario',$_SESSION["id"]);
+    }
     $this->smarty->assign('categoria',$categoria);
     $this->smarty->display("verSerie.tpl");
   }

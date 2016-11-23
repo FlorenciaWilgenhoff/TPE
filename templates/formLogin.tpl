@@ -43,7 +43,7 @@
 
             <div class="form-group">
               <label class="control-label" for="password">Contraseña</label>
-                <input type="password" name="password"id="inputPassword" class="form-control" placeholder="Ingrese contraseña" required>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Ingrese contraseña" required>
             </div>
            
             <div>

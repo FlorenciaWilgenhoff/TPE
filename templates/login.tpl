@@ -32,11 +32,6 @@
           <form method="post" action="login">
 
             <div class="form-group">
-             <label class="control-label" for="name">Nombre</label>
-             <input type="text" name="nombre" id="inputNombre" class="form-control" placeholder="Ingrese su Nombre" required autofocus>
-            </div>
-
-            <div class="form-group">
              <label class="control-label" for="username">Email</label>
              <input type="email" name="txtUser" id="inputEmail" class="form-control" placeholder="Ingrese su Email" required autofocus>
             </div>

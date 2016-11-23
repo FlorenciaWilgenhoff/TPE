@@ -36,6 +36,7 @@ $( document ).ready(function() {
       var idSerie = $(this).attr("data-id");
       $.get("index.php?action=" + action + idSerie, function(data) {
         $(".contenido").html(data);
+        getComentarios(idSerie);
       });
     });
   }
@@ -43,7 +44,7 @@ $( document ).ready(function() {
   
 
 
-  // Guardar datos del formulario de staff, agregar categoria, serie y comentario, y editar serie
+  // Guardar datos del formulario de staff, agregar categoria, serie  y editar serie
   agregarDatos(".agregarCat", "agregar_categoria");
   agregarDatos(".formularios", "guardar_staff");
   agregarDatos(".agregarSerie", "agregar_serie");
@@ -114,20 +115,28 @@ function getComentarios(id_serie){
    }
  });
 
+ 
 
+getComments();
 
-  $.get( "api/comentarios", function(data) {
+setInterval(getComments, 2000);
+
+function getComments(){
+
+    $.get( "api/comentario", function(data) {
     var datos = [];
     for (var i = 0; i < data.length; i++) {
       if (id_serie == data[i].fk_id_serie) {
         datos.push(data[i]);
       }
     }
-    console.log(datos.length);
+    console.log(datos);
     var rendered = Mustache.render(template,{comentarios:datos});
-    $(".comentarios").append(rendered);
+    $(".comentarios").html(rendered);
 
   });
+}
+
 }
 
 
@@ -142,7 +151,7 @@ function getComentarios(id_serie){
       var id =  $(this).attr("data-id");
       $.ajax({
           type: "DELETE",
-          url: 'api/comentarios/' + id,
+          url: 'api/comentario/' + id,
           success: function(){
             $(comentario).html("");
           }
@@ -153,10 +162,20 @@ function getComentarios(id_serie){
  $(document).on('submit', '.agregarComentario', function(ev) {
     ev.preventDefault();
     var comentario = $(this).serialize();
-    $.post( "api/comentarios", comentario, function( comentarios ) {
+    $.post( "api/comentario", comentario, function( comentarios ) {
       var rendered = Mustache.render(template,{comentarios});
       $( ".comentarios" ).append(rendered);
     });
   });
+
+
+   $(document).on("click", ".actualizarPermisos", function(ev){
+    ev.preventDefault();
+    var id = $(this).attr("data-id");
+    $.post( "index.php?action=actualizar_permisos&id_usuario=" + id, function(data){
+      $(".contenido").html(data);
+    });
+  });
+ 
 
 });
