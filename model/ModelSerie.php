@@ -65,7 +65,7 @@ class ModelSerie extends Model{
 
     $sentencia = $this->db->prepare("delete from serie where id_serie=?");
     $sentencia->execute(array($id_serie));
-    //return $sentencia->rowCount();
+    
   }
 
 

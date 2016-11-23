@@ -19,7 +19,6 @@
 <script src="js/ajax.js"></script>
 <script src="js/mustache.js"></script>
 
-<!--< script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.3/mustache.js"></script> -->
 </body>
 
 </html>

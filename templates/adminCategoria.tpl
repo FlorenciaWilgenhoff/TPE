@@ -6,9 +6,9 @@
   <form  data-id="{$categoria["id_categoria"]}" class="formEditar form-inline" method="POST" action="index.php?action=editar_categoria&id_categoria={$categoria['id_categoria'] }">
     <div class="form-group">
       <li data-name="{$categoria['nombre']}">{$categoria["nombre"]}
-        <!-- boton editar categoria -->
+       
         <a class="editarCat">Editar</a>
-        <!-- boton eliminar categoria -->
+      
         <a data-id="{$categoria["id_categoria"]}" class="eliminarCat" href="index.php?action=eliminar_categoria&id_categoria={$categoria['id_categoria'] }"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
       </li>
     </div>

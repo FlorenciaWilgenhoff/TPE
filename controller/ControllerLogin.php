@@ -27,7 +27,6 @@ class ControllerLogin extends Controller
       $usuario = $_REQUEST['txtUser'];
       $pass = $_REQUEST['txtPass'];
       $user = $this->model->getUsuario($usuario);
-      // falta controlar el caso de que el usuario no exista
       if(password_verify($pass, $user['password']))
       {
         session_start();
