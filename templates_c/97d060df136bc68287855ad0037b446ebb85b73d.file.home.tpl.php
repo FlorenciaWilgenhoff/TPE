@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-11-23 19:39:13
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-23 22:08:52
          compiled from ".\templates\home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:120915835e251715ef2-85842711%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97d060df136bc68287855ad0037b446ebb85b73d' => 
     array (
       0 => '.\\templates\\home.tpl',
-      1 => 1478455576,
+      1 => 1479934688,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_5835e25183c521_67916811',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5835e25183c521_67916811')) {function content_5835e25183c521_67916811($_smarty_tpl) {?><section>
   <div class="media">
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </a>
     </div>
     <div class="media-body">
-      <h3 class="media-heading">'The Walking Dead': Esta trama clave del cómic cambiará menos de lo pensábamos en su adaptación a la serie
+      <h3 class="media-heading">The Walking Dead: Esta trama clave del cómic cambiará menos de lo pensábamos en su adaptación a la serie
       </h3>
         <p>La séptima temporada de la ficción de AMC se ha estrenado con un enorme éxito de audiencia, ¿preparado para más zombis?
         Sí, todos los que leen el cómic de Robert Kirman y Tony Roma, The Walking Dead, y lo comparan con la serie, tienen claro que muchas tramas han cambiado de forma radical en su adaptación a la pequeña pantalla, pero aquí tienes otra que puede mantenerse aunque con cambios. 
@@ -48,11 +48,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </a>
     </div>
     <div class="media-body">
-      <h3 class="media-heading"> 'Supergirl': Cyborg Superman aparecerá en la segunda temporada</h3>
-      <p> El icónico personaje de DC Comics se dejará ver en el episodio ‘The Darkest Place’ (2x07) que se emitirá en Estados Unidos el próximo 28 de noviembre.
-      Después de varios rumores, la sinopsis oficial del episodio ‘The Darkest Place’ (2x07) de Supergirl ha confirmado la presencia de Cyborg Superman.
+      <h3 class="media-heading"> Supergirl: Cyborg Superman aparecerá en la segunda temporada</h3>
+      <p> El icónico personaje de DC Comics se dejará ver en el episodio The Darkest Place (2x07) que se emitirá en Estados Unidos el próximo 28 de noviembre.
+      Después de varios rumores, la sinopsis oficial del episodio The Darkest Place (2x07) de Supergirl ha confirmado la presencia de Cyborg Superman.
       La descripción de este esperado capítulo, que se emitirá el próximo 28 de noviembre, dice así:
-      <strong>Mientras el Guardían (Mehcad Brooks) intenta limpiar su nombre después de haber sido acusado de un asesinato cometido por otro vigilante, Supergirl (Melissa Benoist) se dirigir a una misión en solitario para rescatar a Mon-El (Chris Wood) que ha sido capturado por CADMUS. Mientras lucha para liberar a Mon-El, Supergirl se encuentra cara a cara con Cyborg Superman".
+      <strong>Mientras el Guardían (Mehcad Brooks) intenta limpiar su nombre después de haber sido acusado de un asesinato cometido por otro vigilante, Supergirl (Melissa Benoist) se dirigir a una misión en solitario para rescatar a Mon-El (Chris Wood) que ha sido capturado por CADMUS. Mientras lucha para liberar a Mon-El, Supergirl se encuentra cara a cara con Cyborg Superman.
       </strong>
       En esta segunda temporada, CW ha decidido optar por presentar al nuevo Superman de la cadena tras la emisión de Smallville y lo ha hecho confiando en Tyler Hoechlin, actor reconocido por su participación en Teen Wolf y el mismo que posiblemente interprete a Cyborg Superman.
       </p>
@@ -67,7 +67,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </a>
     </div>
     <div class="media-body">
-      <h3 class="media-heading"> 'American Crime Story': Lady Gaga interpretará a Donatella Versace en la tercera temporada</h3>
+      <h3 class="media-heading"> American Crime Story: Lady Gaga interpretará a Donatella Versace en la tercera temporada</h3>
       <p>La segunda entrega de la exitosa serie de Ryan Murphy girará en torno a los hechos acontecidos tras el huracán Katrina en Nueva Orleans y se estrenará en algún momento de 2017.
       Aunque no se haya aún estrenado la segunda temporada, Ryan Murphy ya trabaja en la tercera entrega de American Crime Story centrada en el asesinato del diseñador Gianni Versace en 1997 y cuenta ya con su primer protagonista.
       Según informa Us Magazine, Lady Gaga ha sido la elegida para interpretar a Donatella Versace, amiga íntima también de la cantante y cuyos diseños ha llevado en varias ocasiones en la Alfombra Roja e incluso acompañada de la propia diseñadora.
@@ -85,13 +85,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </a>
     </div>
     <div class="media-body">
-      <h3 class="media-heading"> 'Los Simpson' hacen historia: Fox renueva la serie por las temporadas 29 y 30
+      <h3 class="media-heading">Los Simpson hacen historia: Fox renueva la serie por las temporadas 29 y 30
       </h3>
       <p>Esto convertirá a la comedia de Matt Groening en la serie con más episodios de la historia de la televisión estadounidense, 669 episodios.
   
       ¡Los Simpson hacen historia! La serie de Matt Groening acaba de ser renovada por Fox por las temporadas 29 y 30. Esta noticia, publicada por Deadline,  adelanta que con este cambio conseguirá que la serie tenga 669 episodios, lo que la convierte en la serie guionizada por mayor número de episodios rompiendo así el récord de Gunsmoke con 635 capítulos. 
       Además, está confirmado el regreso de los dobladores Dan Castellaneta, Julie Kavner, Nancy Cartwright, Yeardley Smith, Hank Azaria y Harry Shearer. Los Simpson cuenta en su haber con cientos de premios, entre los que destacan los 32 Emmys conseguidos a lo largo de sus casi 30 años en antena. Pese a que los fans y los críticos no están tan contentos con las nuevas temporadas como lo estaban con las primeras, la comedia sigue triunfando, es más, su recién emitido episodio 600 consiguió un 3,6 en demos y casi 10 millones de espectadores. 
-      A esta noticia, hay que sumar las declaraciones que realizó recientemente James L. Brooks sobre la posibilidad de hacer una secuela de la película sobre la familia amarilla de Springfield. Aquella cinta tuvo un buen recibimiento por parte del público o de los fans, recaudando más de 500 millones de dólares en todo el mundo, por ello Brooks ha dicho lo siguiente: "Fox realmente quiere que hagamos otra y quizás lo hagamos o quizás no. Así están las cosas. ¿Cómo dividimos nuestras funciones y creemos en la idea que tenemos? Quizás hagamos un poco más de exploración activa para la segunda película muy pronto". 
+      A esta noticia, hay que sumar las declaraciones que realizó recientemente James L. Brooks sobre la posibilidad de hacer una secuela de la película sobre la familia amarilla de Springfield. Aquella cinta tuvo un buen recibimiento por parte del público o de los fans, recaudando más de 500 millones de dólares en todo el mundo, por ello Brooks ha dicho lo siguiente: Fox realmente quiere que hagamos otra y quizás lo hagamos o quizás no. Así están las cosas. ¿Cómo dividimos nuestras funciones y creemos en la idea que tenemos? Quizás hagamos un poco más de exploración activa para la segunda película muy pronto. 
 
     </p>
       

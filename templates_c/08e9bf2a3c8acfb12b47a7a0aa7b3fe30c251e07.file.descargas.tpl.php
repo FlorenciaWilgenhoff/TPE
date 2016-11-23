@@ -1,4 +1,25 @@
-
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-23 22:22:25
+         compiled from ".\templates\descargas.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:3021558360891062c49-61545515%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '08e9bf2a3c8acfb12b47a7a0aa7b3fe30c251e07' => 
+    array (
+      0 => '.\\templates\\descargas.tpl',
+      1 => 1479933260,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '3021558360891062c49-61545515',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_583608910c6632_87645637',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_583608910c6632_87645637')) {function content_583608910c6632_87645637($_smarty_tpl) {?>
 <section>
   <h1>Descargas</h1>
   <h2>Desde aca podras descargar series completamente gratis!!!</h2>
@@ -156,3 +177,4 @@ Pero con cada cerebro que consume, hereda recuerdos del cadáver. De ahí que, c
     </article>
   </section>
 
+<?php }} ?>

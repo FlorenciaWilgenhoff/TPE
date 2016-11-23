@@ -105,7 +105,7 @@ $( document ).ready(function() {
       $(".contenido").html(data);
     });
   });
- //hacer con la api eliminar, mostrar, y agregar
+ 
   var template;
   var intervalo;
 function getComentarios(id_serie){
