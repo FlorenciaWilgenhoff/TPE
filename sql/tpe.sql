@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-11-2016 a las 19:45:57
+-- Tiempo de generación: 23-11-2016 a las 22:51:23
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.6.21
 
@@ -66,12 +66,8 @@ CREATE TABLE `comentario` (
 --
 
 INSERT INTO `comentario` (`id_comentario`, `fk_id_usuario`, `email`, `puntaje`, `comentario`, `fk_id_serie`) VALUES
-(19, 1, '', 1, 'asfasfasf', 47),
-(21, 1, '', 1, 'soy alta gila', 47),
-(22, 1, '', 1, 'soy alta gila x2', 47),
-(23, 1, '', 1, 'soy alta gila x2', 47),
-(24, 1, '', 1, 'soy alta gila x2', 47),
-(25, 1, '', 1, 'SASDASDAS', 47);
+(26, 1, '', 5, 'Me encanta esta serie', 47),
+(27, 17, '', 4, 'Me gusta mucho, lastima que dura tan pocos los capitulos', 47);
 
 -- --------------------------------------------------------
 
@@ -84,6 +80,13 @@ CREATE TABLE `imagen_serie` (
   `path` text NOT NULL,
   `fk_id_serie` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `imagen_serie`
+--
+
+INSERT INTO `imagen_serie` (`id_is`, `path`, `fk_id_serie`) VALUES
+(1, 'images/58360e6802c35_the-big-bang-theory.jpg', 47);
 
 -- --------------------------------------------------------
 
@@ -105,7 +108,7 @@ CREATE TABLE `serie` (
 --
 
 INSERT INTO `serie` (`id_serie`, `nombre`, `año`, `link`, `noticia`, `fk_id_categoria`) VALUES
-(47, 'The Big Bang Theory', 2010, 'series.com', 'La serie comienza con la llegada de Penny, aspirante a actriz, al apartamento vecino, que comparten Sheldon y Leonard, dos físicos que trabajan en el Instituto Tecnológico de California (Caltech). Leonard se enamora desde el primer momento de Penny.\r\n\r\nLeonard y Sheldon son estudiantes destacados en Caltech , amigos a su vez de Howard y Raj, que son presentados como unos completos geeks, alejados de las inquietudes y problemas de la gente común.', 3),
+(47, 'The Big Bang Theory', 2010, 'series.com', ' La serie comienza con la llegada de Penny, aspirante a actriz, al apartamento vecino, que comparten Sheldon y Leonard, dos físicos que trabajan en el Instituto Tecnológico de California (Caltech). Leonard se enamora desde el primer momento de Penny.\r\n\r\nLeonard y Sheldon son estudiantes destacados en Caltech , amigos a su vez de Howard y Raj, que son presentados como unos completos geeks, alejados de las inquietudes y problemas de la gente común.', 2),
 (52, 'The Walking Dead', 2010, 'cjsk.com', '   La historia nos traslada a un escenario post-pandémico en el que un virus ha acabado con la práctica totalidad de la población mundial convirtiéndolos en zombis. Seremos testigo de la lucha de un grupo de supervivientes por mantenerse a salvo en este entorno infestado de zombis o, como ellos prefieren llamarlos, caminantes.', 4),
 (53, 'The Exorcist', 2016, 'elexorcits.com', 'En Asia, más precisamente en la zona de Irak, el sacerdote Lankester Merrin descubre en una excavación arqueológica una reliquia que representa al demonio Pazuzu. Tras este hallazgo, Merrin es alertado por una serie de profecías sobre el regreso de esta criatura demoniaca a la tierra. Al mismo tiempo, en Georgetown, una niña de doce años, llamada Regan MacNeil, hija de una famosa actriz, es poseída por una fuerza demoniaca que provoca una serie de cambios psicológicos y físicos en la joven. Esto provoca que, después de una serie de tratamientos inefectivos, la atea madre de Regan llame a un sacerdote para realizar una serie de exorcismos con el fin de liberar a Regan.\r\n', 4),
 (54, 'Vikingos', 2013, 'series.com', 'Este nuevo drama histórico, dirigido por Michael Hirst (Elizabeth, The Tudors), de History Channel está centrado en Ragnar Lothbrok, figura mítica que aseguraba que era el descendiente de Odín, el dios principal de la mitología nórdica. ', 8),
@@ -159,19 +162,14 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `email`, `password`, `administrador`, `nombre`) VALUES
-(1, 'miemail@gmail.com', '$2y$10$feT6KO3cjGlyDmynsNmsGu8Q6TJytVx7YzRBfpAXnDH5t9XYYKalG', 0, 'Carlos'),
+(1, 'miemail@gmail.com', '$2y$10$feT6KO3cjGlyDmynsNmsGu8Q6TJytVx7YzRBfpAXnDH5t9XYYKalG', 1, 'Carlos'),
 (5, 'eze@gmail.com', '$2y$10$21iNgN3GpyV8Ea1kbUcmy.h8JQPnYFDvyUVNT2bjnY/5jTk0SN.du', 0, 'Lucas'),
 (6, 'eze@gmail.com', '$2y$10$L05wEC2UwfTBpGshztZLEeB8FNk42yTtzOr28Z1941xr8K9w1k2ku', 0, 'Josefina'),
 (7, 'eze@gmail.com', '$2y$10$L05wEC2UwfTBpGshztZLEeB8FNk42yTtzOr28Z1941xr8K9w1k2ku', 0, 'Jose'),
 (8, 'eze@gmail.com', '$2y$10$L05wEC2UwfTBpGshztZLEeB8FNk42yTtzOr28Z1941xr8K9w1k2ku', 0, 'Juan'),
-(9, 'yo@gmail.com', '$2y$10$PDmijgqQxGWXw9CZBTP/4ukC2DYJnm0Txdw/Fot2h3DpWpU5Urri.', 0, ''),
-(10, 'porfinanda@gmail.com', '$2y$10$lWC8EHhzlgfGnF6wEhiZ2erJDpSYcSvSpWwM4TuMcz2pXw4RQfpfm', 0, ''),
-(11, 'flor@hotmail.com', '$2y$10$cdMynLHWS5ZKwNEo7bnS2uWk9j/4kJAm4ia7yRFoY/4slaKFIKqi6', 0, ''),
-(12, 'hola@gmail.com', '$2y$10$csXEyWpGzD1L1umvKuTRG.Kp0fGeRIguT1WgLUN06CfE/dadaqYo6', 0, ''),
-(13, 'lala@gmail.com', '$2y$10$3v.CcrT0jk6F92GOlo9bl.XHv0fLVSylmN.bI1TFiwfRzbjVegs8e', 0, ''),
-(14, 'aranda@gmail.com', '$2y$10$utTmouRuTUh.FKOeQj4OqeuQLCwp0LA1fsBNyPhVZcHtOd/JBvRKi', 0, ''),
 (15, 'layoli@gmail.com', '$2y$10$0K.UtNLH.h6KmiJW2x0TFOKbKW.sNckf4HSDCCugg18/3UZSstrxu', 0, 'jauasd'),
-(16, 'esteesmiemail@gmail.com', '$2y$10$e0Q/Q3s0tbP77zQf7xQj4.sChm2.2zFBaVskwXfKBYKhqx6togYHK', 0, 'juan35235');
+(16, 'esteesmiemail@gmail.com', '$2y$10$e0Q/Q3s0tbP77zQf7xQj4.sChm2.2zFBaVskwXfKBYKhqx6togYHK', 0, 'juan35235'),
+(17, 'camilodelaolla@gmail.com', '$2y$10$eTA7nOtQ0nI4Kj21ZeYS3.y0HrTcBX4aJOf3idINkni8yM4ERtqde', 0, 'Camilo');
 
 --
 -- Índices para tablas volcadas
@@ -228,12 +226,12 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT de la tabla `imagen_serie`
 --
 ALTER TABLE `imagen_serie`
-  MODIFY `id_is` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_is` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `serie`
 --
@@ -248,7 +246,7 @@ ALTER TABLE `staff`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- Restricciones para tablas volcadas
 --

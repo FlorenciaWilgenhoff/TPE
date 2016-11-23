@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-11-23 20:08:47
+<?php /* Smarty version Smarty-3.1.14, created on 2016-11-23 22:43:55
          compiled from ".\templates\adminCategoria.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:286765835e93f5a56e0-61033151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0750831271c774abc73a4f23a7062066151d5a18' => 
     array (
       0 => '.\\templates\\adminCategoria.tpl',
-      1 => 1478876032,
+      1 => 1479928224,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5835e93f713b67_43530201',
   'variables' => 
   array (
     'categorias' => 0,
     'categoria' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5835e93f713b67_43530201',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5835e93f713b67_43530201')) {function content_5835e93f713b67_43530201($_smarty_tpl) {?>
 
@@ -55,25 +55,6 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
 
   <?php } ?>
 </ul>
-
-
-<div class="bs_example">
-    <label for="grupo">Filtrado de categorias</label>
-
-    <select class="form-control filtro" name="categoria">
-        <option selected>Elija categoría</option>
-        <?php  $_smarty_tpl->tpl_vars['categoria'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['categoria']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['categorias']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->key => $_smarty_tpl->tpl_vars['categoria']->value){
-$_smarty_tpl->tpl_vars['categoria']->_loop = true;
-?>
-        <option value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value["id_categoria"];?>
-"><?php echo $_smarty_tpl->tpl_vars['categoria']->value["nombre"];?>
-</option>
-        <?php } ?>
-    </select>
-    <div class="mostrarFiltro"></div>
-  </div>
 
 
 <h1>Agregar Categoria</h1>

@@ -128,7 +128,6 @@ class ControllerSerie extends Controller{
     $this->mostrarAdmin();
   }
    function filtroCat() {
-    $this->comprobarAdmin();
     if (isset($_GET["id_categoria"])) {
       $categoria = $this->modelCategoria->getCategorias($_GET["id_categoria"]);
       $series = $this->model->getSerieCat($_GET["id_categoria"]);
