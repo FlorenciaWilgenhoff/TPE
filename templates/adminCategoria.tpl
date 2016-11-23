@@ -19,19 +19,6 @@
 </ul>
 
 
-<div class="bs_example">
-    <label for="grupo">Filtrado de categorias</label>
-
-    <select class="form-control filtro" name="categoria">
-        <option selected>Elija categoría</option>
-        {foreach from=$categorias item=categoria}
-        <option value="{$categoria["id_categoria"]}">{$categoria["nombre"]}</option>
-        {/foreach}
-    </select>
-    <div class="mostrarFiltro"></div>
-  </div>
-
-
 <h1>Agregar Categoria</h1>
 <form class="form-inline agregarCat" method="POST" action="index.php?action=agregar_categoria">
   <div class="form-group">

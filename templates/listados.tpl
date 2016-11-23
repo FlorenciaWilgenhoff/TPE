@@ -7,6 +7,23 @@
     {/foreach}
   </ul>
 
+
+
+
+<div class="bs_example">
+    <label for="grupo">Filtrado de categorias</label>
+
+    <select class="form-control filtro" name="categoria">
+        <option selected>Elija categoría</option>
+        {foreach from=$categorias item=categoria}
+        <option value="{$categoria["id_categoria"]}">{$categoria["nombre"]}</option>
+        {/foreach}
+    </select>
+    <div class="mostrarFiltro"></div>
+  </div>
+
+
+
   <h1>Listado de Series</h1>
   <ul> 
     {foreach from=$categorias item=categoria}
@@ -19,4 +36,7 @@
       {/foreach}
     {/foreach}
   </ul>
+
+
+
 </div>

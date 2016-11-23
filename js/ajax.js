@@ -107,8 +107,9 @@ $( document ).ready(function() {
   });
  //hacer con la api eliminar, mostrar, y agregar
   var template;
+  var intervalo;
 function getComentarios(id_serie){
-
+  clearInterval(intervalo);
   $.ajax({ url: 'js/templates/comentarios.mst',
    success: function(templateReceived) {
      template = templateReceived;
@@ -119,7 +120,7 @@ function getComentarios(id_serie){
 
 getComments();
 
-setInterval(getComments, 2000);
+intervalo = setInterval(getComments, 2000);
 
 function getComments(){
 
